@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+import { Button } from "../components/ui/moving-border";
 import Image from "next/image";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 //import MobileNavbar2 from "./MobileNavbar2";
 export default function BackgroundSlider() {
   const slides = [
@@ -34,20 +35,20 @@ export default function BackgroundSlider() {
       desc: "When tillage begins, other arts follow. The farmers, therefore, are the founders of human civilization.",
     },
     {
-        url: "https://images.unsplash.com/photo-1572775146189-b792cd0b76ba?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "Brenda Schoepp",
-        desc: "My grandfather used to say that once in your life you need a doctor, a lawyer, a policeman, and a preacher. But every day, three times a day, you need a farmer.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1539902743451-20dfa0a92ffd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "Dwight D. Eisenhower",
-        desc: "Farming looks mighty easy when your plow is a pencil and you're a thousand miles from the corn field.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "B. C. Forbes",
-        desc: "It is only the farmer who faithfully plants seeds in the Spring, who reaps a harvest in the Autumn.",
-      },
+      url: "https://images.unsplash.com/photo-1572775146189-b792cd0b76ba?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Brenda Schoepp",
+      desc: "My grandfather used to say that once in your life you need a doctor, a lawyer, a policeman, and a preacher. But every day, three times a day, you need a farmer.",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1539902743451-20dfa0a92ffd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Dwight D. Eisenhower",
+      desc: "Farming looks mighty easy when your plow is a pencil and you're a thousand miles from the corn field.",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "B. C. Forbes",
+      desc: "It is only the farmer who faithfully plants seeds in the Spring, who reaps a harvest in the Autumn.",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,7 +83,7 @@ export default function BackgroundSlider() {
     <div className="h-screen w-full m-auto relative group">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full min-h-screen opacity-40 bg-center bg-cover duration-1000"
+        className="w-full min-h-screen opacity-55 bg-center bg-cover duration-[2700ms]"
       >
         {/* <Image src={slides[currentIndex].url}
         alt="bg pic"
@@ -91,40 +92,28 @@ export default function BackgroundSlider() {
         className="h-screen w-screen opacity-85 transition duration-700 ease-in-out">
 
         </Image> */}
-        {/* <MobileNavbar2 /> */}
-        {/* <motion.div
-          className="absolute text-center pt-4 bottom-[27%] left-[10%] sm:top-[20%] sm:left-[10%]"
-          animate={{ x: 80 }}
-          transition={{ ease: "easeOut", duration: 1 }}
-        >
-          <Link href="/pages/buy">
-            <button className="btn text-xs text-white bg-slate-900 hover:bg-slate-50 hover:text-slate-900 border-slate-900 btn-circle h-20 w-20 sm:animate-bounce">
-              Discover More
-            </button>
-          </Link>
-        </motion.div> */}
-
-
       </div>
-      {/* <div className="w-full h-full">
-            <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
-          </div> */}
+
       {/* Descriptive content */}
       <div className="absolute bottom-6 text-white sm:right-8 w-[10em] sm:w-[40em] h-48 pl-4 pt-6">
-        <p className="pt-2 uppercase text-white text-">{slides[currentIndex].desc}</p>
+        <p className="pt-2 uppercase text-white text-">
+          {slides[currentIndex].desc}
+        </p>
         <h1 className="text-xl sm:text-6xl text-gray-300 font-semibold sm:font-light font-mono">
           {slides[currentIndex].name}
         </h1>
-        
       </div>
-     
-      <div className="absolute sm:w-96 h-full sm:top-[60%] sm:right-[30%] top-[60%] right-[10%]">
-          <a className="btn btn-wide bg-base-200 text-gray-200 hover:glass"
-          href="/Dashboard">
-            LOG IN
-          </a>
-          
-        </div>
+
+      <div className="absolute sm:w-96 h-full sm:top-[50%] sm:right-[30%] top-[60%] right-[10%]">
+        <Button
+          borderRadius="1.75rem"
+          className="bg-slate-900 text-white 
+          border-neutral-200 uppercase 
+          font-mono hover:text-base duration-300"
+        >
+          Explore Organic
+        </Button>
+      </div>
 
       {/* Left Arrow */}
       <div className="hidden group-hover:block absolute top-[60%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
