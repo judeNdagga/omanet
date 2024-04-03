@@ -107,7 +107,7 @@ export default function BackgroundSlider() {
       <div className="absolute sm:w-96 h-full sm:top-[50%] sm:right-[30%] top-[60%] right-[10%]">
         <Button
           borderRadius="1.75rem"
-          className="bg-slate-900 text-white 
+          className="bg-gradient-to-r from-green-900 to-green-300 text-white 
           border-neutral-200 uppercase 
           font-mono hover:text-base duration-300"
         >
