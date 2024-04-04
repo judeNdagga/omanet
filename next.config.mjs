@@ -10,6 +10,7 @@ const nextConfig = {
             {hostname: "unsplash.com"},
             {hostname: "images.pexels.com"},
             {hostname: "assets.aceternity.com"},
+            {hostname: "aceternity.com"},
             
         ],
     },

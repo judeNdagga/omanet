@@ -22,8 +22,9 @@ export default function Home() {
   return (
     <div>
       <BackgroundSlider />
-      <div className="bg-gradient-to-r from-green-200
-       to-white opacity-95 h-[45em] flex">
+      <div className="bg-gradient-to-r from-green-600 from-3%
+      via-green-300 
+       to-white to-75% opacity-95 h-[45em] flex">
         {/* 1st level */}
         <div className="text-center text-black w-[50%] ">
           <h1 className="pt-32 text-3xl uppercase font-semibold font-mono">Best Quality Products</h1>
@@ -62,8 +63,9 @@ export default function Home() {
       </div>
 
       {/* 2nd level */}
-      <div className="bg-gradient-to-l from-green-200
-       to-white opacity-95 h-[45em] flex">
+      <div className="bg-gradient-to-l from-green-600 from-3%
+      via-green-300 
+       to-white to-75%  opacity-95 h-[45em] flex">
         
         
         <div className="w-[50%]">
@@ -103,8 +105,9 @@ export default function Home() {
 
       {/* 3rd level */}
 
-      <div className="bg-gradient-to-r from-green-200
-       to-white opacity-95 h-[45em] flex">
+      <div className="bg-gradient-to-r from-green-600 from-3%
+      via-green-300 
+       to-white to-75%  opacity-95 h-[45em] flex">
         {/* 1st level */}
         <div className="text-center text-black w-[50%] ">
           <h1 className="pt-32 text-3xl uppercase font-semibold font-mono">Fast Delivery</h1>
