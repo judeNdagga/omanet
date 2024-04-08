@@ -55,13 +55,13 @@ function Navbar({ className }: { className?: string }) {
             />
             <ProductItem
               title="Herbal Gardening"
-              href="https://gomoonbeam.com"
+              href="../HerbalGardening"
               src="https://images.unsplash.com/photo-1523301551780-cd17359a95d0?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               description="Never write from scratch again. Go from idea to blog in minutes."
             />
             <ProductItem
               title="Local Eggs"
-              href="https://userogue.com"
+              href="../Products/Eggs"
               src="https://images.unsplash.com/photo-1586802990181-a5771596eaea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
             />

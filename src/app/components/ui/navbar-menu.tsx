@@ -33,7 +33,8 @@ export const MenuItem = ({
          rounded-xl font-light w-28 text-sm 
          text-center uppercase font-mono 
          hover:opacity-[0.9] dark:text-white
-         hover:bg-white hover:text-slate-900 animate-pulse"
+         hover:bg-white hover:text-slate-900
+          animate-bounce hover:animate-none"
       >
         {item}
       </motion.p>

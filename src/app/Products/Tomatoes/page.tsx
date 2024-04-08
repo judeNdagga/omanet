@@ -11,7 +11,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src="https://images.pexels.com/photos/5617/red-tomato-vegetable.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://images.unsplash.com/photo-1562695530-ca03c4b98623?q=80&w=1852&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -27,7 +27,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src="https://images.pexels.com/photos/4022083/pexels-photo-4022083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://images.unsplash.com/photo-1583250794760-9d41bf58442f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -43,7 +43,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src="https://images.pexels.com/photos/17896145/pexels-photo-17896145/free-photo-of-green-tomato-plant.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://images.unsplash.com/photo-1613295759649-e16cdcdf22fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -59,7 +59,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src="https://images.pexels.com/photos/210895/pexels-photo-210895.jpeg"
+          src="https://images.unsplash.com/photo-1567306301408-9b74779a11af?q=80&w=2034&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -92,7 +92,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src="https://images.pexels.com/photos/6316521/pexels-photo-6316521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://images.unsplash.com/photo-1571680322317-a5f004900ace?q=80&w=1906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           width={300}
           height={300}
           className="h-full w-full object-cover"
