@@ -6,6 +6,7 @@ import {
   TypewriterEffect,
   TypewriterEffectSmooth,
 } from "../components/ui/typewriter-effect";
+import Image from "next/image";
 import { AuroraBackground } from "../components/ui/aurora-background";
 import { Button } from "../components/ui/moving-border";
 export default function HerbalGardening() {
@@ -94,7 +95,7 @@ export default function HerbalGardening() {
             speed="slow"
           />
         </div>
-        <div className="h-[30em] flex">
+        <div className="h-[30em] flex pt-3">
           <div className="w-[50%] p-16 text-center">
             <h1 className="font-bold text-3xl">Abstract Title</h1>
             <p className="pt-8">
@@ -107,10 +108,26 @@ export default function HerbalGardening() {
               ipsum corrupti exercitationem! Ipsam eos fuga tenetur vel.
             </p>
           </div>
-          <div className="w-[50%]"></div>
+          <div className="w-[50%]">
+          <Image
+            src="https://images.unsplash.com/photo-1584479898061-15742e14f50d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            height="1000"
+            width="1000"
+            className="w-full h-full rounded-md opacity-85"
+            alt="thumbnail"
+          />
+          </div>
         </div>
         <div className="h-[30em] flex">
-          <div className="w-[50%]"></div>
+          <div className="w-[50%]">
+          <Image
+            src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            height="1000"
+            width="1000"
+            className="w-full h-full rounded-md opacity-85"
+            alt="thumbnail"
+          />
+          </div>
           <div className="w-[50%] p-16 text-center">
             <h1 className="font-bold text-3xl">Abstract Title</h1>
             <p className="pt-8">
@@ -122,6 +139,29 @@ export default function HerbalGardening() {
               quod corporis temporibus voluptate quae rem, cum tempore nisi
               ipsum corrupti exercitationem! Ipsam eos fuga tenetur vel.
             </p>
+          </div>
+        </div>
+        <div className="h-[30em] flex pt-3">
+          <div className="w-[50%] p-16 text-center">
+            <h1 className="font-bold text-3xl">Abstract Title</h1>
+            <p className="pt-8">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam nemo accusamus quidem nobis sequi eius, praesentium
+              esse enim sint sit eligendi incidunt non quo architecto blanditiis
+              soluta commodi maxime impedit. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Itaque expedita recusandae sit unde,
+              quod corporis temporibus voluptate quae rem, cum tempore nisi
+              ipsum corrupti exercitationem! Ipsam eos fuga tenetur vel.
+            </p>
+          </div>
+          <div className="w-[50%]">
+          <Image
+            src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            height="1000"
+            width="1000"
+            className="w-full h-full rounded-md opacity-85"
+            alt="thumbnail"
+          />
           </div>
         </div>
       </AuroraBackground>

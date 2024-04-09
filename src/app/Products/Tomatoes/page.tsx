@@ -2,6 +2,7 @@
 import React from "react";
 import { StickyScroll } from "@/app/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
+import { Button } from "@/app/components/ui/moving-border";
 
 const content = [
   {
@@ -17,6 +18,7 @@ const content = [
           className="h-full w-full object-cover"
           alt="linear board demo"
         />
+         
       </div>
     ),
   },
@@ -82,6 +84,7 @@ const content = [
           className="h-full w-full object-cover"
           alt="linear board demo"
         />
+       
       </div>
     ),
   },
@@ -92,7 +95,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src="https://images.unsplash.com/photo-1571680322317-a5f004900ace?q=80&w=1906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1485795046599-702122cd1267?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           width={300}
           height={300}
           className="h-full w-full object-cover"

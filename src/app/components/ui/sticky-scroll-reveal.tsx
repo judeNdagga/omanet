@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
+import { Button } from "./moving-border";
 
 export const StickyScroll = ({
   content,
@@ -84,6 +85,16 @@ export const StickyScroll = ({
                 className="text-kg text-slate-300 max-w-sm mt-10"
               >
                 {item.description}
+                <p className="pt-8"><Button
+            borderRadius="1.75rem"
+            className="bg-gradient-to-r from-green-900 to-green-400 text-white 
+          border-neutral-200 uppercase 
+          font-mono
+           hover:text-base hover:font-semibold
+            duration-300"
+          >
+            Buy Now
+          </Button></p>
               </motion.p>
             </div>
           ))}
