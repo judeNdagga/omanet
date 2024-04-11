@@ -36,7 +36,7 @@ export default function Home() {
           className="bg-gradient-to-r from-green-900 to-green-300 text-white 
           border-neutral-200 uppercase 
           font-mono
-           hover:text-base hover:font-semibold
+           hover:text-base hover:font-semibold 
             duration-300"
         >
           Check Out
