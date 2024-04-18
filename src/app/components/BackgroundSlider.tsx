@@ -5,8 +5,31 @@ import { RxDotFilled } from "react-icons/rx";
 import { Button } from "../components/ui/moving-border";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import {
+  TypewriterEffect,
+  TypewriterEffectSmooth,
+} from "../components/ui/typewriter-effect";
 //import MobileNavbar2 from "./MobileNavbar2";
 export default function BackgroundSlider() {
+  const words = [
+    {
+      text: "Learn",
+    },
+    {
+      text: "Organic",
+    },
+    {
+      text: "Farming",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "OMANET.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
+
   const slides = [
     {
       url: "https://images.unsplash.com/photo-1598030304671-5aa1d6f21128?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

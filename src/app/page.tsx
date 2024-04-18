@@ -22,14 +22,21 @@ export default function Home() {
   return (
     <div>
       <BackgroundSlider />
-      <div className="bg-gradient-to-b from-green-600 from-3%
+      {/* 1st level */}
+      <div className="h-[40em]
+       bg-gradient-to-b from-green-600 from-3%
+       via-green-300 
+        to-white to-75%
+       p-10">
+      <div className="bg-gradient-to-t from-green-600 from-3%
       via-green-300 
-       to-white to-75% opacity-90 h-[45em] flex">
-        {/* 1st level */}
+       to-white to-75% flex rounded-xl animate-aurora"
+       style={{ backgroundImage: `url(https://images.unsplash.com/photo-1469053713174-e64e64779a7a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)` }}>
+        
         <div className="text-center text-black w-[50%]">
-          <h1 className="pt-32 text-3xl uppercase font-semibold font-mono">Best Quality Products</h1>
-          <p className="pt-8 pl-20 pr-20 pb-4">
-           <TextGenerateEffect words={words} />
+          <h1 className="pt-32 text-3xl uppercase font-semibold font-mono text-white">WHY OMANET?</h1>
+          <p className="pt-8 pl-20 pr-20 pb-4 text-white">
+           {words}
           </p>
           <Button
           borderRadius="1.75rem"
@@ -45,12 +52,12 @@ export default function Home() {
         <div className="w-[50%]">
           <CardContainer className="inter-var w-full">
             <CardBody className="w-full">
-              <CardItem className="w-full">
+              <CardItem className="w-full pt-4">
               <Image
             src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             height="1000"
             width="1000"
-            className=" h-[30em] w-[98%] object-cover rounded-xl group-hover/card:shadow-xl"
+            className="h-[30em] w-[98%] object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
               </CardItem>
@@ -61,19 +68,25 @@ export default function Home() {
 
         
       </div>
-
+      </div>
       {/* 2nd level */}
-      <div className="bg-gradient-to-t from-green-600 from-3%
-      via-green-300 
-       to-white to-75%  opacity-90 h-[45em] flex">
+      <div className="h-[40em]
+       bg-gradient-to-t from-green-600 from-3%
+       via-green-300 
+        to-white to-75%
+       p-10">
+      <div className="bg-scroll bg-gradient-to-b from-green-600 from-3%
+      via-green-300 to-white to-75% 
+       flex rounded-xl animate-aurora"
+      style={{ backgroundImage: `url(https://images.unsplash.com/photo-1518843875459-f738682238a6?q=80&w=2042&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)` }}>
         
-        
+        {/* <div className="bg-scroll rounded-xl" style={{ backgroundImage: `url(https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)` }}> */}
         <div className="w-[50%]">
           <CardContainer className="inter-var w-full">
             <CardBody className="w-full">
-              <CardItem className="w-full pl-4">
+              <CardItem className="w-full pl-4 pt-4">
               <Image
-            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             height="1000"
             width="1000"
             className=" h-[30em] w-[98%] object-cover rounded-xl group-hover/card:shadow-xl"
@@ -84,9 +97,9 @@ export default function Home() {
           </CardContainer>
         </div>
         <div className="text-center text-black w-[50%] ">
-          <h1 className="pt-32 text-3xl uppercase font-semibold font-mono">Farmer Products</h1>
-          <p className="pt-8 pl-20 pr-20 pb-4">
-           <TextGenerateEffect words={words} />
+          <h1 className="pt-32 text-3xl uppercase font-semibold font-mono text-white">Farmer Products</h1>
+          <p className="pt-8 pl-20 pr-20 pb-4 text-white">
+           {words}
           </p>
           <Button
           borderRadius="1.75rem"
@@ -102,17 +115,24 @@ export default function Home() {
 
         
       </div>
+      </div>
 
       {/* 3rd level */}
 
-      <div className="bg-gradient-to-b from-green-600 from-3%
+      <div className="h-[40em]
+       bg-gradient-to-b from-green-600 from-3%
+       via-green-300 
+        to-white to-75%
+       p-10">
+      <div className="bg-gradient-to-t from-green-600 from-3%
       via-green-300 
-       to-white to-75%  opacity-90 h-[45em] flex">
-        {/* 1st level */}
+       to-white to-75% flex rounded-xl animate-aurora"
+       style={{ backgroundImage: `url(https://images.unsplash.com/uploads/141143339879512fe9b0d/f72e2c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)` }}>
+      
         <div className="text-center text-black w-[50%] ">
-          <h1 className="pt-32 text-3xl uppercase font-semibold font-mono">Fast Delivery</h1>
-          <p className="pt-8 pl-20 pr-20 pb-4">
-           <TextGenerateEffect words={words} />
+          <h1 className="pt-32 text-3xl uppercase font-semibold font-mono text-white">Fast Delivery</h1>
+          <p className="pt-8 pl-20 pr-20 pb-4 text-white">
+           {words}
           </p>
           <Button
           borderRadius="1.75rem"
@@ -128,7 +148,7 @@ export default function Home() {
         <div className="w-[50%]">
           <CardContainer className="inter-var w-full">
             <CardBody className="w-full">
-              <CardItem className="w-full">
+              <CardItem className="w-full pt-4">
               <Image
             src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             height="1000"
@@ -143,6 +163,7 @@ export default function Home() {
         
 
         
+      </div>
       </div>
 
     </div>
