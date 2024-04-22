@@ -127,7 +127,7 @@ export default function Home() {
       <div className="bg-gradient-to-t from-green-600 from-3%
       via-green-300 
        to-white to-75% flex rounded-xl animate-aurora"
-       style={{ backgroundImage: `url(https://images.unsplash.com/uploads/141143339879512fe9b0d/f72e2c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)` }}>
+       style={{ backgroundImage: `url(https://images.unsplash.com/photo-1529909369182-b5a23481c330?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)` }}>
       
         <div className="text-center text-black w-[50%] ">
           <h1 className="pt-32 text-3xl uppercase font-semibold font-mono text-white">Fast Delivery</h1>
@@ -150,7 +150,7 @@ export default function Home() {
             <CardBody className="w-full">
               <CardItem className="w-full pt-4">
               <Image
-            src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1607273685680-6bd976c5a5ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             height="1000"
             width="1000"
             className=" h-[30em] w-[98%] object-cover rounded-xl group-hover/card:shadow-xl"
