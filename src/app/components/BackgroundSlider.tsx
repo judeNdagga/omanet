@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import { Button } from "../components/ui/moving-border";
+import "../../../public/images/banana/Banana049.JPG";
+import net1 from "../../../public/images/homepage/networking1.jpg"
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {

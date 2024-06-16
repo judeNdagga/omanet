@@ -92,8 +92,10 @@ export const StickyScroll = ({
           font-mono
            hover:text-base hover:font-semibold
             duration-300"
+            
           >
-            Buy Now
+            <a href="./Tomatoes/BuyTomatoes"> Buy Now</a>
+           
           </Button></p>
               </motion.p>
             </div>
