@@ -1,7 +1,54 @@
+"use client"
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import banana1 from "../../../../public/images/banana/Banana049.jpg";
 import { BsArrowRight } from "react-icons/bs";
 export default function Consultancy() {
+  const FadeInUpwardsAnimation = {
+    initial: { 
+      y: 200, 
+      opacity: 0
+     },
+    animate: { 
+      y: 0, 
+      opacity: 1,
+      transition: {
+        delay: 0.08,
+        type: "easeInOut"
+      }
+    },
+    
+  };
+  const FadeInUpwardsAnimationSlower = {
+    initial: { 
+      y: 200, 
+      opacity: 0
+     },
+    animate: { 
+      y: 0, 
+      opacity: 1,
+      transition: {
+        delay: 0.18,
+        type: "easeInOut"
+      }
+    },
+    
+  };
+  const FadeInUpwardsAnimationEvenSlower = {
+    initial: { 
+      y: 200, 
+      opacity: 0
+     },
+    animate: { 
+      y: 0, 
+      opacity: 1,
+      transition: {
+        delay: 0.38,
+        type: "easeInOut"
+      }
+    },
+    
+  };
   return (
     <div className="overflow-hidden">
      <div
@@ -40,10 +87,16 @@ export default function Consultancy() {
         </h1>
         <div className="sm:flex sm:gap-10 p-8">
           {/* first card */}
-          <div
+          <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75% hover:-inset-y-2"
+     variants={FadeInUpwardsAnimation}
+     initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
           >
             <h1 className="text-2xl font-semibold pb-8">
               STRATEGIC DATA INFRASTRUCTURE DESIGN
@@ -55,14 +108,20 @@ export default function Consultancy() {
               storage, frameworks, and integration tools for enhanced data
               access and management.
             </p>
-          </div>
+          </motion.div>
 
           {/* second card */}
 
-          <div
+          <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
              to-green-600 to-75% hover:-inset-y-2"
+             variants={FadeInUpwardsAnimationSlower}
+             initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
           >
             <h1 className="text-2xl font-semibold pb-8">
               EFFICIENT DATA PIPELINES & INTEGRATION
@@ -73,13 +132,19 @@ export default function Consultancy() {
               pipelines and data lakes, you can accommodate increasing data
               volumes and complexity, leading to a more accurate analysis.
             </p>
-          </div>
+          </motion.div>
           {/* third card */}
 
-          <div
+          <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
              to-green-600 to-75% hover:-inset-y-2"
+             variants={FadeInUpwardsAnimationEvenSlower}
+             initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
           >
             <h1 className="text-2xl font-semibold pb-8">
               RELIABLE DATA SYSTEM MAINTENANCE
@@ -90,13 +155,13 @@ export default function Consultancy() {
               implementation of best practices, and performance optimization,
               your data infrastructure remains reliable and highly accessible.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {/* after 3 cards */}
 
 
-        <div className="sm:p-20 p-10">
+        <div className="p-20">
           <div
             className="card card-body bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
