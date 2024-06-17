@@ -4,8 +4,8 @@ import { BsArrowRight } from "react-icons/bs";
 export default function Consultancy() {
   return (
     <div className="overflow-hidden">
-      <div
-        className="h-[50em] sm:flex pt-[11em] p-20  brightness-90
+     <div
+        className="h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75%"

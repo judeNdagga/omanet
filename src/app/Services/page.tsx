@@ -9,7 +9,7 @@ export default function Entrepreneurship() {
   return (
     <div className="overflow-hidden">
       <div
-        className="h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
+        className="h-[41em] sm:h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75%"
@@ -46,7 +46,8 @@ export default function Entrepreneurship() {
         </h1>
         <div className="sm:flex sm:gap-10 p-8">
           {/* first card */}
-          <div className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl">
+          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl"
+          href="/Services/Consultancy">
             <Image
               src={training1}
               className="w-full h-full rounded-xl brightness-75 hover:brightness-50"
@@ -63,11 +64,12 @@ export default function Entrepreneurship() {
               OMANET selected the right technology for our search algorithm and
               created a very user-friendly front-end application.
             </p>
-          </div>
+          </a>
 
           {/* second card */}
 
-          <div className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl">
+          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl"
+          href="/Services/Training">
             <Image
               src={training3}
               className="w-full h-full rounded-xl brightness-75 hover:brightness-50"
@@ -84,10 +86,11 @@ export default function Entrepreneurship() {
               OMANET selected the right technology for our search algorithm and
               created a very user-friendly front-end application.
             </p>
-          </div>
+          </a>
           {/* third card */}
 
-          <div className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl">
+          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl"
+          href="/Services/Communication">
             <Image
               src={training2}
               className="w-full h-full rounded-xl brightness-75 hover:brightness-50"
@@ -104,14 +107,15 @@ export default function Entrepreneurship() {
               OMANET selected the right technology for our search algorithm and
               created a very user-friendly front-end application.
             </p>
-          </div>
+          </a>
         </div>
 
         {/* after first cards */}
 
         <div className="sm:flex gap-10 p-8">
           {/* first card */}
-          <div className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl">
+          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl"
+          href="/Services/ProductDevelopment">
             <Image
               src={chilli3}
               className="w-full h-full rounded-xl brightness-75 hover:brightness-50"
@@ -128,11 +132,12 @@ export default function Entrepreneurship() {
               OMANET selected the right technology for our search algorithm and
               created a very user-friendly front-end application.
             </p>
-          </div>
+          </a>
 
           {/* second card */}
 
-          <div className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl">
+          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] shadow-xl"
+          href="/Services/Entrepreneurship">
             <Image
               src={networking1}
               className="w-full h-full rounded-xl brightness-75 hover:brightness-50"
@@ -149,7 +154,7 @@ export default function Entrepreneurship() {
               OMANET selected the right technology for our search algorithm and
               created a very user-friendly front-end application.
             </p>
-          </div>
+          </a>
           {/* third card */}
         </div>
 

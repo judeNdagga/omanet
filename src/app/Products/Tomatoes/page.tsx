@@ -10,7 +10,7 @@ const content = [
     description:
       "The king of tomatoes, THE salsa tomato. Red Beefsteak tomatoes are large and meaty with lots of juice, making them ideal to use as a base for fresh sauces and dips. Red Beefsteak’s mild flavor makes them the perfect complement to any dish, without being too overpowering. They make a great addition to your classic hamburger or BLT, and can even hold their own as a patty substitute!",
     content: (
-      <div className="h-full w-full  flex items-center justify-center text-white">
+      <div className="h-full w-full flex items-center justify-center text-white">
         <Image
           src="https://images.unsplash.com/photo-1562695530-ca03c4b98623?q=80&w=1852&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           width={300}
