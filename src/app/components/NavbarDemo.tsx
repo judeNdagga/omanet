@@ -31,28 +31,28 @@ function Navbar({ className }: { className?: string }) {
         </MenuItem>
       </a>
       
-        <a href="../Services"><MenuItem setActive={setActive} active={active} item="Services">
+        <a href="/Services"><MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="../Services/Entrepreneurship">Entrepreneurship and Marketing</HoveredLink>
-            <HoveredLink href="../Services/Training">Training and Extension</HoveredLink>
-            <HoveredLink href="../Services/ProductDevelopment">Product Development</HoveredLink>
-            <HoveredLink href="../Services/Communication">Communication</HoveredLink>
+            <HoveredLink href="/Services/Entrepreneurship">Entrepreneurship and Marketing</HoveredLink>
+            <HoveredLink href="/Services/Training">Training and Extension</HoveredLink>
+            <HoveredLink href="/Services/ProductDevelopment">Product Development</HoveredLink>
+            <HoveredLink href="/Services/Communication">Communication</HoveredLink>
             
-            <HoveredLink href="../Services/Consultancy">Consultancy</HoveredLink>
+            <HoveredLink href="/Services/Consultancy">Consultancy</HoveredLink>
           </div>
         </MenuItem></a>
-       <a href="../Products">
+       <a href="/Products">
        <MenuItem setActive={setActive} active={active} item="Products">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Organic Wine"
-              href="/Products/OrganicWine"
+              href="/Products/OrganicWine/BuyWine"
               src="https://images.unsplash.com/photo-1610371800811-a7d2a7b6b3e8?q=80&w=1963&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               description="Prepare for tech interviews like never before."
             />
             <ProductItem
               title="Fresh Cherry Tomatoes"
-              href="/Products/Tomatoes"
+              href="/Products/Tomatoes/BuyTomatoes"
               src="https://images.unsplash.com/photo-1589190051962-0b138f75d3c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               description="Production ready Tailwind css components for your next project"
             />
@@ -71,7 +71,7 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
        </a>
-       <a href="../About">
+       <a href="/About">
        <MenuItem setActive={setActive} active={active} item="About">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/About/Gallery">Gallery</HoveredLink>

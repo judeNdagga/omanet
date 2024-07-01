@@ -1,57 +1,54 @@
-"use client"
+"use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import banana1 from "../../../../public/images/banana/Banana049.jpg";
 import { BsArrowRight } from "react-icons/bs";
 export default function Consultancy() {
   const FadeInUpwardsAnimation = {
-    initial: { 
-      y: 200, 
-      opacity: 0
-     },
-    animate: { 
-      y: 0, 
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         delay: 0.08,
-        type: "easeInOut"
-      }
+        type: "easeInOut",
+      },
     },
-    
   };
   const FadeInUpwardsAnimationSlower = {
-    initial: { 
-      y: 200, 
-      opacity: 0
-     },
-    animate: { 
-      y: 0, 
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         delay: 0.18,
-        type: "easeInOut"
-      }
+        type: "easeInOut",
+      },
     },
-    
   };
   const FadeInUpwardsAnimationEvenSlower = {
-    initial: { 
-      y: 200, 
-      opacity: 0
-     },
-    animate: { 
-      y: 0, 
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         delay: 0.38,
-        type: "easeInOut"
-      }
+        type: "easeInOut",
+      },
     },
-    
   };
   return (
     <div className="overflow-hidden">
-     <div
+      <div
         className="h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
@@ -66,22 +63,22 @@ export default function Consultancy() {
         <div className="divider lg:divider-horizontal divider-success h-10"></div>
         <div className="sm:w-[48%] sm:text-xl">
           <p>
-            Consultancy in agriculture isn't just about sowing seeds; it's
-            about cultivating innovation, harvesting opportunity, and reaping
-            sustainable growth. Embrace the land, nurture creativity, and watch
-            your dreams grow into fields of abundance.
+            Consultancy in organic agriculture plays a crucial role in guiding
+            farmers, agribusinesses, and organizations towards sustainable and
+            profitable organic farming practices. Organic agricultural
+            consultants provide expert advice, support, and training to help
+            clients transition to organic farming, improve their operations, and
+            achieve certification.
             <p className="sm:pt-20">
-              From identifying priorities with an AI & Data Strategy to scaling
-              ML Operations, our team of experts works closely with businesses
-              to unlock the full potential of their data, providing bespoke
-              solutions that drive growth, efficiency, and innovation.
+              Consultants help farmers build resilience against various risks,
+              including climate change, market fluctuations, and pest outbreaks
             </p>
           </p>
         </div>
       </div>
 
-     {/* 2nd level */}
-     <div className="bg-white">
+      {/* 2nd level */}
+      <div className="bg-white">
         <h1 className="text-black text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           DISCOVER HOW TO RUN AN AGRICULTURAL BUSINESS
         </h1>
@@ -91,22 +88,22 @@ export default function Consultancy() {
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75% hover:-inset-y-2"
-     variants={FadeInUpwardsAnimation}
-     initial="initial"
-          whileInView="animate"
-          viewport={{
-            once: true,
-          }}
+            variants={FadeInUpwardsAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <h1 className="text-2xl font-semibold pb-8">
-              STRATEGIC DATA INFRASTRUCTURE DESIGN
+              TRAINING AND EDUCATION
             </h1>
             <p>
-              After evaluating your company's existing data systems,
-              requirements, and sources, we'll design a scalable, secure, and
-              affordable solution. This includes choosing the proper data
-              storage, frameworks, and integration tools for enhanced data
-              access and management.
+              Workshops and Seminars: Organizing workshops and seminars on
+              organic farming practices, sustainability, and market trends.
+              <br />
+              Field Days and Demonstrations: Hosting on-farm demonstrations and
+              field days to showcase best practices and innovative techniques.
             </p>
           </motion.div>
 
@@ -116,21 +113,24 @@ export default function Consultancy() {
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
              to-green-600 to-75% hover:-inset-y-2"
-             variants={FadeInUpwardsAnimationSlower}
-             initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
+            variants={FadeInUpwardsAnimationSlower}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <h1 className="text-2xl font-semibold pb-8">
-              EFFICIENT DATA PIPELINES & INTEGRATION
+              VALUE-ADDED PRODUCT DEVELOPMENT
             </h1>
             <p>
-              Data processing and data quality optimization are essential to
-              reliable and timely decision-making. By implementing powerful data
-              pipelines and data lakes, you can accommodate increasing data
-              volumes and complexity, leading to a more accurate analysis.
+              Product Innovation: Identifying opportunities for creating
+              value-added organic products such as jams, sauces, and processed
+              foods.
+              <br />
+              Processing and Packaging: Advising on processing techniques and
+              packaging solutions that maintain organic integrity and appeal to
+              consumers.
             </p>
           </motion.div>
           {/* third card */}
@@ -139,27 +139,28 @@ export default function Consultancy() {
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
              to-green-600 to-75% hover:-inset-y-2"
-             variants={FadeInUpwardsAnimationEvenSlower}
-             initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
+            variants={FadeInUpwardsAnimationEvenSlower}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <h1 className="text-2xl font-semibold pb-8">
-              RELIABLE DATA SYSTEM MAINTENANCE
+              SUSTAINABLE FARM MANAGEMENT
             </h1>
             <p>
-              Maintaining and optimizing your data infrastructure lets you focus
-              on your core business. Through regular data system monitoring,
-              implementation of best practices, and performance optimization,
-              your data infrastructure remains reliable and highly accessible.
+              Resource Efficiency: Advising on efficient use of water, energy,
+              and other resources to reduce costs and environmental impact.
+              <br />Organic Inputs: Recommending suitable organic fertilizers,
+              pesticides, and seeds to meet certification standards and improve
+              crop yields. 
+              
             </p>
           </motion.div>
         </div>
 
         {/* after 3 cards */}
-
 
         <div className="p-20">
           <div
@@ -168,21 +169,18 @@ export default function Consultancy() {
      to-green-600 to-75%"
           >
             <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em]">
-              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING YOUR BUSINESS
+              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
+              YOUR BUSINESS
             </h1>
-           
+
             <div className="btn sm:btn-wide w-[15em] mt-6 sm:mt-28 bg-slate-900 hover:bg-gray-100 border-none hover:text-black text-white flex sm:gap-5">
-              <h1 className="text-md ">
-                Connect with our experts
-                
-              </h1>
+              <h1 className="text-md ">Connect with our experts</h1>
               <BsArrowRight className="hidden sm:block text-2xl animate-pulse" />
             </div>
           </div>
         </div>
 
         {/* after card */}
-
 
         <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 h-[35em]">
           <h1 className="text-black font-bold font-mono text-5xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
@@ -206,7 +204,7 @@ export default function Consultancy() {
               className="rounded-md h-[20em] hover:animate-pulse"
             ></Image>
             <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
+              HOW ELIZABETH USED OUR ADVICE
             </h1>
             <p className="text-black">
               The world's largest privately owned Fragrance and Flavor company
@@ -226,7 +224,7 @@ export default function Consultancy() {
               className="rounded-md h-[20em] hover:animate-pulse"
             ></Image>
             <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
+              HOW ELIZABETH USED OUR ADVICE
             </h1>
             <p className="text-black">
               The world's largest privately owned Fragrance and Flavor company
@@ -245,7 +243,7 @@ export default function Consultancy() {
               className="rounded-md h-[20em] hover:animate-pulse"
             ></Image>
             <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
+              HOW ELIZABETH USED OUR ADVICE
             </h1>
             <p className="text-black">
               The world's largest privately owned Fragrance and Flavor company

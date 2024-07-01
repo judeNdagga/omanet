@@ -1,53 +1,92 @@
-"use client"
+"use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import banana1 from "../../../../public/images/banana/Banana049.jpg";
 import { BsArrowRight } from "react-icons/bs";
 export default function Training() {
+  const FadeInLeftAnimation = {
+    initial: {
+      x: -200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInLeftAnimationSlower = {
+    initial: {
+      x: -200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.4,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInRightAnimation = {
+    initial: {
+      x: 200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        type: "easeInOut",
+      },
+    },
+  };
   const FadeInUpwardsAnimation = {
-    initial: { 
-      y: 200, 
-      opacity: 0
-     },
-    animate: { 
-      y: 0, 
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         delay: 0.08,
-        type: "easeInOut"
-      }
+        type: "easeInOut",
+      },
     },
-    
   };
   const FadeInUpwardsAnimationSlower = {
-    initial: { 
-      y: 200, 
-      opacity: 0
-     },
-    animate: { 
-      y: 0, 
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         delay: 0.18,
-        type: "easeInOut"
-      }
+        type: "easeInOut",
+      },
     },
-    
   };
   const FadeInUpwardsAnimationEvenSlower = {
-    initial: { 
-      y: 200, 
-      opacity: 0
-     },
-    animate: { 
-      y: 0, 
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         delay: 0.38,
-        type: "easeInOut"
-      }
+        type: "easeInOut",
+      },
     },
-    
   };
   return (
     <div className="overflow-hidden">
@@ -66,15 +105,17 @@ export default function Training() {
         <div className="divider lg:divider-horizontal divider-success h-10"></div>
         <div className="sm:w-[48%] sm:text-xl">
           <p>
-            Training in agriculture isn't just about sowing seeds; it's
-            about cultivating innovation, harvesting opportunity, and reaping
-            sustainable growth. Embrace the land, nurture creativity, and watch
-            your dreams grow into fields of abundance.
+            Our commitment to your success doesn’t end with a single
+            consultation. We provide ongoing support and training to help you
+            stay informed about the latest organic farming techniques and market
+            trends. Whether you need periodic check-ins or continuous guidance,
+            we’re here to ensure your farm thrives.
             <p className="sm:pt-20">
-              From identifying priorities with an AI & Data Strategy to scaling
-              ML Operations, our team of experts works closely with businesses
-              to unlock the full potential of their data, providing bespoke
-              solutions that drive growth, efficiency, and innovation.
+              Training in organic agriculture is essential for fostering the
+              knowledge, skills, and practices needed to cultivate sustainable,
+              environmentally friendly, and health-conscious farming systems. As
+              the demand for organic products continues to rise, comprehensive
+              training programs are crucial in equipping farmers.
             </p>
           </p>
         </div>
@@ -83,7 +124,7 @@ export default function Training() {
       {/* 2nd level */}
       <div className="bg-white">
         <h1 className="text-black text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
-          DISCOVER HOW TO RUN AN AGRICULTURAL BUSINESS
+          UNDERTAKE CRUCIAL TRAINING FOR BETTER SUCCESS
         </h1>
         <div className="sm:flex sm:gap-10 p-8">
           {/* first card */}
@@ -91,22 +132,23 @@ export default function Training() {
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75% hover:-inset-y-2"
-     variants={FadeInUpwardsAnimation}
-     initial="initial"
-          whileInView="animate"
-          viewport={{
-            once: true,
-          }}
+            variants={FadeInUpwardsAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <h1 className="text-2xl font-semibold pb-8">
-              STRATEGIC DATA INFRASTRUCTURE DESIGN
+              WORKSHOPS AND SEMINARS
             </h1>
             <p>
-              After evaluating your company's existing data systems,
-              requirements, and sources, we'll design a scalable, secure, and
-              affordable solution. This includes choosing the proper data
-              storage, frameworks, and integration tools for enhanced data
-              access and management.
+              Workshops and seminars led by experienced organic farmers,
+              agronomists, and industry experts provide valuable insights and
+              up-to-date information on organic farming practices. These
+              sessions often cover advanced topics, such as organic market
+              trends, innovative farming technologies, and sustainable business
+              strategies.
             </p>
           </motion.div>
 
@@ -116,21 +158,23 @@ export default function Training() {
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
              to-green-600 to-75% hover:-inset-y-2"
-             variants={FadeInUpwardsAnimationSlower}
-             initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
+            variants={FadeInUpwardsAnimationSlower}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <h1 className="text-2xl font-semibold pb-8">
-              EFFICIENT DATA PIPELINES & INTEGRATION
+              NETWORKING AND COMMUNITY BUILDING
             </h1>
             <p>
-              Data processing and data quality optimization are essential to
-              reliable and timely decision-making. By implementing powerful data
-              pipelines and data lakes, you can accommodate increasing data
-              volumes and complexity, leading to a more accurate analysis.
+              Training programs often provide opportunities for networking and
+              community building. Participants can connect with fellow trainees,
+              mentors, and industry professionals, fostering a supportive
+              community of like-minded individuals committed to organic farming.
+              This network can be invaluable for sharing knowledge, resources,
+              and opportunities.
             </p>
           </motion.div>
           {/* third card */}
@@ -139,27 +183,27 @@ export default function Training() {
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
              to-green-600 to-75% hover:-inset-y-2"
-             variants={FadeInUpwardsAnimationEvenSlower}
-             initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
+            variants={FadeInUpwardsAnimationEvenSlower}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <h1 className="text-2xl font-semibold pb-8">
-              RELIABLE DATA SYSTEM MAINTENANCE
+              FIELD VISITS AND DEMONSTRATIONS
             </h1>
             <p>
-              Maintaining and optimizing your data infrastructure lets you focus
-              on your core business. Through regular data system monitoring,
-              implementation of best practices, and performance optimization,
-              your data infrastructure remains reliable and highly accessible.
+              Field visits to successful organic farms and demonstration sites
+              offer trainees a firsthand look at how organic principles are
+              applied in diverse farming operations. These visits provide
+              practical examples and inspiration, showcasing innovative
+              techniques and best practices in action.
             </p>
           </motion.div>
         </div>
 
         {/* after 3 cards */}
-
 
         <div className="p-20">
           <div
@@ -168,14 +212,12 @@ export default function Training() {
      to-green-600 to-75%"
           >
             <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em]">
-              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING YOUR BUSINESS
+              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
+              YOUR BUSINESS
             </h1>
-           
+
             <div className="btn sm:btn-wide w-[15em] mt-6 sm:mt-28 bg-slate-900 hover:bg-gray-100 border-none hover:text-black text-white flex sm:gap-5">
-              <h1 className="text-md ">
-                Connect with our experts
-                
-              </h1>
+              <h1 className="text-md ">Connect with our experts</h1>
               <BsArrowRight className="hidden sm:block text-2xl animate-pulse" />
             </div>
           </div>
@@ -183,87 +225,48 @@ export default function Training() {
 
         {/* after card */}
 
-
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 h-[35em]">
-          <h1 className="text-black font-bold font-mono text-5xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
-            HEAR IT FROM OUR CUSTOMERS
-          </h1>
-          <div className="divider lg:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-black text-lg ml-20 pr-10">
-            Discover how we helped industry leaders build their data-driven
-            future. Get a deeper understanding of our AI & Data solutions and
-            the impact they have on businesses like yours.
-          </h1>
-        </div>
-        <div className="sm:flex">
-          {/* 1st card */}
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-          {/* 2nd card */}
-
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-          {/* 3rd card */}
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center h-[20em]">
-          <div
-            className="btn bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% border-none mt-20 hover:btn-lg"
+        <div className="sm:flex sm:h-[40em] pt-10">
+          <motion.div
+            className="sm:w-[50%]"
+            variants={FadeInRightAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
-            <h1 className="text-white">Discover More Case Studies</h1>
-          </div>
+            <p className="text-black pl-5 sm:pl-16 sm:pr-44 sm:pt-20">
+              <h1 className="text-xl font-bold pb-10">OUR APPROACH</h1>
+              <h1 className="text-4xl sm:text-6xl pb-6">
+                EASY, <a className="text-green-600">ORGANIC</a> <br />
+                SEAMLESS
+              </h1>
+              <p>
+                Practical, hands-on training is a cornerstone of effective
+                organic agriculture education. Participants engage in on-farm
+                experiences where they can apply theoretical knowledge to
+                real-world scenarios. This includes activities like soil
+                testing, planting, weeding, composting, and harvesting, as well
+                as managing livestock and implementing pest control measures.
+              </p>
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="sm:w-[50%]"
+            variants={FadeInLeftAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+          >
+            <Image
+              src={banana1}
+              alt=""
+              className="p-5 sm:p-0 sm:pr-5 sm:w-full h-[85%] hover:scale-105 transition duration-500"
+            />
+          </motion.div>
         </div>
       </div>
     </div>

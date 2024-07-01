@@ -1,9 +1,5 @@
 import Image from "next/image";
-import training1 from "../../../public/images/services/Training_3309.jpg";
-import training2 from "../../../public/images/services/Training_3313.jpg";
-import training3 from "../../../public/images/services/Training_171.jpg";
-import networking1 from "../../../public/images/homepage/networking1.jpg";
-import chilli3 from "../../../public/images/services/chilli3.jpg";
+
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 export default function Entrepreneurship() {
   return (
@@ -17,7 +13,7 @@ export default function Entrepreneurship() {
           {/* first card */}
         
           <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:-inset-y-2 pt-2 shadow-xl"
-          href="./Products/OrganicWine"
+          href="./Products/OrganicWine/BuyWine"
           >           
             <Image
               src="https://images.unsplash.com/photo-1610371800811-a7d2a7b6b3e8?q=80&w=1963&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -40,7 +36,7 @@ export default function Entrepreneurship() {
           {/* second card */}
 
           <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:-inset-y-2 pt-2 shadow-xl"
-          href="./Products/Tomatoes"
+          href="./Products/Tomatoes/BuyTomatoes"
           >
             <Image
               src="https://images.unsplash.com/photo-1589190051962-0b138f75d3c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

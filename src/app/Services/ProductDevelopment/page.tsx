@@ -1,53 +1,93 @@
-"use client"
+"use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import banana1 from "../../../../public/images/banana/Banana049.jpg";
 import { BsArrowRight } from "react-icons/bs";
 export default function ProductDevelopment() {
+  const FadeInLeftAnimation = {
+    initial: {
+      x: -200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInLeftAnimationSlower = {
+    initial: {
+      x: -200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.4,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInRightAnimation = {
+    initial: {
+      x: 200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        type: "easeInOut",
+      },
+    },
+  };
+
   const FadeInUpwardsAnimation = {
-    initial: { 
-      y: 200, 
-      opacity: 0
-     },
-    animate: { 
-      y: 0, 
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         delay: 0.08,
-        type: "easeInOut"
-      }
+        type: "easeInOut",
+      },
     },
-    
   };
   const FadeInUpwardsAnimationSlower = {
-    initial: { 
-      y: 200, 
-      opacity: 0
-     },
-    animate: { 
-      y: 0, 
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         delay: 0.18,
-        type: "easeInOut"
-      }
+        type: "easeInOut",
+      },
     },
-    
   };
   const FadeInUpwardsAnimationEvenSlower = {
-    initial: { 
-      y: 200, 
-      opacity: 0
-     },
-    animate: { 
-      y: 0, 
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         delay: 0.38,
-        type: "easeInOut"
-      }
+        type: "easeInOut",
+      },
     },
-    
   };
   return (
     <div className="overflow-hidden">
@@ -61,29 +101,34 @@ export default function ProductDevelopment() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl sm:text-7xl font-mono">Product Development</h1>
+          <h1 className="text-3xl sm:text-7xl font-mono">
+            Product Development
+          </h1>
         </div>
         <div className="divider lg:divider-horizontal divider-success h-10"></div>
         <div className="sm:w-[48%] sm:text-xl">
           <p>
-            Product Development in agriculture isn't just about sowing seeds; it's
-            about cultivating innovation, harvesting opportunity, and reaping
-            sustainable growth. Embrace the land, nurture creativity, and watch
-            your dreams grow into fields of abundance.
+            Product development in organic agriculture is a dynamic and
+            innovative process that transforms raw organic produce into a
+            variety of value-added products. This not only meets consumer demand
+            for healthy, sustainable food options but also enhances
+            profitability for farmers and agribusinesses.
             <p className="sm:pt-20">
-              From identifying priorities with an AI & Data Strategy to scaling
-              ML Operations, our team of experts works closely with businesses
-              to unlock the full potential of their data, providing bespoke
-              solutions that drive growth, efficiency, and innovation.
+              Successful product development begins with understanding market
+              trends and consumer preferences. Organic agricultural
+              entrepreneurs conduct market research to identify gaps and
+              opportunities. This includes analyzing consumer demand for
+              specific organic products, such as gluten-free snacks, plant-based
+              proteins, or organic skincare items.
             </p>
           </p>
         </div>
       </div>
 
-     {/* 2nd level */}
-     <div className="bg-white">
+      {/* 2nd level */}
+      <div className="bg-white">
         <h1 className="text-black text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
-          DISCOVER HOW TO RUN AN AGRICULTURAL BUSINESS
+          ACCESS PROFESSIONAL PRODUCT DEVELOPMENT
         </h1>
         <div className="sm:flex sm:gap-10 p-8">
           {/* first card */}
@@ -91,22 +136,23 @@ export default function ProductDevelopment() {
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75% hover:-inset-y-2"
-     variants={FadeInUpwardsAnimation}
-     initial="initial"
-          whileInView="animate"
-          viewport={{
-            once: true,
-          }}
+            variants={FadeInUpwardsAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <h1 className="text-2xl font-semibold pb-8">
-              STRATEGIC DATA INFRASTRUCTURE DESIGN
+              SUSTAINABLE SOURCING
             </h1>
             <p>
-              After evaluating your company's existing data systems,
-              requirements, and sources, we'll design a scalable, secure, and
-              affordable solution. This includes choosing the proper data
-              storage, frameworks, and integration tools for enhanced data
-              access and management.
+              Ensuring the sustainability and integrity of raw materials is
+              crucial in organic product development. Producers source
+              high-quality organic ingredients, adhering to strict organic
+              certification standards. This involves working with certified
+              organic farms, practicing fair trade, and ensuring that all inputs
+              are free from synthetic chemicals and GMOs.
             </p>
           </motion.div>
 
@@ -116,21 +162,23 @@ export default function ProductDevelopment() {
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
              to-green-600 to-75% hover:-inset-y-2"
-             variants={FadeInUpwardsAnimationSlower}
-             initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
+            variants={FadeInUpwardsAnimationSlower}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <h1 className="text-2xl font-semibold pb-8">
-              EFFICIENT DATA PIPELINES & INTEGRATION
+              INNOVATION AND CREATIVITY
             </h1>
             <p>
-              Data processing and data quality optimization are essential to
-              reliable and timely decision-making. By implementing powerful data
-              pipelines and data lakes, you can accommodate increasing data
-              volumes and complexity, leading to a more accurate analysis.
+              Innovation is at the heart of product development in organic
+              agriculture. Entrepreneurs experiment with new recipes,
+              formulations, and processes to create unique and appealing
+              products. This might include developing organic superfood blends,
+              fermented foods, cold-pressed juices, or eco-friendly packaging
+              solutions.
             </p>
           </motion.div>
           {/* third card */}
@@ -139,27 +187,28 @@ export default function ProductDevelopment() {
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
              to-green-600 to-75% hover:-inset-y-2"
-             variants={FadeInUpwardsAnimationEvenSlower}
-             initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
+            variants={FadeInUpwardsAnimationEvenSlower}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
             <h1 className="text-2xl font-semibold pb-8">
-              RELIABLE DATA SYSTEM MAINTENANCE
+              QUALITY AND SAFETY STANDARDS
             </h1>
             <p>
-              Maintaining and optimizing your data infrastructure lets you focus
-              on your core business. Through regular data system monitoring,
-              implementation of best practices, and performance optimization,
-              your data infrastructure remains reliable and highly accessible.
+              Maintaining high standards of quality and safety is paramount.
+              Organic product developers implement rigorous quality control
+              measures throughout the production process. This includes testing
+              for contaminants, ensuring proper labeling, and adhering to food
+              safety regulations. Certification by recognized organic standards
+              bodies provides additional assurance to consumers.
             </p>
           </motion.div>
         </div>
 
         {/* after 3 cards */}
-
 
         <div className="p-20">
           <div
@@ -168,14 +217,12 @@ export default function ProductDevelopment() {
      to-green-600 to-75%"
           >
             <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em]">
-              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING YOUR BUSINESS
+              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
+              YOUR BUSINESS
             </h1>
-           
+
             <div className="btn sm:btn-wide w-[15em] mt-6 sm:mt-28 bg-slate-900 hover:bg-gray-100 border-none hover:text-black text-white flex sm:gap-5">
-              <h1 className="text-md ">
-                Connect with our experts
-                
-              </h1>
+              <h1 className="text-md ">Connect with our experts</h1>
               <BsArrowRight className="hidden sm:block text-2xl animate-pulse" />
             </div>
           </div>
@@ -183,87 +230,54 @@ export default function ProductDevelopment() {
 
         {/* after card */}
 
-
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 h-[35em]">
-          <h1 className="text-black font-bold font-mono text-5xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
-            HEAR IT FROM OUR CUSTOMERS
-          </h1>
-          <div className="divider lg:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-black text-lg ml-20 pr-10">
-            Discover how we helped industry leaders build their data-driven
-            future. Get a deeper understanding of our AI & Data solutions and
-            the impact they have on businesses like yours.
-          </h1>
-        </div>
-        <div className="sm:flex">
-          {/* 1st card */}
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-          {/* 2nd card */}
-
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-          {/* 3rd card */}
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center h-[20em]">
-          <div
-            className="btn bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% border-none mt-20 hover:btn-lg"
+        <div className="sm:flex sm:h-[40em] pt-10">
+          <motion.div
+            className="sm:w-[50%]"
+            variants={FadeInRightAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
           >
-            <h1 className="text-white">Discover More Case Studies</h1>
-          </div>
+            <p className="text-black pl-5 sm:pl-16 sm:pr-44 sm:pt-20">
+              <h1 className="text-xl font-bold pb-10">OUR APPROACH</h1>
+              <h1 className="text-4xl sm:text-6xl pb-6">
+                EASY, <a className="text-green-600">ORGANIC</a> <br />
+                SEAMLESS
+              </h1>
+              <p>
+                Product development in organic agriculture offers significant
+                economic benefits. By adding value to raw produce, farmers and
+                agribusinesses can increase their revenue streams and
+                profitability. This economic viability supports the growth of
+                the organic sector and encourages more farmers to adopt organic
+                practices. 
+                <br />Product development in organic agriculture is a
+                multifaceted process that combines innovation, sustainability,
+                and market insight. By transforming raw organic materials into
+                diverse, high-quality products, entrepreneurs not only meet
+                consumer demand but also contribute to a healthier planet and a
+                more resilient food system.
+              </p>
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="sm:w-[50%]"
+            variants={FadeInLeftAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+          >
+            <Image
+              src={banana1}
+              alt=""
+              className="p-5 sm:p-0 sm:pr-5 sm:w-full h-[85%] hover:scale-105 transition duration-500"
+            />
+          </motion.div>
         </div>
       </div>
     </div>
