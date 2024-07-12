@@ -91,7 +91,7 @@ export default function Communication() {
   return (
     <div className="overflow-hidden">
       <div
-        className="h-[41em] sm:h-[50em] sm:flex pt-[11em] p-20  brightness-90
+        className="h-[41em] sm:h-[35em] sm:flex pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75%"
@@ -248,8 +248,10 @@ export default function Communication() {
             }}
           >
             <Image
-              src={banana1}
+              src="https://images.unsplash.com/photo-1624207615763-df683de05417?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
+              width={1080}
+              height={720}
               className="p-5 sm:p-0 sm:pr-5 sm:w-full h-[85%] hover:scale-105 transition duration-500"
             />
           </motion.div>

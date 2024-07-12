@@ -1,7 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import banana1 from "../../../../public/images/banana/Banana049.jpg";
+import training3 from "../../../../public/images/services/Training_171.jpg";
 import { BsArrowRight } from "react-icons/bs";
 export default function Training() {
   const FadeInLeftAnimation = {
@@ -262,7 +262,7 @@ export default function Training() {
             }}
           >
             <Image
-              src={banana1}
+              src={training3}
               alt=""
               className="p-5 sm:p-0 sm:pr-5 sm:w-full h-[85%] hover:scale-105 transition duration-500"
             />

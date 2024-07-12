@@ -31,7 +31,7 @@ export default function HerbalGardening() {
   ];
 
   return (
-    <div className="h-[100em] sm:h-auto overflow-hidden">
+    <div className="h-[103em] sm:h-auto overflow-hidden">
       <div className="bg-white h-full sm:pl-20 pl-10 sm:pr-20 pr-10">
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}

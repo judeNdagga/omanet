@@ -273,8 +273,10 @@ export default function ProductDevelopment() {
             }}
           >
             <Image
-              src={banana1}
+              src="https://images.unsplash.com/photo-1475948164756-9a56289068fb?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
+              height={720}
+              width={1080}
               className="p-5 sm:p-0 sm:pr-5 sm:w-full h-[85%] hover:scale-105 transition duration-500"
             />
           </motion.div>

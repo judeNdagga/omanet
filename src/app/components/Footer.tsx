@@ -1,3 +1,7 @@
+import { FaClock, FaPhoneAlt } from "react-icons/fa";
+import { FaLocationDot, FaMessage } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+
 export default function Footer(){
 
     return(
@@ -9,24 +13,19 @@ export default function Footer(){
     <p>OMANET<br/>Better Organic Farming</p>
   </aside> 
   <nav>
-    <h6 className="footer-title">Services</h6> 
+    <h6 className="footer-title">About</h6> 
     <a className="link link-hover">Branding</a>
     <a className="link link-hover">Design</a>
     <a className="link link-hover">Marketing</a>
     <a className="link link-hover">Advertisement</a>
   </nav> 
+  
   <nav>
-    <h6 className="footer-title">Company</h6> 
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
-  </nav> 
-  <nav>
-    <h6 className="footer-title">Legal</h6> 
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
+    <h6 className="footer-title">Company Info</h6> 
+    <a className="link link-hover flex"><FaLocationDot className="mr-1"/>Address: Kampala, Uganda</a>
+    <a className="link link-hover flex"> <FaPhoneAlt className="mr-1"/>Phone: +256 770 734601</a>
+    <a className="link link-hover flex"><FaClock className="mr-1"/>Hours: 7 Days a week from 9:00am - 5:00pm</a>
+    <a className="link link-hover flex"><MdEmail className="mr-1 mt-1"/> E-mail: admin@omanetug.org</a>
   </nav>
 </footer>
     )

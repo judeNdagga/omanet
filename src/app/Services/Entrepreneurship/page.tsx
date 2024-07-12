@@ -1,7 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import banana1 from "../../../../public/images/banana/Banana049.jpg";
+
 import { BsArrowRight } from "react-icons/bs";
 export default function Entrepreneurship() {
   const FadeInUpwardsAnimation = {
@@ -42,6 +42,34 @@ export default function Entrepreneurship() {
       opacity: 1,
       transition: {
         delay: 0.38,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInLeftAnimation = {
+    initial: {
+      x: -200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInRightAnimation = {
+    initial: {
+      x: 200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
         type: "easeInOut",
       },
     },
@@ -196,65 +224,50 @@ export default function Entrepreneurship() {
             the impact they have on businesses like yours.
           </h1>
         </div>
-        <div className="sm:flex">
-          {/* 1st card */}
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
+        <div className="sm:flex sm:h-[40em] pt-10">
+          <motion.div
+            className="sm:w-[50%]"
+            variants={FadeInRightAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+          >
+            <p className="text-black pl-5 sm:pl-16 sm:pr-44 sm:pt-20">
+              <h1 className="text-xl font-bold pb-10">OUR APPROACH</h1>
+              <h1 className="text-4xl sm:text-6xl pb-6">
+                EASY, <a className="text-green-600">ORGANIC</a> <br />
+                SEAMLESS
+              </h1>
+              <p>
+                Entrepreneurship in organic agriculture represents a dynamic and
+                innovative approach to farming that combines sustainable
+                practices with business acumen. As consumer demand for organic
+                products continues to rise, opportunities abound for
+                entrepreneurs to create profitable and environmentally
+                responsible agricultural enterprises.
+              </p>
             </p>
-          </div>
-          {/* 2nd card */}
+          </motion.div>
 
-          <div className="card card-body">
+          <motion.div
+            className="sm:w-[50%]"
+            variants={FadeInLeftAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+          >
             <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-          {/* 3rd card */}
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
+              src="https://images.unsplash.com/photo-1609780447631-05b93e5a88ea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              width={1080}
+              height={720}
+              className="p-5 sm:p-0 sm:pr-5 sm:w-full h-[85%] hover:scale-105 transition duration-500"
+            />
+          </motion.div>
         </div>
 
         <div className="text-center h-[20em]">

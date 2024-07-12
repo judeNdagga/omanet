@@ -1,7 +1,9 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import banana1 from "../../../../public/images/banana/Banana049.jpg";
+import ruraltraining from "../../../../public/images/homepage/ruraltraining.jpg";
+import chicken from "../../../../public/images/homepage/chicken.jpg";
+import samavocado from "../../../../public/images/homepage/samavocado.jpg";
 import { BsArrowRight } from "react-icons/bs";
 export default function Consultancy() {
   const FadeInUpwardsAnimation = {
@@ -197,14 +199,14 @@ export default function Consultancy() {
           {/* 1st card */}
           <div className="card card-body">
             <Image
-              src={banana1}
+              src={chicken}
               width={1920}
               height={1080}
               alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
+              className="h-[20em] hover:scale-110 transition duration-700"
             ></Image>
             <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ELIZABETH USED OUR ADVICE
+              HOW PETER USED OUR ADVICE
             </h1>
             <p className="text-black">
               The world's largest privately owned Fragrance and Flavor company
@@ -217,14 +219,14 @@ export default function Consultancy() {
 
           <div className="card card-body">
             <Image
-              src={banana1}
+              src={samavocado}
               width={1920}
               height={1080}
               alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
+              className="h-[20em] hover:scale-110 transition duration-700"
             ></Image>
             <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ELIZABETH USED OUR ADVICE
+              HOW SAM USED OUR ADVICE
             </h1>
             <p className="text-black">
               The world's largest privately owned Fragrance and Flavor company
@@ -236,14 +238,14 @@ export default function Consultancy() {
           {/* 3rd card */}
           <div className="card card-body">
             <Image
-              src={banana1}
+              src={ruraltraining}
               width={1920}
               height={1080}
               alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
+              className="h-[20em] hover:scale-110 transition duration-700"
             ></Image>
             <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ELIZABETH USED OUR ADVICE
+              HOW THIS COMMUNITY USED OUR ADVICE
             </h1>
             <p className="text-black">
               The world's largest privately owned Fragrance and Flavor company

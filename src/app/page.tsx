@@ -2,6 +2,7 @@
 import training1 from "../../public/images/services/Training_3309.jpg";
 import training2 from "../../public/images/services/Training_3313.jpg";
 import training3 from "../../public/images/services/Training_171.jpg";
+import training4 from "../../public/images/services/Training164.jpg";
 import networking1 from "../../public/images/homepage/networking1.jpg";
 import chilli3 from "../../public/images/services/chilli3.jpg";
 import Image from "next/image";
@@ -180,7 +181,7 @@ export default function Home() {
           <motion.div
       className="hidden sm:block relative sm:h-[32em] sm:w-[70%] bg-cover bg-center sm:right-[-30%] brightness-75"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+        backgroundImage: `url('https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
       }}
       variants={FadeInRightAnimation}
       initial="initial"
@@ -190,9 +191,9 @@ export default function Home() {
       }}
     >
       <motion.img
-        src="https://images.unsplash.com/photo-1518843875459-f738682238a6?q=80&w=2042&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://images.unsplash.com/photo-1526346698789-22fd84314424?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Foreground Image"
-        className="sm:absolute sm:bottom-[-20%] sm:left-[-50%] m-4 w-[22em] sm:h-[20em] opacity-95"
+        className="sm:absolute sm:bottom-[-20%] sm:left-[-50%] m-4 w-[25em] sm:h-[20em] opacity-95"
         variants={FadeInUpwardsAnimationSlower}
         initial="initial"
         whileInView="animate"
@@ -487,7 +488,7 @@ export default function Home() {
             }}
           >
             <Image
-              src={networking1}
+              src={training4}
               alt=""
               className="w-full h-[85%] hover:scale-105 transition duration-500"
             />
