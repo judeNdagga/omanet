@@ -25,7 +25,7 @@ function Navbar({ className }: { className?: string }) {
       <MenuItem setActive={setActive} active={active} item="OMANET">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/">Home</HoveredLink>
-            <HoveredLink href="/">Contact</HoveredLink>
+            <HoveredLink href="/Contact">Contact</HoveredLink>
             
           </div>
         </MenuItem>
@@ -71,13 +71,13 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
        </a>
-       <a href="/About">
+       <a href="/About/Team">
        <MenuItem setActive={setActive} active={active} item="About">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/About/Gallery">Gallery</HoveredLink>
-            <HoveredLink href="/About/Partners">Partners</HoveredLink>
+            
             <HoveredLink href="/About/Team">Team</HoveredLink>
-            <HoveredLink href="/About/Projects">Projects</HoveredLink>
+           
           </div>
         </MenuItem>
        </a>

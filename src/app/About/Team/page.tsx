@@ -1,217 +1,272 @@
+"use client";
 import Image from "next/image";
 import banana1 from "../../../../public/images/homepage/networking1.jpg";
 import { BsArrowRight } from "react-icons/bs";
+import { motion } from "framer-motion";
 export default function Team() {
+  const FadeInLeftAnimation = {
+    initial: {
+      x: -200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInLeftAnimationSlower = {
+    initial: {
+      x: -200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.4,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInRightAnimation = {
+    initial: {
+      x: 200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        type: "easeInOut",
+      },
+    },
+  };
+
+  const FadeInUpwardsAnimation = {
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.08,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInUpwardsAnimationSlower = {
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.18,
+        type: "easeInOut",
+      },
+    },
+  };
+  const FadeInUpwardsAnimationEvenSlower = {
+    initial: {
+      y: 200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.38,
+        type: "easeInOut",
+      },
+    },
+  };
   return (
     <div className="overflow-hidden">
-     <div
-        className="sm:h-[50em] sm:flex sm:pt-[11em] sm:p-20 pt-20 pl-3 brightness-90
-        bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75%"
-        // style={{
-        //   backgroundImage: `url(https://images.unsplash.com/photo-1535090467336-9501f96eef89?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
-        // }}
+      <div
+        className="h-auto sm:h-[80em]
+       bg-gradient-to-b from-green-300 from-3%
+       via-green-300 
+        to-white to-75%
+        group
+       p-10 pt-20"
       >
-        <div className="sm:w-[38%]">
-          <h1 className="text-3xl sm:text-7xl font-mono">Meet Our Team</h1>
-          <p>
-            Team in agriculture isn't just about sowing seeds; it's
-            about cultivating innovation, harvesting opportunity, and reaping
-            sustainable growth. Embrace the land, nurture creativity, and watch
-            your dreams grow into fields of abundance.
-            <p className="hidden sm:block pt-20">
-              From identifying priorities with an AI & Data Strategy to scaling
-              ML Operations, our team of experts works closely with businesses
-              to unlock the full potential of their data, providing bespoke
-              solutions that drive growth, efficiency, and innovation.
+        <div className="sm:flex">
+          <div className="text-center text-black sm:w-[50%]">
+            <p className="text-black sm:pl-16 sm:pr-44 sm:pt-20 pb-5">
+              <motion.h1
+                className="text-4xl sm:text-6xl pb-6 sm:pl-20"
+                variants={FadeInLeftAnimationSlower}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: false,
+                }}
+              >
+                MEET OUR <a className="text-green-600">TEAM</a>
+              </motion.h1>
+              <motion.p
+                variants={FadeInLeftAnimation}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: false,
+                }}
+              >
+                Teamwork is an essential component of successful organic
+                agriculture. Effective collaboration among farmers, workers,
+                consultants, and other stakeholders ensures that sustainable
+                practices are implemented efficiently, challenges are addressed
+                promptly, and the farm operates smoothly.
+              </motion.p>
             </p>
-          </p>
+            <button className="px-4 py-2 hover:scale-105 transition duration-500 backdrop-blur-sm border bg-emerald-500 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+              <span>Contact Us →</span>
+              <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+            </button>
+          </div>
+
+          {/* right side */}
+          <div className="sm:w-[50%]">
+            <motion.div
+              className="hidden sm:block relative sm:h-[32em] sm:w-[70%] bg-cover bg-center sm:right-[-30%] brightness-75"
+              style={{
+                backgroundImage: `url('https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+              }}
+              variants={FadeInRightAnimation}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+            >
+              <motion.img
+                src="https://images.unsplash.com/photo-1526346698789-22fd84314424?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Foreground Image"
+                className="sm:absolute sm:bottom-[-20%] sm:left-[-50%] m-4 w-[25em] sm:h-[20em] opacity-95"
+                variants={FadeInUpwardsAnimationSlower}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: true,
+                }}
+              />
+            </motion.div>
+          </div>
         </div>
-        <div className="divider lg:divider-horizontal divider-success h-10"></div>
-        <div className="w-screen sm:w-[62%] text-xl">
-        <div className="card card-body">
+
+        {/* after first div */}
+        <div className="sm:pt-60 sm:pb-40 sm:flex sm:pl-20 sm:pr-20 sm:h-[50em]">
+        <motion.div
+            className="w-[50%]"
+            variants={FadeInLeftAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              className="w-full h-[85%] hover:scale-105 transition duration-500"
+            />
+          </motion.div>
+          <div className="divider lg:divider-horizontal divider-success"></div>
+         
+          <motion.h1
+            variants={FadeInUpwardsAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            className="text-black text-3xl sm:text-5xl pl-4 sm:pl-10 sm:pr-1 pt-20"
+          >
+            PROBLEM SOLVING AND{" "}
+            <a className="text-green-600">KNOWLEDGE SHARING.</a>
+          </motion.h1>
+        </div>
+        </div>
+
+        {/* services level */}
+        <div className="h-auto sm:h-[40em] bg-gradient-to-t from-green-300 from-3%
+       via-green-300 
+        to-white to-75%">
+        <div className="hidden sm:flex gap-10 p-10 pt-[10em]">
+          {/* 1st card */}
+          <a
+            className="card sm:w-[25em] sm:h-[19em] shadow-xl hover:text-green-300 transition duration-500 hover:scale-110"
+            href="/Services/Consultancy"
+          >
             <Image
-              src={banana1}
+              src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
               width={1920}
               height={1080}
-              alt="bg pic"
-              className="rounded-md h-[15em] sm:h-[20em] sm:w-full "
-            ></Image>
-            
-          </div>
-         
-        </div>
-      </div>
-
-      {/* 2nd level */}
-      <div className="bg-white">
-        <h1 className="text-black text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
-          DISCOVER HOW TO RUN AN AGRICULTURAL BUSINESS
-        </h1>
-        <div className="sm:flex sm:gap-10 p-8">
-          {/* first card */}
-          <div
-            className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% hover:-inset-y-2"
-          >
-            <h1 className="text-2xl font-semibold pb-8">
-              STRATEGIC DATA INFRASTRUCTURE DESIGN
-            </h1>
-            <p>
-              After evaluating your company's existing data systems,
-              requirements, and sources, we'll design a scalable, secure, and
-              affordable solution. This includes choosing the proper data
-              storage, frameworks, and integration tools for enhanced data
-              access and management.
-            </p>
-          </div>
+              alt="image"
+            />
+           
+          </a>
 
           {/* second card */}
 
-          <div
-            className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
-            via-lime-400 
-             to-green-600 to-75% hover:-inset-y-2"
+          <a
+            className="card sm:w-[25em] sm:h-[19em] shadow-xl hover:text-green-300 transition duration-500 hover:scale-110"
+            href="/Services/Training"
           >
-            <h1 className="text-2xl font-semibold pb-8">
-              EFFICIENT DATA PIPELINES & INTEGRATION
-            </h1>
-            <p>
-              Data processing and data quality optimization are essential to
-              reliable and timely decision-making. By implementing powerful data
-              pipelines and data lakes, you can accommodate increasing data
-              volumes and complexity, leading to a more accurate analysis.
-            </p>
-          </div>
+            <Image
+              src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
+              width={1920}
+              height={1080}
+              alt="image"
+            />
+           
+          </a>
           {/* third card */}
 
-          <div
-            className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
-            via-lime-400 
-             to-green-600 to-75% hover:-inset-y-2"
+          <a
+            className="card sm:w-[25em] sm:h-[19em] shadow-xl hover:text-green-300 transition duration-500 hover:scale-110"
+            href="/Services/Communication"
           >
-            <h1 className="text-2xl font-semibold pb-8">
-              RELIABLE DATA SYSTEM MAINTENANCE
-            </h1>
-            <p>
-              Maintaining and optimizing your data infrastructure lets you focus
-              on your core business. Through regular data system monitoring,
-              implementation of best practices, and performance optimization,
-              your data infrastructure remains reliable and highly accessible.
-            </p>
-          </div>
-        </div>
-
-        {/* after 3 cards */}
-
-
-        <div className="sm:p-20 p-10">
-          <div
-            className="card card-body bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75%"
-          >
-            <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em]">
-              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING YOUR BUSINESS
-            </h1>
+            <Image
+              src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
+              width={1920}
+              height={1080}
+              alt="image"
+            />
            
-            <div className="btn sm:btn-wide w-[15em] mt-6 sm:mt-28 bg-slate-900 hover:bg-gray-100 border-none hover:text-black text-white flex sm:gap-5">
-              <h1 className="text-md ">
-                Connect with our experts
-                
-              </h1>
-              <BsArrowRight className="hidden sm:block text-2xl animate-pulse" />
-            </div>
-          </div>
-        </div>
+          </a>
 
-        {/* after card */}
-
-
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 h-[35em]">
-          <h1 className="text-black font-bold font-mono text-5xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
-            HEAR IT FROM OUR CUSTOMERS
-          </h1>
-          <div className="divider lg:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-black text-lg ml-20 pr-10">
-            Discover how we helped industry leaders build their data-driven
-            future. Get a deeper understanding of our AI & Data solutions and
-            the impact they have on businesses like yours.
-          </h1>
-        </div>
-        <div className="sm:flex">
-          {/* 1st card */}
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-          {/* 2nd card */}
-
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-          {/* 3rd card */}
-          <div className="card card-body">
-            <Image
-              src={banana1}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="rounded-md h-[20em] hover:animate-pulse"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW ROCHE USES ML TO BOOST THEIR DIGITAL PATHOLOGY CAPABILITIES
-            </h1>
-            <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center h-[20em]">
-          <div
-            className="btn bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% border-none mt-20 hover:btn-lg"
+          {/* fourth card */}
+          <a
+            className="card sm:w-[25em] sm:h-[19em] shadow-xl hover:text-green-300 transition duration-500 hover:scale-110"
+            href="/Services/ProductDevelopment"
           >
-            <h1 className="text-white">Discover More Case Studies</h1>
-          </div>
+            <Image
+              src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
+              width={1920}
+              height={1080}
+              alt="image"
+            />
+           
+          </a>
         </div>
-      </div>
+        </div>
+
+        {/* after services level */}
+      
     </div>
   );
 }

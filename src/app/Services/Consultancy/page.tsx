@@ -154,10 +154,10 @@ export default function Consultancy() {
             <p>
               Resource Efficiency: Advising on efficient use of water, energy,
               and other resources to reduce costs and environmental impact.
-              <br />Organic Inputs: Recommending suitable organic fertilizers,
+              <br />
+              Organic Inputs: Recommending suitable organic fertilizers,
               pesticides, and seeds to meet certification standards and improve
-              crop yields. 
-              
+              crop yields.
             </p>
           </motion.div>
         </div>
@@ -209,10 +209,9 @@ export default function Consultancy() {
               HOW PETER USED OUR ADVICE
             </h1>
             <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
+              Peter utilised our consultation to enable him run his poultry farm
+              more effieciently as well as look out for probable hindrances to
+              success.
             </p>
           </div>
           {/* 2nd card */}
@@ -229,10 +228,8 @@ export default function Consultancy() {
               HOW SAM USED OUR ADVICE
             </h1>
             <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
+              Sam used our consultation to double the yield on his avocado farm
+              and mitigate the problems he had faced before.
             </p>
           </div>
           {/* 3rd card */}
@@ -248,21 +245,8 @@ export default function Consultancy() {
               HOW THIS COMMUNITY USED OUR ADVICE
             </h1>
             <p className="text-black">
-              The world's largest privately owned Fragrance and Flavor company
-              dsm-firmenich breaks new ground in chemical formula generation,
-              creating the world's first AI-augmented flavor & fragrance
-              formulation.
+              They were able to learn ways in which to increase their productivity as efficiently as possible while avoiding hindrances at the same time.
             </p>
-          </div>
-        </div>
-
-        <div className="text-center h-[20em]">
-          <div
-            className="btn bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% border-none mt-20 hover:btn-lg"
-          >
-            <h1 className="text-white">Discover More Case Studies</h1>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ import Image from "next/image";
 import { BiDownArrow } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import { IoIosArrowDropup } from "react-icons/io";
-import { FaCartPlus } from "react-icons/fa6";
+import { FaCartPlus, FaCircleMinus, FaCirclePlus } from "react-icons/fa6";
 export default function Eggs(){
   
     return(
@@ -27,7 +27,7 @@ export default function Eggs(){
      to-green-600 to-75%">
     <h2 className="card-title">
       Local Eggs
-      <div className="badge badge-secondary">NEW</div>
+      <div className="badge bg-red-600 border-none text-white">OUT OF STOCK</div>
     </h2>
     <p>High quality eggs from organic farms in Uganda</p>
     <div className="card-actions justify-end pt-5">
@@ -42,9 +42,11 @@ export default function Eggs(){
           HIGH QUALITY EGGS
         </h1>
 
-        <div className="pt-3 sm:pt-10 flex gap-10">
+        <div className="pt-3 sm:pt-10 flex">
           <h1 className="text-black">Quantity :</h1>
+          <FaCircleMinus className="text-green-600 btn-circle scale-50 mt-0"/>
           <input type="text" className="input input-bordered max-w-20 h-8 bg-white text-black border-slate-500 border-2" />
+          <FaCirclePlus className="text-green-600 btn-circle scale-50 mt-0"/>
       <div className="btn btn-sm hover:text-white"><h1>Add to cart</h1><FaCartPlus className="text-white"/></div>    
         </div>
         <div className="pt-3 sm:pt-10 flex gap-10">

@@ -270,15 +270,7 @@ export default function Entrepreneurship() {
           </motion.div>
         </div>
 
-        <div className="text-center h-[20em]">
-          <div
-            className="btn bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% border-none mt-20 hover:btn-lg"
-          >
-            <h1 className="text-white">Discover More Case Studies</h1>
-          </div>
-        </div>
+       
       </div>
     </div>
   );

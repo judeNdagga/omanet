@@ -26,6 +26,8 @@ export default function Gallery() {
       {image : image8},
       {image : image9},
       {image : image10},
+      {image : image10},
+      {image : image10},
       
       
       
@@ -50,15 +52,15 @@ export default function Gallery() {
     //     </div>);
     
   return (
-    
+    <div className="overflow-hidden">
     <div
-      className="bg-gradient-to-r from-green-900 from-3%
-      via-lime-400 
-       to-green-600 to-75% text-center flex min-h-screen"
+      className="bg-gradient-to-b from-green-300 from-3%
+      via-green-300 
+       to-white to-75% text-center flex min-h-screen"
     >
       
       
-      <div className="pl-12 grid grid-cols-1 md:grid-cols-2
+      <div className="p-10 grid grid-cols-1 md:grid-cols-2
     xl:grid-cols-3 gap-3">
       {elements.map((element, index) => (
         <CardContainer className="inter-var w-full">
@@ -78,6 +80,36 @@ export default function Gallery() {
       
     </div>
       
+    </div>
+
+    <div
+      className="bg-gradient-to-t from-green-300 from-3%
+      via-green-300 
+       to-white to-75% text-center flex min-h-screen"
+    >
+      
+      
+      <div className="p-10 grid grid-cols-1 md:grid-cols-2
+    xl:grid-cols-3 gap-3">
+      {elements.map((element, index) => (
+        <CardContainer className="inter-var w-full">
+        <CardBody className="w-full">
+          <CardItem className="w-full pt-4">
+            <Image
+              src={element.image}
+              height="1000"
+              width="1000"
+              className="h-[30em] w-[98%] object-cover rounded-xl group-hover/card:shadow-xl"
+              alt="thumbnail"
+            />
+          </CardItem>
+        </CardBody>
+      </CardContainer>
+      ))}
+      
+    </div>
+      
+    </div>
     </div>
   );
 }

@@ -6,14 +6,15 @@ import training4 from "../../public/images/services/Training164.jpg";
 import networking1 from "../../public/images/homepage/networking1.jpg";
 import chilli3 from "../../public/images/services/chilli3.jpg";
 import Image from "next/image";
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import { CardBody, CardContainer, CardItem } from "./components/ui/3d-card";
-import BackgroundSlider from "./components/BackgroundSlider";
+
 import { Button } from "./components/ui/moving-border";
-import net1 from "../../public/images/homepage/networking1.jpg";
+
 import eggs from "../../public/images/homepage/eggs.jpg";
 import AltBackgroundSlider from "./components/AltBackgroundSlider";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 export default function Home() {
   const words = ` We stand for providing the most fresh organic products which will
   serve your health and be a source of vitamins and minerals for our
@@ -22,6 +23,15 @@ export default function Home() {
   and hair, the Lycopene in cherry tomato naturally protects the skin
   and acts as a sunblock. Those who have oily skin can apply it to the
   face to prevent acne and pimples.`;
+
+  useEffect( () => {
+(
+  async () => {
+    const LocomotiveScroll = (await import('locomotive-scroll')).default;
+    const locomotiveScroll = new LocomotiveScroll();
+  }
+)
+  }, [])
 
   const FadeInLeftAnimation = {
     initial: {
@@ -164,16 +174,10 @@ export default function Home() {
                 plans to meet your specific expectations and preferences.
               </motion.p>
             </p>
-            <Button
-              borderRadius="1.75rem"
-              className="bg-gradient-to-r from-green-900 to-green-300 text-white 
-          border-neutral-200 uppercase 
-        
-           hover:text-base hover:font-semibold
-            duration-300"
-            >
-              Contact Us
-            </Button>
+            <button className="px-4 py-2 hover:scale-105 transition duration-500 backdrop-blur-sm border bg-emerald-500 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+          <span>Contact Us →</span>
+          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+        </button>
           </div>
 
           {/* right side */}
@@ -324,7 +328,7 @@ export default function Home() {
       >
         {/* testimonial level */}
         <div className="hidden sm:flex h-[40em]">
-          <motion.div
+        <motion.div
             className="w-[50%]"
             variants={FadeInLeftAnimation}
             initial="initial"
@@ -349,7 +353,7 @@ export default function Home() {
             }}
           >
             <p className="text-black text-xl sm:text-2xl font-extralight pl-16">
-              "To access product knowledge and serve our customers more
+              <FaQuoteLeft/> To access product knowledge and serve our customers more
               efficiently, we decided to build an intelligent knowledge base.
               <a className="font-bold text-green-400 italic">OMANET</a> selected
               the right technology for our search algorithm and created a very
@@ -359,7 +363,7 @@ export default function Home() {
               <a className="underline text-green-400 font-bold italic">
                 great pleasure to collaborate.
               </a>
-              "
+              <FaQuoteRight/>
             </p>
 
             <p className="sm:text-right text-center text-black pt-10 text-3xl">
@@ -424,16 +428,10 @@ export default function Home() {
             <p className="pt-8 sm:pt-8 pl-4 sm:pl-20 pr-4 sm:pr-20 pb-5 sm:pb-4 sm:text-md text-white">
               {words}
             </p>
-            <Button
-              borderRadius="1.75rem"
-              className="bg-gradient-to-r from-green-900 to-green-300 text-white 
-          border-neutral-200 uppercase 
-        
-           hover:text-base hover:font-semibold
-            duration-300"
-            >
-              Check Out
-            </Button>
+            <button className="px-4 py-2 hover:scale-105 transition duration-500 backdrop-blur-sm border bg-emerald-500 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+          <span>Check Out →</span>
+          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+        </button>
           </motion.div>
         </motion.div>
       </div>

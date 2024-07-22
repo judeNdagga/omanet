@@ -12,7 +12,7 @@ export default function Entrepreneurship() {
         <div className="sm:flex gap-10 p-8">
           {/* first card */}
         
-          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:-inset-y-2 pt-2 shadow-xl"
+          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
           href="./Products/OrganicWine/BuyWine"
           >           
             <Image
@@ -35,7 +35,7 @@ export default function Entrepreneurship() {
 
           {/* second card */}
 
-          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:-inset-y-2 pt-2 shadow-xl"
+          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
           href="./Products/Tomatoes/BuyTomatoes"
           >
             <Image
@@ -62,7 +62,7 @@ export default function Entrepreneurship() {
         <div className="sm:flex gap-10 p-8">
        
           {/* first card */}
-          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:-inset-y-2 pt-2 shadow-xl"
+          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
           href="./Products/HerbalGardening"
           >
             <Image
@@ -85,7 +85,7 @@ export default function Entrepreneurship() {
 
           {/* second card */}
 
-          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:-inset-y-2 pt-2 shadow-xl"
+          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
           href="./Products/Eggs"
           >
             <Image

@@ -33,8 +33,8 @@ export default function AltBackgroundSlider() {
           WELCOME TO <br /> <a className="text-green-300  hover:text-green-600 sm:pl-36 transition duration-500 italic">OMANET</a>
         </motion.p>
         <motion.p className="text-md md:text-lg pl-[20%] sm:pl-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
-          Our practices exemplify true organic farming, <br /><a className="">try them.</a>
-         <br /> <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+         Your one stop center for organic products,<br /><a className="">try them.</a>
+         <br /> <button className="px-4 py-2 hover:scale-105 transition duration-500 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
           <span>Contact Us →</span>
           <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
         </button>
