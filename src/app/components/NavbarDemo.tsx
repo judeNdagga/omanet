@@ -2,10 +2,13 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "../utils/cn";
+import logo from "../../../public/images/OMANETLOGO2.png"
+import Image from "next/image"; 
 
 export function NavbarDemo() {
   return (
-    <div className="relative w-full flex items-center justify-center">  
+    <div className="relative w-full flex items-center justify-center">
+        
       <Navbar className="top-2" />
       
     </div>
@@ -16,15 +19,25 @@ function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn("fixed flex top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
+      <a className="hidden sm:block"
+       href="/">
+        <Image 
+        src={logo}
+        alt="logo"
+        className="rounded-full hover:scale-150 transition duration-500"
+        />
+
+      </a>
+      
       {/* <a href="/" className="uppercase font-mono ml-[45%] text-xl text-green-400">omanet</a> */}
       <Menu setActive={setActive}>
 
       <a href="/">
-      <MenuItem setActive={setActive} active={active} item="OMANET">
+      <MenuItem setActive={setActive} active={active} item="HOME">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/">Home</HoveredLink>
+            <HoveredLink href="/">Homepage</HoveredLink>
             <HoveredLink href="/Contact">Contact</HoveredLink>
             
           </div>

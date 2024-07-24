@@ -134,17 +134,23 @@ export const ImagesSlider = ({
       )}
 
       {areImagesLoaded && (
-        <AnimatePresence>
-          <motion.img
-            key={currentIndex}
-            src={loadedImages[currentIndex]}
-            initial="initial"
-            animate="visible"
-            exit={direction === "up" ? "upExit" : "downExit"}
-            variants={slideVariants}
-            className="image h-full w-full absolute inset-0 object-cover object-center"
-          />
-        </AnimatePresence>
+        // <AnimatePresence>
+        //   <motion.img
+        //     key={currentIndex}
+        //     src={loadedImages[currentIndex]}
+        //     initial="initial"
+        //     animate="visible"
+        //     exit={direction === "up" ? "upExit" : "downExit"}
+        //     variants={slideVariants}
+        //     className="image h-full w-full absolute inset-0 object-cover object-center"
+        //   />
+        // </AnimatePresence>
+
+<motion.div
+style={{ backgroundImage: `url(${loadedImages[currentIndex]})` }}
+className="image h-full w-full absolute inset-0 object-cover object-center bg-center bg-cover duration-[2700ms]"
+>
+  </motion.div>
       )}
     </div>
   );

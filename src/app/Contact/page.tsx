@@ -51,7 +51,7 @@ export default function Contact() {
             ANY 
             <a className="text-green-600"> INQUIRIES</a>?
           </motion.h1>
-          <motion.p className="mt-8 mb-8 text-black"
+          <motion.p className="mt-8 mb-8 text-black text-lg"
           variants={FadeInRightAnimation}
           initial="initial"
           whileInView="animate"
@@ -59,44 +59,19 @@ export default function Contact() {
             once: false,
           }}
           >
-            Use this contact form to reach out and tell us about your challenge
-            or send an email to{" "}
-            <a
-              href="mailto:admin@omanetug.org"
-              className="text-green-600 font-bold underline"
-            >
-              admin@omanetug.org
-            </a>
-            . We will certainly receive your message. You can also call our
-            offices on phone with 0772495627.
+            Send us an email and tell us what you need help with.
+            We will certainly receive your message. You can also call our
+            offices on <a className="font-bold text-green-600 underline">0772495627</a>.
           </motion.p>
-          <form action="">
-            <div className="">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="bg-green-100 rounded-lg h-10 border-2 border-green-300 text-black text-center w-[80%]"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="bg-green-100 rounded-lg h-10 border-2 border-green-300 text-black text-center w-[80%]"
-              />
-              <input
-                type="text"
-                placeholder="Message"
-                className="bg-green-100 rounded-lg h-36 border-2 border-green-300 text-black text-center w-[80%]"
-              />
-            </div>
-            <button
-              className="btn btn-wide mt-5 mb-10 bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% text-white text-lg border-none"
+          
+            <a
+              className="btn btn-wide mt-5 mb-10 bg-slate-900 hover:bg-gray-100 hover:text-black text-white text-lg border-none"
+              href="mailto:admin@omanetug.org"
             >
-              Send
+              Send Email
               <AiOutlineArrowRight className="text-xl" />
-            </button>
-          </form>
+            </a>
+          
         </div>
       </div>
     </div>

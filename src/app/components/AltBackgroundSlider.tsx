@@ -27,7 +27,7 @@ export default function AltBackgroundSlider() {
         className="z-50 flex flex-col w-full"
       >
         <motion.p className="font-bold text-lg pl-[30%] sm:pl-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
-          AN ORGANIC SOLUTION
+          EAT HEALTHY, EAT ORGANIC
         </motion.p>
         <motion.p className="font-semibold text-5xl md:text-8xl pl-[25%] sm:pl-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           WELCOME TO <br /> <a className="text-green-300  hover:text-green-600 sm:pl-36 transition duration-500 italic">OMANET</a>
