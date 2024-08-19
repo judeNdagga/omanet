@@ -1,7 +1,16 @@
 import Image from "next/image";
-
+import prisma from '@/app/lib/prisma'
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-export default function Entrepreneurship() {
+import { ProductCard } from "../components/ui/hero-parallax";
+import ProductCard2 from "../components/ProductCard";
+
+export const metadata = {
+  title: "Products - OMANET"
+}
+export default async function Entrepreneurship() {
+  const products = await prisma.product.findMany({
+    orderBy: {id: "desc"}
+})
   return (
     <div className="overflow-hidden">
       {/* 2nd level */}
@@ -11,8 +20,21 @@ export default function Entrepreneurship() {
         </h1>
         <div className="sm:flex gap-10 p-8">
           {/* first card */}
+
+
+
+{/* product card trial */}
+{products.map((product) => (
+  <ProductCard2 product={product} key={product.id} />
+))}
+
+
+
+
+
+
         
-          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
+          {/* <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
           href="./Products/OrganicWine/BuyWine"
           >           
             <Image
@@ -22,20 +44,15 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute bottom-3 sm:bottom-[30%] text-3xl font-bold font-mono ml-10">
+            <h1 className="absolute bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
               ORGANIC WINE
             </h1>
-            <p className="absolute hidden sm:block bottom-[3%] text-sm p-4">
-              To access product knowledge and serve our customers more
-              efficiently, we decided to build an intelligent knowledge base.
-              OMANET selected the right technology for our search algorithm and
-              created a very user-friendly front-end application.
-            </p>
-          </a>
+           
+          </a> */}
 
           {/* second card */}
 
-          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
+          {/* <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
           href="./Products/Tomatoes/BuyTomatoes"
           >
             <Image
@@ -45,24 +62,19 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute bottom-3 sm:bottom-[30%] text-3xl font-bold font-mono ml-10">
+            <h1 className="absolute bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
               CHERRY TOMATOES
             </h1>
-            <p className="absolute hidden sm:block bottom-[3%] text-sm p-4">
-              To access product knowledge and serve our customers more
-              efficiently, we decided to build an intelligent knowledge base.
-              OMANET selected the right technology for our search algorithm and
-              created a very user-friendly front-end application.
-            </p>
-          </a>
+           
+          </a> */}
           {/* third card */}
         
-</div>
+{/* </div> */}
         {/* after first cards */}
-        <div className="sm:flex gap-10 p-8">
+        {/* <div className="sm:flex gap-10 p-8"> */}
        
           {/* first card */}
-          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
+          {/* <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
           href="./Products/HerbalGardening"
           >
             <Image
@@ -72,20 +84,15 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute bottom-3 sm:bottom-[30%] text-3xl font-bold font-mono ml-10">
+            <h1 className="absolute bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
               HERBAL GARDENING
             </h1>
-            <p className="absolute hidden sm:block bottom-[3%] text-sm p-4">
-              To access product knowledge and serve our customers more
-              efficiently, we decided to build an intelligent knowledge base.
-              OMANET selected the right technology for our search algorithm and
-              created a very user-friendly front-end application.
-            </p>
-          </a>
+           
+          </a> */}
 
           {/* second card */}
 
-          <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
+          {/* <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
           href="./Products/Eggs"
           >
             <Image
@@ -95,16 +102,11 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute bottom-3 sm:bottom-[30%] text-3xl font-bold font-mono ml-10">
+            <h1 className="absolute bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
               LOCAL EGGS
             </h1>
-            <p className="absolute hidden sm:block bottom-[3%] text-sm p-4">
-              To access product knowledge and serve our customers more
-              efficiently, we decided to build an intelligent knowledge base.
-              OMANET selected the right technology for our search algorithm and
-              created a very user-friendly front-end application.
-            </p>
-          </a>
+           
+          </a> */}
           {/* third card */}
         </div>
 
@@ -150,10 +152,7 @@ export default function Entrepreneurship() {
         <div className="sm:pr-40 sm:pl-40 p-6">
           <div className="card card-body shadow-xl">
             <p className="text-black text-3xl sm:text-4xl font-extralight">
-              "To access product knowledge and serve our customers more
-              efficiently, we decided to build an intelligent knowledge base.
-              OMANET selected the right technology for our search algorithm and
-              created a very user-friendly front-end application. Their
+              " Their
               technical expertise, professional communication, and excellent
               project management made it a great pleasure to collaborate."
             </p>

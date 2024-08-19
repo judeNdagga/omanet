@@ -198,12 +198,12 @@ export default function Home() {
         src="https://images.unsplash.com/photo-1526346698789-22fd84314424?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Foreground Image"
         className="sm:absolute sm:bottom-[-20%] sm:left-[-50%] m-4 w-[25em] sm:h-[20em] opacity-95"
-        variants={FadeInUpwardsAnimationSlower}
-        initial="initial"
-        whileInView="animate"
-        viewport={{
-          once: true,
-        }}
+        // variants={FadeInUpwardsAnimationSlower}
+        // initial="initial"
+        // whileInView="animate"
+        // viewport={{
+        //   once: true,
+        // }}
       />
     </motion.div>
 
