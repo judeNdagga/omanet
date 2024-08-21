@@ -1,5 +1,5 @@
 
-import React from "react";
+
 import PriceTag from "@/app/components/PriceTag";
 import Image from "next/image";
 
@@ -8,6 +8,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { FaCartPlus, FaCircleMinus, FaCirclePlus } from "react-icons/fa6";
 import prisma from "@/app/lib/prisma";
 import { cache } from "react";import { Metadata } from "next";
+import OutOfStock from "@/app/components/OutOfStock";
 interface ProductPageProps {
     params: {
       id: string;
@@ -25,6 +26,7 @@ interface ProductPageProps {
 export default async function ProductPage(
   { params: { id } }: ProductPageProps)
   {
+   
     const product = await getProduct(id);
     return(
       <div className="overflow-hidden">
@@ -41,7 +43,7 @@ export default async function ProductPage(
      to-green-600 to-75%">
     <h2 className="card-title">
       {product.name}
-      <div className="badge bg-red-600 border-none text-white">OUT OF STOCK</div>
+      <div className="sm:badge sm:bg-red-600 border-none text-red-800 sm:text-white text-xs sm:text-xs">OUT OF STOCK</div>
     </h2>
     <p>{product.description}</p>
     
@@ -53,14 +55,15 @@ export default async function ProductPage(
           HIGH QUALITY EGGS
         </h1>
 
-        <div className="pt-3 sm:pt-10 flex">
-          <h1 className="text-black">Quantity :</h1>
-          <FaCircleMinus className="text-green-600 btn-circle scale-50 mt-0"/>
+        <div className="pt-3 sm:pt-10 pb-5 flex">
+          <h1 className="text-black pt-2">Quantity :</h1>
+          <FaCircleMinus className="text-green-600 btn btn-circle scale-50 mt-0"/>
           <input type="text" className="input input-bordered max-w-20 h-8 bg-white text-black border-slate-500 border-2" />
-          <FaCirclePlus className="text-green-600 btn-circle scale-50 mt-0"/>
-      <div className="btn btn-sm hover:text-white"><h1>Add to cart</h1><FaCartPlus className="text-white"/></div>    
+          <OutOfStock/>
+      
         </div>
-        <div className="pt-3 sm:pt-10 flex gap-10">
+        <div className="btn btn-sm hover:text-white"><h1>Add to cart</h1><FaCartPlus className="text-white"/></div>    
+        <div className="pt-3 sm:pt-5 flex gap-10">
           <h1 className="text-black">Price :</h1>
           <h1 className="text-lime-500"> <PriceTag price={product.price} className="" /></h1>
           

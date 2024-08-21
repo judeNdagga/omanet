@@ -3,7 +3,6 @@ import prisma from '@/app/lib/prisma'
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { ProductCard } from "../components/ui/hero-parallax";
 import ProductCard2 from "../components/ProductCard";
-
 export const metadata = {
   title: "Products - OMANET"
 }
@@ -34,80 +33,7 @@ export default async function Entrepreneurship() {
 
 
         
-          {/* <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
-          href="./Products/OrganicWine/BuyWine"
-          >           
-            <Image
-              src="https://images.unsplash.com/photo-1610371800811-a7d2a7b6b3e8?q=80&w=1963&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="w-full h-full rounded-xl brightness-75 hover:brightness-50"
-              width={1920}
-              height={1080}
-              alt="image"
-            />
-            <h1 className="absolute bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
-              ORGANIC WINE
-            </h1>
-           
-          </a> */}
-
-          {/* second card */}
-
-          {/* <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
-          href="./Products/Tomatoes/BuyTomatoes"
-          >
-            <Image
-              src="https://images.unsplash.com/photo-1589190051962-0b138f75d3c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="w-full h-full rounded-xl brightness-75 hover:brightness-50"
-              width={1920}
-              height={1080}
-              alt="image"
-            />
-            <h1 className="absolute bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
-              CHERRY TOMATOES
-            </h1>
-           
-          </a> */}
-          {/* third card */}
-        
-{/* </div> */}
-        {/* after first cards */}
-        {/* <div className="sm:flex gap-10 p-8"> */}
-       
-          {/* first card */}
-          {/* <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
-          href="./Products/HerbalGardening"
-          >
-            <Image
-              src="https://images.unsplash.com/photo-1523301551780-cd17359a95d0?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="w-full h-full rounded-xl brightness-75 hover:brightness-50"
-              width={1920}
-              height={1080}
-              alt="image"
-            />
-            <h1 className="absolute bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
-              HERBAL GARDENING
-            </h1>
-           
-          </a> */}
-
-          {/* second card */}
-
-          {/* <a className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 transition duration-500 pt-2 shadow-xl"
-          href="./Products/Eggs"
-          >
-            <Image
-              src="https://images.unsplash.com/photo-1586802990181-a5771596eaea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="w-full h-full rounded-xl brightness-75 hover:brightness-50"
-              width={1920}
-              height={1080}
-              alt="image"
-            />
-            <h1 className="absolute bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
-              LOCAL EGGS
-            </h1>
-           
-          </a> */}
-          {/* third card */}
+          
         </div>
 
         {/* after second cards */}

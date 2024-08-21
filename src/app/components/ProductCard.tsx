@@ -16,7 +16,7 @@ export default async function ProductCard2({product}: ProductCard2Props){
         height={1080}
         alt={product.name}
       />
-      <h1 className="absolute bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
+      <h1 className="absolute uppercase bottom-3 sm:bottom-[10%] text-3xl font-bold font-mono ml-10">
         {product.name}
       </h1>
      
