@@ -10,6 +10,7 @@ import Image from "next/image";
 
 import { Button } from "../../components/ui/moving-border";
 import { BsArrowRight } from "react-icons/bs";
+import ContactButton from "@/app/components/ContactButton";
 export default function HerbalGardening() {
   const words = [
     {
@@ -47,16 +48,7 @@ export default function HerbalGardening() {
             The road to Organic Farming starts here
           </p>
           <TypewriterEffectSmooth words={words} />
-          <Button
-            borderRadius="1.75rem"
-            className="bg-gradient-to-r from-green-900 to-green-400 text-white 
-          border-neutral-200 uppercase 
-          font-mono
-           hover:text-base hover:font-semibold
-            duration-300 gap-4"
-          >
-            Learn More <BsArrowRight className="text-2xl animate-pulse" />
-          </Button>
+         <ContactButton/>
         </motion.div>
 
         <div className="sm:pr-10 sm:pl-10 sm:pb-10 sm:text-center">

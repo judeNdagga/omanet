@@ -3,6 +3,7 @@ import Image from "next/image";
 import banana1 from "../../../../public/images/homepage/networking1.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import { motion } from "framer-motion";
+import ContactButton from "@/app/components/ContactButton";
 export default function Team() {
   const FadeInLeftAnimation = {
     initial: {
@@ -128,10 +129,7 @@ export default function Team() {
                 promptly, and the farm operates smoothly.
               </motion.p>
             </p>
-            <button className="px-4 py-2 hover:scale-105 transition duration-500 backdrop-blur-sm border bg-emerald-500 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
-              <span>Contact Us →</span>
-              <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-            </button>
+           <ContactButton/>
           </div>
 
           {/* right side */}

@@ -4,6 +4,7 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "../utils/cn";
 import logo from "../../../public/images/OMANETLOGO2.png"
 import Image from "next/image"; 
+import SignInNavbarAddition from "./SignInNavbarAddition";
 
 export function NavbarDemo() {
   return (
@@ -21,12 +22,12 @@ function Navbar({ className }: { className?: string }) {
     <div
       className={cn("fixed flex top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
-      <a className="hidden sm:block"
+      <a className="hidden sm:block pt-4"
        href="/">
         <Image 
         src={logo}
         alt="logo"
-        className="rounded-full hover:scale-150 transition duration-500"
+        className="rounded-full w-[6em] hover:scale-150 transition duration-500"
         />
 
       </a>
@@ -35,13 +36,13 @@ function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
 
       <a href="/">
-      <MenuItem setActive={setActive} active={active} item="HOME">
+      {/* <MenuItem setActive={setActive} active={active} item="HOME">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/">Homepage</HoveredLink>
-            <HoveredLink href="/Contact">Contact</HoveredLink>
+            
             
           </div>
-        </MenuItem>
+        </MenuItem> */}
       </a>
       
         <a href="/Services"><MenuItem setActive={setActive} active={active} item="Services">
@@ -88,7 +89,7 @@ function Navbar({ className }: { className?: string }) {
        <MenuItem setActive={setActive} active={active} item="About">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/About/Gallery">Gallery</HoveredLink>
-            
+            <HoveredLink href="/Contact">Contact</HoveredLink>
             <HoveredLink href="/About/Team">Team</HoveredLink>
            
           </div>
@@ -96,6 +97,7 @@ function Navbar({ className }: { className?: string }) {
        </a>
        
       </Menu>
+      
     </div>
   );
 }

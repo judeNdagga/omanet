@@ -1,5 +1,3 @@
-
-
 import PriceTag from "@/app/components/PriceTag";
 import Image from "next/image";
 
@@ -7,77 +5,83 @@ import { BsArrowRight } from "react-icons/bs";
 
 import { FaCartPlus, FaCircleMinus, FaCirclePlus } from "react-icons/fa6";
 import prisma from "@/app/lib/prisma";
-import { cache } from "react";import { Metadata } from "next";
+import { cache } from "react";
+import { Metadata } from "next";
 import OutOfStock from "@/app/components/OutOfStock";
+import ContactExpertsButton from "@/app/components/ContactExpertsButton";
 interface ProductPageProps {
-    params: {
-      id: string;
-    };
-  }
+  params: {
+    id: string;
+  };
+}
 
-  const getProduct = cache(async (id: string) => { 
-    const product = await prisma.product.findUnique({ where: { id } });
-  
-    
-    return product;
-  })
+const getProduct = cache(async (id: string) => {
+  const product = await prisma.product.findUnique({ where: { id } });
 
- 
-export default async function ProductPage(
-  { params: { id } }: ProductPageProps)
-  {
-   
-    const product = await getProduct(id);
-    return(
-      <div className="overflow-hidden">
+  return product;
+});
+
+export default async function ProductPage({
+  params: { id },
+}: ProductPageProps) {
+  const product = await getProduct(id);
+  return (
+    <div className="overflow-hidden">
       {/* 2nd level */}
       <div className="bg-white">
-        
         <div className="sm:flex gap-10 pl-10 sm:pl-16 pr-10 sm:pr-0 pt-20 sm:pt-40">
-
-
-        <div className="card sm:w-[40em] sm:h-[30em] bg-base-100 shadow-xl">
-  <figure><img src={product.imageUrl} alt="Shoes" /></figure>
-  <div className="rounded-md card-body bg-gradient-to-r from-green-900 from-3%
+          <div className="card sm:w-[40em] sm:h-[30em] bg-base-100 shadow-xl">
+            <figure>
+              <img src={product.imageUrl} alt="Shoes" />
+            </figure>
+            <div
+              className="rounded-md card-body bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
-     to-green-600 to-75%">
-    <h2 className="card-title">
-      {product.name}
-      <div className="sm:badge sm:bg-red-600 border-none text-red-800 sm:text-white text-xs sm:text-xs">OUT OF STOCK</div>
-    </h2>
-    <p>{product.description}</p>
-    
-  </div>
-</div>
+     to-green-600 to-75%"
+            >
+              <h2 className="card-title">
+                {product.name}
+                <div className="sm:badge sm:bg-red-600 border-none text-red-800 sm:text-white text-xs sm:text-xs">
+                  OUT OF STOCK
+                </div>
+              </h2>
+              <p>{product.description}</p>
+            </div>
+          </div>
 
-<div>
-<h1 className="text-black text-4xl sm:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] pt-6 sm:pt-0">
-          HIGH QUALITY EGGS
-        </h1>
+          <div>
+            <h1 className="text-black text-4xl sm:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] pt-6 sm:pt-0">
+              HIGH QUALITY EGGS
+            </h1>
 
-        <div className="pt-3 sm:pt-10 pb-5 flex">
-          <h1 className="text-black pt-2">Quantity :</h1>
-          <FaCircleMinus className="text-green-600 btn btn-circle scale-50 mt-0"/>
-          <input type="text" className="input input-bordered max-w-20 h-8 bg-white text-black border-slate-500 border-2" />
-          <OutOfStock/>
-      
-        </div>
-        <div className="btn btn-sm hover:text-white"><h1>Add to cart</h1><FaCartPlus className="text-white"/></div>    
-        <div className="pt-3 sm:pt-5 flex gap-10">
-          <h1 className="text-black">Price :</h1>
-          <h1 className="text-lime-500"> <PriceTag price={product.price} className="" /></h1>
-          
-        </div>
-       
-        <div className="pt-10 sm:pt-20">
-          <div className="btn btn-wide text-white bg-slate-800"> CHECK OUT</div>
-        </div>
-</div>
-          
+            <div className="pt-3 sm:pt-10 pb-5 flex">
+              <h1 className="text-black pt-2">Quantity :</h1>
+              <FaCircleMinus className="text-green-600 btn btn-circle scale-50 mt-0" />
+              <input
+                type="text"
+                className="input input-bordered max-w-20 h-8 bg-white text-black border-slate-500 border-2"
+              />
+              <OutOfStock />
+            </div>
+            <div className="btn btn-sm hover:text-white">
+              <h1>Add to cart</h1>
+              <FaCartPlus className="text-white" />
+            </div>
+            <div className="pt-3 sm:pt-5 flex gap-10">
+              <h1 className="text-black">Price :</h1>
+              <h1 className="text-lime-500">
+                {" "}
+                <PriceTag price={product.price} className="" />
+              </h1>
+            </div>
 
-        
-
-        
+            <div className="pt-10 sm:pt-20">
+              <div className="btn btn-wide text-white bg-slate-800">
+                {" "}
+                CHECK OUT
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* after second cards */}
@@ -92,18 +96,12 @@ export default async function ProductPage(
               NEED SOMETHING ELSE?
             </h1>
             <p className="sm:pt-16 sm:pr-20 text-xl sm:text-2xl font-extralight">
-              Whether you’re in Healthcare, CPG, Chemicals, or another industry,
-              we offer AI & Data solutions and expert guidance so you can claim
-              a leading spot in your market.To access product knowledge and
-              serve our customers more efficiently, we decided to build an
-              intelligent knowledge base.
+              Don't see what you want? No worries. We can provide custom
+              products tailored to what you require. We also offer our expert
+              guidance to any related situation, regardless of the field. You
+              need only connect with our experts.
             </p>
-            <div className="btn btn-wide mt-5 sm:mt-28 bg-slate-900 hover:bg-gray-100 border-none hover:text-black text-white">
-              <h1 className="text-xl flex gap-10">
-                Let's Talk
-                <BsArrowRight className="text-3xl animate-pulse" />
-              </h1>
-            </div>
+            <ContactExpertsButton />
           </div>
         </div>
 
@@ -122,12 +120,8 @@ export default async function ProductPage(
         <div className="sm:pr-40 sm:pl-40">
           <div className="card card-body shadow-xl">
             <p className="text-black text-3xl sm:text-4xl font-extralight">
-              "To access product knowledge and serve our customers more
-              efficiently, we decided to build an intelligent knowledge base.
-              OMANET selected the right technology for our search algorithm and
-              created a very user-friendly front-end application. Their
-              technical expertise, professional communication, and excellent
-              project management made it a great pleasure to collaborate."
+              " Our customers' needs are our primary concern. Everything else is
+              secondary. It is always a great pleasure to collaborate."
             </p>
           </div>
           <p className="sm:text-right text-center text-black pt-10 text-3xl">
@@ -136,16 +130,8 @@ export default async function ProductPage(
           </p>
         </div>
 
-        <div className="text-center h-[20em]">
-          <div
-            className="btn bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% border-none mt-20 hover:btn-lg"
-          >
-            <h1 className="text-white">Discover More Case Studies</h1>
-          </div>
-        </div>
+        <div className="text-center h-[20em]"></div>
       </div>
     </div>
-    )
+  );
 }

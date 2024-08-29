@@ -15,23 +15,20 @@ import { Button } from "./components/ui/moving-border";
 import eggs from "../../public/images/homepage/eggs.jpg";
 import AltBackgroundSlider from "./components/AltBackgroundSlider";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import ContactButton from "./components/ContactButton";
 export default function Home() {
-  const words = ` We stand for providing the most fresh organic products which will
-  serve your health and be a source of vitamins and minerals for our
-  clients. Packed with Vitamin C, a cherry tomato boosts immunity and
-  acts as an antioxidant, It is also used in beauty care for both skin
-  and hair, the Lycopene in cherry tomato naturally protects the skin
-  and acts as a sunblock. Those who have oily skin can apply it to the
-  face to prevent acne and pimples.`;
+  const words = ` Organic farm products are grown with a deep respect for nature, free from synthetic chemicals, pesticides, and GMOs. They are nurtured in healthy, nutrient-rich soils,
+   which not only enhance their flavor but also retain more of the essential
+    vitamins and minerals we need. From fresh vegetables to pasture-raised meats,
+     organic farm products reflect sustainable practices that protect the environment,
+      support biodiversity, and promote animal welfare.`;
 
-  useEffect( () => {
-(
-  async () => {
-    const LocomotiveScroll = (await import('locomotive-scroll')).default;
-    const locomotiveScroll = new LocomotiveScroll();
-  }
-)
-  }, [])
+  useEffect(() => {
+    async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    };
+  }, []);
 
   const FadeInLeftAnimation = {
     initial: {
@@ -130,90 +127,84 @@ export default function Home() {
         group
        p-10"
       >
-
         <div className="sm:flex">
-        <div
-            className="text-center text-black sm:w-[50%]"
-           
-          >
+          <div className="text-center text-black sm:w-[50%]">
             <p className="text-black sm:pl-16 sm:pr-44 sm:pt-20 pb-5">
-              <motion.h1 className="text-xl font-bold pb-10"
-               variants={FadeInLeftAnimation}
-               initial="initial"
-               whileInView="animate"
-               viewport={{
-                 once: false,
-               }}
-              >WHY OMANET?</motion.h1>
-              <motion.h1 className="text-4xl sm:text-6xl pb-6 sm:pl-40"
-               variants={FadeInLeftAnimationSlower}
-               initial="initial"
-               whileInView="animate"
-               viewport={{
-                 once: false,
-               }}
+              <motion.h1
+                className="text-xl font-bold pb-10"
+                variants={FadeInLeftAnimation}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: false,
+                }}
               >
-                HEALTHY, <a className="text-green-600">ORGANIC,</a> 
+                WHY OMANET?
+              </motion.h1>
+              <motion.h1
+                className="text-4xl sm:text-6xl pb-6 sm:pl-40"
+                variants={FadeInLeftAnimationSlower}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: false,
+                }}
+              >
+                HEALTHY, <a className="text-green-600">ORGANIC,</a>
                 AUTHENTIC
               </motion.h1>
               <motion.p
-               variants={FadeInLeftAnimation}
-               initial="initial"
-               whileInView="animate"
-               viewport={{
-                 once: false,
-               }}
+                variants={FadeInLeftAnimation}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: false,
+                }}
               >
-                At OMANET, we emphasize personal interactions and a bespoke
-                service from start to finish, valuing traditional engagement
-                methods over digital communication. As primarily an offline
-                business, we focus on face-to-face and telephone consultations
-                to provide tailored guidance based on your unique interests.
-                <br /> We invite to contact us for a meeting or telephone
-                conversation, allowing us to understand and craft your travel
-                plans to meet your specific expectations and preferences.
+                Organic food is not just a trend; it’s a return to wholesome,
+                natural nutrition that benefits both our bodies and the planet.
+                Free from synthetic pesticides, GMOs, and harmful additives,
+                organic food is grown in harmony with nature, promoting soil
+                health, biodiversity, and sustainable farming practices. It
+                often contains higher levels of nutrients, tastes fresher, and
+                supports ethical farming methods that prioritize the welfare of
+                animals and the environment.
+                <br /> Choosing organic is an investment in your well-being and
+                a commitment to a healthier, more sustainable future for
+                everyone.
               </motion.p>
             </p>
-            <button className="px-4 py-2 hover:scale-105 transition duration-500 backdrop-blur-sm border bg-emerald-500 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
-          <span>Contact Us →</span>
-          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-        </button>
+            <ContactButton />
           </div>
 
           {/* right side */}
           <div className="sm:w-[50%]">
-          <motion.div
-      className="hidden sm:block relative sm:h-[32em] sm:w-[70%] bg-cover bg-center sm:right-[-30%] brightness-75"
-      style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
-      }}
-      variants={FadeInRightAnimation}
-      initial="initial"
-      whileInView="animate"
-      viewport={{
-        once: true,
-      }}
-    >
-      <motion.img
-        src="https://images.unsplash.com/photo-1526346698789-22fd84314424?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Foreground Image"
-        className="sm:absolute sm:bottom-[-20%] sm:left-[-50%] m-4 w-[25em] sm:h-[20em] opacity-95"
-        // variants={FadeInUpwardsAnimationSlower}
-        // initial="initial"
-        // whileInView="animate"
-        // viewport={{
-        //   once: true,
-        // }}
-      />
-    </motion.div>
-
-
-
+            <motion.div
+              className="hidden sm:block relative sm:h-[32em] sm:w-[70%] bg-cover bg-center sm:right-[-30%] brightness-75"
+              style={{
+                backgroundImage: `url('https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+              }}
+              variants={FadeInRightAnimation}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+            >
+              <motion.img
+                src="https://images.unsplash.com/photo-1526346698789-22fd84314424?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Foreground Image"
+                className="sm:absolute sm:bottom-[-20%] sm:left-[-50%] m-4 w-[25em] sm:h-[20em] opacity-95"
+                // variants={FadeInUpwardsAnimationSlower}
+                // initial="initial"
+                // whileInView="animate"
+                // viewport={{
+                //   once: true,
+                // }}
+              />
+            </motion.div>
           </div>
-        
         </div>
-
-      
 
         {/* after first div */}
         <div className="sm:pt-60 sm:pb-40 sm:flex sm:pl-20 sm:pr-20 sm:h-[35em]">
@@ -226,7 +217,8 @@ export default function Home() {
             }}
             className="text-black text-3xl sm:text-5xl pl-4 sm:pl-10 sm:pr-1"
           >
-            YOU’LL BE IN GREAT COMPANY, WE’RE <a className="text-green-600">TRUSTED BY HUNDREDS</a> OF FARMERS.
+            YOU’LL BE IN GREAT COMPANY, WE’RE{" "}
+            <a className="text-green-600">TRUSTED BY HUNDREDS</a> OF FARMERS.
           </motion.h1>
           <div className="divider lg:divider-horizontal divider-success"></div>
           <motion.h1
@@ -238,9 +230,8 @@ export default function Home() {
             }}
             className="text-right text-black text-lg sm:ml-20 sm:pr-10"
           >
-            Discover how we helped industry leaders build their data-driven
-            future. Get a deeper understanding of our AI & Data solutions and
-            the impact they have on businesses like yours.
+            Discover how we helped multiple farmers increase their productivity
+            and efficiency for a better yield.
           </motion.h1>
         </div>
 
@@ -328,7 +319,7 @@ export default function Home() {
       >
         {/* testimonial level */}
         <div className="hidden sm:flex h-[40em]">
-        <motion.div
+          <motion.div
             className="w-[50%]"
             variants={FadeInLeftAnimation}
             initial="initial"
@@ -353,17 +344,17 @@ export default function Home() {
             }}
           >
             <p className="text-black text-xl sm:text-2xl font-extralight pl-16">
-              <FaQuoteLeft/> To access product knowledge and serve our customers more
-              efficiently, we decided to build an intelligent knowledge base.
+              <FaQuoteLeft /> To access product knowledge and serve our
+              customers more efficiently, we decided to build an intelligent
+              knowledge base.
               <a className="font-bold text-green-400 italic">OMANET</a> selected
-              the right technology for our search algorithm and created a very
-              user-friendly front-end application. Their technical expertise,
-              professional communication, and excellent project management made
-              it a{" "}
+              the right procedures and created a very simple and easy to follow
+              guide to success. Our technical expertise bolsters our advice and
+              guarantess a positive change. It is always a{" "}
               <a className="underline text-green-400 font-bold italic">
                 great pleasure to collaborate.
               </a>
-              <FaQuoteRight/>
+              <FaQuoteRight />
             </p>
 
             <p className="sm:text-right text-center text-black pt-10 text-3xl">
@@ -428,10 +419,7 @@ export default function Home() {
             <p className="pt-8 sm:pt-8 pl-4 sm:pl-20 pr-4 sm:pr-20 pb-5 sm:pb-4 sm:text-md text-white">
               {words}
             </p>
-            <button className="px-4 py-2 hover:scale-105 transition duration-500 backdrop-blur-sm border bg-emerald-500 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
-          <span>Check Out →</span>
-          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-        </button>
+            <ContactButton />
           </motion.div>
         </motion.div>
       </div>
@@ -470,7 +458,7 @@ export default function Home() {
                 business, we focus on face-to-face and telephone consultations
                 to provide tailored guidance based on your unique interests.
                 <br /> We invite to contact us for a meeting or telephone
-                conversation, allowing us to understand and craft your travel
+                conversation, allowing us to understand and craft your organic farming
                 plans to meet your specific expectations and preferences.
               </p>
             </p>
@@ -494,8 +482,6 @@ export default function Home() {
         </div>
 
         {/* after second testimonial */}
-
-        
       </div>
     </div>
   );

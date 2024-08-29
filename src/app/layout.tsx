@@ -4,6 +4,7 @@ import "./globals.css";
 import FloatingNav from "./components/ui/FloatingNav";
 import { NavbarDemo } from "./components/NavbarDemo";
 import Footer from "./components/Footer";
+import SignInNavbarAddition from "./components/SignInNavbarAddition";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavbarDemo/>
+        <div className="flex"><NavbarDemo/><SignInNavbarAddition/></div>
+        
         {/* <FloatingNav/> */}
         {children}
         <Footer/>

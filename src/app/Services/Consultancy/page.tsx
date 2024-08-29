@@ -5,6 +5,7 @@ import ruraltraining from "../../../../public/images/homepage/ruraltraining.jpg"
 import chicken from "../../../../public/images/homepage/chicken.jpg";
 import samavocado from "../../../../public/images/homepage/samavocado.jpg";
 import { BsArrowRight } from "react-icons/bs";
+import ContactExpertsButton from "@/app/components/ContactExpertsButton";
 export default function Consultancy() {
   const FadeInUpwardsAnimation = {
     initial: {
@@ -89,12 +90,12 @@ export default function Consultancy() {
           <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
-     to-green-600 to-75% hover:-inset-y-2"
+     to-green-600 to-75%"
             variants={FadeInUpwardsAnimation}
             initial="initial"
             whileInView="animate"
             viewport={{
-              once: true,
+              once: false,
             }}
           >
             <h1 className="text-2xl font-semibold pb-8">
@@ -114,12 +115,12 @@ export default function Consultancy() {
           <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
-             to-green-600 to-75% hover:-inset-y-2"
+             to-green-600 to-75%"
             variants={FadeInUpwardsAnimationSlower}
             initial="initial"
             whileInView="animate"
             viewport={{
-              once: true,
+              once: false,
             }}
           >
             <h1 className="text-2xl font-semibold pb-8">
@@ -140,12 +141,12 @@ export default function Consultancy() {
           <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
             via-lime-400 
-             to-green-600 to-75% hover:-inset-y-2"
+             to-green-600 to-75%"
             variants={FadeInUpwardsAnimationEvenSlower}
             initial="initial"
             whileInView="animate"
             viewport={{
-              once: true,
+              once: false,
             }}
           >
             <h1 className="text-2xl font-semibold pb-8">
@@ -175,10 +176,7 @@ export default function Consultancy() {
               YOUR BUSINESS
             </h1>
 
-            <div className="btn sm:btn-wide w-[15em] mt-6 sm:mt-28 bg-slate-900 hover:bg-gray-100 border-none hover:text-black text-white flex sm:gap-5">
-              <h1 className="text-md ">Connect with our experts</h1>
-              <BsArrowRight className="hidden sm:block text-2xl animate-pulse" />
-            </div>
+           <ContactExpertsButton/>
           </div>
         </div>
 

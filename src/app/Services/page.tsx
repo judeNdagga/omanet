@@ -5,6 +5,7 @@ import training3 from "../../../public/images/services/Training_171.jpg";
 import networking1 from "../../../public/images/homepage/networking1.jpg";
 import chilli3 from "../../../public/images/services/chilli3.jpg";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import ContactExpertsButton from "../components/ContactExpertsButton";
 export default function Entrepreneurship() {
   const FadeInLeftAnimation = {
     initial: {
@@ -216,12 +217,7 @@ export default function Entrepreneurship() {
               instance. We provide customized services and products to help you
               along your organic journey. Give us a call if you need anything customized to your special needs. Easy for you, easy for us.
             </p>
-            <div className="btn btn-wide mt-28 bg-slate-900 hover:bg-gray-100 border-none hover:text-black text-white">
-              <h1 className="text-xl flex gap-10">
-                Let's Talk
-                <BsArrowRight className="text-3xl animate-pulse" />
-              </h1>
-            </div>
+            <ContactExpertsButton/>
           </div>
         </div>
 
@@ -255,13 +251,7 @@ export default function Entrepreneurship() {
         </div>
 
         <div className="text-center h-[20em]">
-          <div
-            className="btn bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% border-none mt-20 hover:btn-lg"
-          >
-            <h1 className="text-white">Discover More Case Studies</h1>
-          </div>
+          
         </div>
       </div>
     </div>

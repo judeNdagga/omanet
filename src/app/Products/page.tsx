@@ -1,15 +1,16 @@
 import Image from "next/image";
-import prisma from '@/app/lib/prisma'
+import prisma from "@/app/lib/prisma";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { ProductCard } from "../components/ui/hero-parallax";
 import ProductCard2 from "../components/ProductCard";
+import ContactExpertsButton from "../components/ContactExpertsButton";
 export const metadata = {
-  title: "Products - OMANET"
-}
+  title: "Products - OMANET",
+};
 export default async function Entrepreneurship() {
   const products = await prisma.product.findMany({
-    orderBy: {id: "desc"}
-})
+    orderBy: { id: "desc" },
+  });
   return (
     <div className="overflow-hidden">
       {/* 2nd level */}
@@ -20,20 +21,10 @@ export default async function Entrepreneurship() {
         <div className="sm:flex gap-10 p-8">
           {/* first card */}
 
-
-
-{/* product card trial */}
-{products.map((product) => (
-  <ProductCard2 product={product} key={product.id} />
-))}
-
-
-
-
-
-
-        
-          
+          {/* product card trial */}
+          {products.map((product) => (
+            <ProductCard2 product={product} key={product.id} />
+          ))}
         </div>
 
         {/* after second cards */}
@@ -48,18 +39,12 @@ export default async function Entrepreneurship() {
               NEED SOMETHING ELSE?
             </h1>
             <p className="sm:pt-16 sm:pr-20 text-2xl font-extralight">
-              Whether you’re in Healthcare, CPG, Chemicals, or another industry,
-              we offer AI & Data solutions and expert guidance so you can claim
-              a leading spot in your market.To access product knowledge and
-              serve our customers more efficiently, we decided to build an
-              intelligent knowledge base.
+              Don't see what you want? No worries. We can provide custom
+              products tailored to what you require. We also offer our expert
+              guidance to any related situation, regardless of the field. You
+              need only connect with our experts.
             </p>
-            <div className="btn btn-wide mt-10 sm:mt-28 bg-slate-900 hover:bg-gray-100 border-none hover:text-black text-white">
-              <h1 className="text-xl flex gap-10">
-                Let's Talk
-                <BsArrowRight className="text-3xl animate-pulse" />
-              </h1>
-            </div>
+            <ContactExpertsButton />
           </div>
         </div>
 
@@ -78,9 +63,8 @@ export default async function Entrepreneurship() {
         <div className="sm:pr-40 sm:pl-40 p-6">
           <div className="card card-body shadow-xl">
             <p className="text-black text-3xl sm:text-4xl font-extralight">
-              " Their
-              technical expertise, professional communication, and excellent
-              project management made it a great pleasure to collaborate."
+              " Our customers' needs are our primary concern. Everything else is
+              secondary. It is always a great pleasure to collaborate."
             </p>
           </div>
           <p className="text-right text-black pt-10 text-3xl">
@@ -89,15 +73,7 @@ export default async function Entrepreneurship() {
           </p>
         </div>
 
-        <div className="text-center h-[20em]">
-          <div
-            className="btn bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% border-none mt-20 hover:btn-lg"
-          >
-            <h1 className="text-white">Discover More Case Studies</h1>
-          </div>
-        </div>
+        <div className="text-center h-[20em]"></div>
       </div>
     </div>
   );

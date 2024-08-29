@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import banana1 from "../../../../public/images/banana/Banana049.jpg";
 import { BsArrowRight } from "react-icons/bs";
+import ContactExpertsButton from "@/app/components/ContactExpertsButton";
 export default function Communication() {
   const FadeInLeftAnimation = {
     initial: {
@@ -131,7 +132,7 @@ export default function Communication() {
             initial="initial"
             whileInView="animate"
             viewport={{
-              once: true,
+              once: false,
             }}
           >
             <h1 className="text-2xl font-semibold pb-8">EDUCATING CONSUMERS</h1>
@@ -152,7 +153,7 @@ export default function Communication() {
             initial="initial"
             whileInView="animate"
             viewport={{
-              once: true,
+              once: false,
             }}
           >
             <h1 className="text-2xl font-semibold pb-8">
@@ -174,7 +175,7 @@ export default function Communication() {
             initial="initial"
             whileInView="animate"
             viewport={{
-              once: true,
+              once: false,
             }}
           >
             <h1 className="text-2xl font-semibold pb-8">BUILDING COMMUNITY</h1>
@@ -198,10 +199,7 @@ export default function Communication() {
               YOUR BUSINESS
             </h1>
 
-            <div className="btn sm:btn-wide w-[15em] mt-6 sm:mt-28 bg-slate-900 hover:bg-gray-100 border-none hover:text-black text-white flex sm:gap-5">
-              <h1 className="text-md ">Connect with our experts</h1>
-              <BsArrowRight className="hidden sm:block text-2xl animate-pulse" />
-            </div>
+            <ContactExpertsButton/>
           </div>
         </div>
 
@@ -214,7 +212,7 @@ export default function Communication() {
             initial="initial"
             whileInView="animate"
             viewport={{
-              once: true,
+              once: false,
             }}
           >
             <p className="text-black pl-5 sm:pl-16 sm:pr-44 sm:pt-20">
@@ -244,7 +242,7 @@ export default function Communication() {
             initial="initial"
             whileInView="animate"
             viewport={{
-              once: true,
+              once: false,
             }}
           >
             <Image
