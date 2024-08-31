@@ -1,6 +1,9 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import ruraltraining from "/public/images/homepage/ruraltraining.jpg";
+import chicken from "/public/images/homepage/chicken.jpg";
+import samavocado from "/public/images/homepage/samavocado.jpg";
 import ContactExpertsButton from "@/app/components/ContactExpertsButton";
 export default function Consultancy() {
   const FadeInUpwardsAnimation = {
@@ -188,12 +191,11 @@ export default function Consultancy() {
             appreciation of our work together, reflected in their progress.
           </h1>
         </div>
-        
         <div className="sm:flex">
           {/* 1st card */}
           <div className="card card-body">
             <Image
-              src={"/public/images/homepage/ruraltraining.jpg"}
+              src={chicken}
               width={1920}
               height={1080}
               alt="bg pic"
@@ -212,7 +214,7 @@ export default function Consultancy() {
 
           <div className="card card-body">
             <Image
-              src={"/public/images/homepage/samavocado.jpg"}
+              src={samavocado}
               width={1920}
               height={1080}
               alt="bg pic"
@@ -229,7 +231,7 @@ export default function Consultancy() {
           {/* 3rd card */}
           <div className="card card-body">
             <Image
-              src={"/public/images/homepage/ruraltraining.jpg"}
+              src={ruraltraining}
               width={1920}
               height={1080}
               alt="bg pic"
