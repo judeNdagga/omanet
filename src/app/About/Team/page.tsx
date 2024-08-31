@@ -104,7 +104,7 @@ export default function Team() {
           <div className="text-center text-black sm:w-[50%]">
             <p className="text-black sm:pl-16 sm:pr-44 sm:pt-20 pb-5">
               <motion.h1
-                className="text-4xl sm:text-6xl pb-6 sm:pl-20"
+                className="text-4xl sm:text-6xl pb-6 sm:pl-20 pt-10 sm:pt-0"
                 variants={FadeInLeftAnimationSlower}
                 initial="initial"
                 whileInView="animate"
@@ -133,11 +133,11 @@ export default function Team() {
           </div>
 
           {/* right side */}
-          <div className="sm:w-[50%]">
+          <div className="sm:w-[50%] hidden sm:block ">
             <motion.div
-              className="hidden sm:block relative sm:h-[32em] sm:w-[70%] bg-cover bg-center sm:right-[-30%] brightness-75"
+              className="relative sm:h-[32em] sm:w-[70%] bg-cover bg-center sm:right-[-30%] brightness-75"
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+                backgroundImage: `url('https://images.unsplash.com/photo-1664575197593-2e7085ef086b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
               }}
               variants={FadeInRightAnimation}
               initial="initial"
@@ -147,7 +147,7 @@ export default function Team() {
               }}
             >
               <motion.img
-                src="https://images.unsplash.com/photo-1526346698789-22fd84314424?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Foreground Image"
                 className="sm:absolute sm:bottom-[-20%] sm:left-[-50%] m-4 w-[25em] sm:h-[20em] opacity-95"
                 variants={FadeInUpwardsAnimationSlower}
@@ -162,9 +162,9 @@ export default function Team() {
         </div>
 
         {/* after first div */}
-        <div className="sm:pt-60 sm:pb-40 sm:flex sm:pl-20 sm:pr-20 sm:h-[50em]">
+        <div className="pt-10 sm:pt-60 sm:pb-40 sm:pl-20 sm:pr-20 sm:h-[50em] flex">
         <motion.div
-            className="w-[50%]"
+            className="sm:w-[50%]"
             variants={FadeInLeftAnimation}
             initial="initial"
             whileInView="animate"
@@ -173,7 +173,7 @@ export default function Team() {
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1521790797524-b2497295b8a0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
               className="w-full h-[85%] hover:scale-105 transition duration-500"
             />
@@ -187,7 +187,7 @@ export default function Team() {
             viewport={{
               once: true,
             }}
-            className="text-black text-3xl sm:text-5xl pl-4 sm:pl-10 sm:pr-1 pt-20"
+            className="text-black text-2xl sm:text-5xl pl-4 sm:pl-10 sm:pr-1 sm:pt-20"
           >
             PROBLEM SOLVING AND{" "}
             <a className="text-green-600">KNOWLEDGE SHARING.</a>
@@ -206,7 +206,7 @@ export default function Team() {
             href="/Services/Consultancy"
           >
             <Image
-              src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1518994603110-1912b3272afd?q=80&w=1924&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
               width={1920}
               height={1080}
@@ -222,7 +222,7 @@ export default function Team() {
             href="/Services/Training"
           >
             <Image
-              src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1523349122880-44486ffa7b14?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
               width={1920}
               height={1080}
@@ -237,7 +237,7 @@ export default function Team() {
             href="/Services/Communication"
           >
             <Image
-              src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1530541835461-dedaf9cf368a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
               width={1920}
               height={1080}

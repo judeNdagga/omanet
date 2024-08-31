@@ -211,12 +211,12 @@ export default function Entrepreneurship() {
 
         {/* after card */}
 
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 h-[35em]">
-          <h1 className="text-black font-bold font-mono text-5xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
+        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 sm:h-[35em]">
+          <h1 className="text-black font-bold font-mono text-3xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
             HEAR IT FROM OUR CUSTOMERS
           </h1>
           <div className="divider lg:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-black text-lg ml-20 pr-10">
+          <h1 className="text-right text-black text-md ml-20 pr-10">
             Discover how we helped industry leaders build their data-driven
             future. Get a deeper understanding of our AI & Data solutions and
             the impact they have on businesses like yours.

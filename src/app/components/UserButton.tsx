@@ -14,14 +14,14 @@ interface UserButtonProps {
 export default function UserButton({ user }: UserButtonProps) {
   return (
     
-    <div className="dropdown dropdown-hover bg-inherit border-none">
+    <div className="dropdown dropdown-hover bg-inherit border-none mt-10 sm:mt-0">
       <div tabIndex={0} role="button" className="btn m-1 bg-inherit border-none hover:bg-transparent">
       <Image
           src={user.image || avatarPlaceholder}
           alt="User profile picture"
           width={1000}
           height={1000}
-          className="sm:w-[6em] avatar aspect-square rounded-full hover:scale-150 transition duration-500"
+          className="w-[6em] avatar aspect-square rounded-full hover:scale-150 transition duration-500"
         />
       </div>
       <ul

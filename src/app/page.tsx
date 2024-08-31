@@ -142,7 +142,7 @@ export default function Home() {
                 WHY OMANET?
               </motion.h1>
               <motion.h1
-                className="text-4xl sm:text-6xl pb-6 sm:pl-40"
+                className="text-3xl sm:text-6xl pb-6 sm:pl-40"
                 variants={FadeInLeftAnimationSlower}
                 initial="initial"
                 whileInView="animate"
@@ -150,7 +150,7 @@ export default function Home() {
                   once: false,
                 }}
               >
-                HEALTHY, <a className="text-green-600">ORGANIC,</a>
+                HEALTHY, <span className="text-green-600">ORGANIC,</span>
                 AUTHENTIC
               </motion.h1>
               <motion.p

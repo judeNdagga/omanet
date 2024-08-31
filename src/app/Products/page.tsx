@@ -15,7 +15,10 @@ export default async function Entrepreneurship() {
     <div className="overflow-hidden">
       {/* 2nd level */}
       <div className="bg-white">
-        <h1 className="text-black text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-40 pt-20">
+        <h1 className="text-black text-4xl
+         sm:text-5xl font-semibold font-mono
+          text-center sm:pl-[5em] sm:pr-[5em]
+           sm:pt-40 pt-32">
           EXPLORE OUR PRODUCTS
         </h1>
         <div className="sm:flex gap-10 p-8">
@@ -35,10 +38,10 @@ export default async function Entrepreneurship() {
     via-lime-400 
      to-green-600 to-75%"
           >
-            <h1 className="text-6xl font-bold font-mono">
+            <h1 className="text-5xl sm:text-6xl font-bold font-mono">
               NEED SOMETHING ELSE?
             </h1>
-            <p className="sm:pt-16 sm:pr-20 text-2xl font-extralight">
+            <p className="sm:pt-16 sm:pr-20 text-xl sm:text-2xl font-extralight">
               Don't see what you want? No worries. We can provide custom
               products tailored to what you require. We also offer our expert
               guidance to any related situation, regardless of the field. You
@@ -50,12 +53,12 @@ export default async function Entrepreneurship() {
 
         {/* after need something */}
 
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 h-[35em]">
-          <h1 className="text-left text-black font-bold font-mono text-5xl sm:text-6xl pl-10 pr-1">
+        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 sm:h-[35em]">
+          <h1 className="text-left text-black font-bold font-mono text-4xl sm:text-6xl pl-10 pr-1">
             CUSTOMER SATISFACTION KNOWS NO BORDERS
           </h1>
           <div className="divider lg:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-2xl font-light text-black ml-20 pr-10">
+          <h1 className="text-right text-xl sm:text-2xl font-light text-black ml-20 pr-10">
             Our customers come from different industries but share a unanimous
             appreciation of our work together, reflected in their progress
           </h1>

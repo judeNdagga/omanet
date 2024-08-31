@@ -35,14 +35,14 @@ function Navbar({ className }: { className?: string }) {
       {/* <a href="/" className="uppercase font-mono ml-[45%] text-xl text-green-400">omanet</a> */}
       <Menu setActive={setActive}>
 
-      <a href="/">
-      {/* <MenuItem setActive={setActive} active={active} item="HOME">
+      <a href="/" className="block sm:hidden">
+      <MenuItem setActive={setActive} active={active} item="HOME">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/">Homepage</HoveredLink>
             
             
           </div>
-        </MenuItem> */}
+        </MenuItem>
       </a>
       
         <a href="/Services"><MenuItem setActive={setActive} active={active} item="Services">

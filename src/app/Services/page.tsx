@@ -52,7 +52,7 @@ export default function Entrepreneurship() {
   return (
     <div className="overflow-hidden">
       <div
-        className="h-[41em] sm:h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
+        className="h-[30em] sm:h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75%"
@@ -86,7 +86,7 @@ export default function Entrepreneurship() {
 
       {/* 2nd level */}
       <div className="bg-white">
-        <h1 className="text-black text-5xl font-semibold text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
+        <h1 className="text-black text-4xl sm:text-5xl font-semibold text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           EXPLORE THE SERVICES WE PROVIDE
         </h1>
         <div className="sm:flex sm:gap-10 p-8">
@@ -211,8 +211,8 @@ export default function Entrepreneurship() {
     via-lime-400 
      to-green-600 to-75%"
           >
-            <h1 className="text-6xl font-bold">NEED SOMETHING ELSE?</h1>
-            <p className="sm:pt-16 sm:pr-20 text-2xl font-extralight">
+            <h1 className="text-4xl sm:text-6xl font-bold">NEED SOMETHING ELSE?</h1>
+            <p className="sm:pt-16 sm:pr-20 text-xl font-extralight">
               Our commitment to your needs doesn’t end with a single
               instance. We provide customized services and products to help you
               along your organic journey. Give us a call if you need anything customized to your special needs. Easy for you, easy for us.
@@ -224,18 +224,18 @@ export default function Entrepreneurship() {
         {/* after need something */}
 
         <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 h-[35em]">
-          <h1 className="text-black font-bold text-5xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
+          <h1 className="text-black font-bold text-3xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
             CUSTOMER SATISFACTION KNOWS NO BORDERS
           </h1>
           <div className="divider lg:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-2xl font-light text-black ml-20 pr-10">
+          <h1 className="text-right text-xl sm:text-2xl font-light text-black ml-20 pr-10">
             Our customers come from different industries but share a unanimous
             appreciation of our work together, reflected in their progress
           </h1>
         </div>
         <div className="sm:pr-40 sm:pl-40">
           <div className="card card-body shadow-xl">
-            <p className="text-black text-4xl font-extralight">
+            <p className="text-black text-2xl sm:text-4xl font-extralight">
               "To access product knowledge and serve our customers more
               efficiently, we decided to build an intelligent knowledge base.
               OMANET selected the right technology for our search algorithm and

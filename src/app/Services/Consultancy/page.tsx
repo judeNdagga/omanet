@@ -52,7 +52,7 @@ export default function Consultancy() {
   return (
     <div className="overflow-hidden">
       <div
-        className="h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
+        className="h-[40em] sm:h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75%"
@@ -82,7 +82,7 @@ export default function Consultancy() {
 
       {/* 2nd level */}
       <div className="bg-white">
-        <h1 className="text-black text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
+        <h1 className="text-black text-4xl sm:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           DISCOVER HOW TO RUN AN AGRICULTURAL BUSINESS
         </h1>
         <div className="sm:flex sm:gap-10 p-8">
@@ -182,15 +182,14 @@ export default function Consultancy() {
 
         {/* after card */}
 
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 h-[35em]">
-          <h1 className="text-black font-bold font-mono text-5xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
+        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 sm:h-[35em]">
+          <h1 className="text-black font-bold font-mono text-3xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
             HEAR IT FROM OUR CUSTOMERS
           </h1>
           <div className="divider lg:divider-horizontal divider-success"></div>
           <h1 className="text-right text-black text-lg ml-20 pr-10">
-            Discover how we helped industry leaders build their data-driven
-            future. Get a deeper understanding of our AI & Data solutions and
-            the impact they have on businesses like yours.
+          Our customers come from different industries but share a unanimous
+            appreciation of our work together, reflected in their progress.
           </h1>
         </div>
         <div className="sm:flex">

@@ -93,7 +93,7 @@ export default function ProductDevelopment() {
   return (
     <div className="overflow-hidden">
       <div
-        className="h-[41em] sm:h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
+        className="h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
      to-green-600 to-75%"
@@ -128,7 +128,7 @@ export default function ProductDevelopment() {
 
       {/* 2nd level */}
       <div className="bg-white">
-        <h1 className="text-black text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
+        <h1 className="text-black text-4xl sm:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           ACCESS PROFESSIONAL PRODUCT DEVELOPMENT
         </h1>
         <div className="sm:flex sm:gap-10 p-8">
