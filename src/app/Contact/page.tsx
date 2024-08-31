@@ -1,5 +1,4 @@
 "use client";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { motion } from "framer-motion";
 export default function Contact() {
   const FadeInLeftAnimation = {
