@@ -48,6 +48,7 @@ export default function Consultancy() {
       },
     },
   };
+  
   return (
     <div className="overflow-hidden">
       <div
