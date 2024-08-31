@@ -1,14 +1,14 @@
 import Image from "next/image";
-import image1 from "../../../../public/images/Gallery/20201030_121306.jpg";
-import image2 from "../../../../public/images/Gallery/20201030_121326.jpg";
-import image3 from "../../../../public/images/Gallery/20230408_104111.jpg";
-import image4 from "../../../../public/images/Gallery/20230408_104118.jpg";
-import image5 from "../../../../public/images/Gallery/DSC03099.jpg";
-import image6 from "../../../../public/images/Gallery/DSC03103.jpg";
-import image7 from "../../../../public/images/Gallery/DSC03105.jpg";
-import image8 from "../../../../public/images/Gallery/DSC03108.jpg";
-import image9 from "../../../../public/images/Gallery/DSC03114.jpg";
-import image10 from "../../../../public/images/Gallery/DSC03131.jpg";
+import image1 from "/public/images/Gallery/20201030_121306.jpg";
+import image2 from "/public/images/Gallery/20201030_121326.jpg";
+import image3 from "/public/images/Gallery/20230408_104111.jpg";
+import image4 from "/public/images/Gallery/20230408_104118.jpg";
+import image5 from "/public/images/Gallery/DSC03099.jpg";
+import image6 from "/public/images/Gallery/DSC03103.jpg";
+import image7 from "/public/images/Gallery/DSC03105.jpg";
+import image8 from "/public/images/Gallery/DSC03108.jpg";
+import image9 from "/public/images/Gallery/DSC03114.jpg";
+import image10 from "/public/images/Gallery/DSC03131.jpg";
 
 import { CardBody, CardContainer, CardItem } from "@/app/components/ui/3d-card";
 export default function Gallery() {
