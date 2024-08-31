@@ -188,6 +188,7 @@ export default function Consultancy() {
             appreciation of our work together, reflected in their progress.
           </h1>
         </div>
+        
         <div className="sm:flex">
           {/* 1st card */}
           <div className="card card-body">
