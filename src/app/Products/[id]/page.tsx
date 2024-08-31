@@ -32,7 +32,7 @@ export default async function ProductPage({
         <div className="sm:flex gap-10 pl-10 sm:pl-16 pr-10 sm:pr-0 pt-20 sm:pt-40">
           <div className="card sm:w-[40em] sm:h-[30em] bg-base-100 shadow-xl">
             <figure>
-              <img src={product.imageUrl} alt="Shoes" />
+              <img src={product!.imageUrl} alt="Shoes" />
             </figure>
             <div
               className="rounded-md card-body bg-gradient-to-r from-green-900 from-3%
@@ -40,12 +40,12 @@ export default async function ProductPage({
      to-green-600 to-75%"
             >
               <h2 className="card-title">
-                {product.name}
+                {product!.name}
                 <div className="sm:badge sm:bg-red-600 border-none text-red-800 sm:text-white text-xs sm:text-xs">
                   OUT OF STOCK
                 </div>
               </h2>
-              <p>{product.description}</p>
+              <p>{product!.description}</p>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ export default async function ProductPage({
               <h1 className="text-black">Price :</h1>
               <h1 className="text-lime-500">
                 {" "}
-                <PriceTag price={product.price} className="" />
+                <PriceTag price={product!.price} className="" />
               </h1>
             </div>
 
