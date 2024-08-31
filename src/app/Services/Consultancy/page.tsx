@@ -1,10 +1,9 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import ruraltraining from "../../../../public/images/homepage/ruraltraining.jpg";
-import chicken from "../../../../public/images/homepage/chicken.jpg";
-import samavocado from "../../../../public/images/homepage/samavocado.jpg";
-import { BsArrowRight } from "react-icons/bs";
+import ruraltraining from "/public/images/homepage/ruraltraining.jpg";
+import chicken from "/public/images/homepage/chicken.jpg";
+import samavocado from "/public/images/homepage/samavocado.jpg";
 import ContactExpertsButton from "@/app/components/ContactExpertsButton";
 export default function Consultancy() {
   const FadeInUpwardsAnimation = {

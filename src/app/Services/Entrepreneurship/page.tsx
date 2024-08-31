@@ -3,7 +3,6 @@ import ContactExpertsButton from "@/app/components/ContactExpertsButton";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-import { BsArrowRight } from "react-icons/bs";
 export default function Entrepreneurship() {
   const FadeInUpwardsAnimation = {
     initial: {

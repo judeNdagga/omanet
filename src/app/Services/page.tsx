@@ -1,10 +1,9 @@
 import Image from "next/image";
-import training1 from "../../../public/images/services/Training_3309.jpg";
-import training2 from "../../../public/images/services/Training_3313.jpg";
-import training3 from "../../../public/images/services/Training_171.jpg";
-import networking1 from "../../../public/images/homepage/networking1.jpg";
-import chilli3 from "../../../public/images/services/chilli3.jpg";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import training1 from "/public/images/services/Training_3309.jpg";
+import training2 from "/public/images/services/Training_3313.jpg";
+import training3 from "/public/images/services/Training_171.jpg";
+import networking1 from "/public/images/homepage/networking1.jpg";
+import chilli3 from "/public/images/services/chilli3.jpg";
 import ContactExpertsButton from "../components/ContactExpertsButton";
 export default function Entrepreneurship() {
   const FadeInLeftAnimation = {

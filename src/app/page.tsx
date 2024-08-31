@@ -1,10 +1,10 @@
 "use client";
-import training1 from "../../public/images/services/Training_3309.jpg";
-import training2 from "../../public/images/services/Training_3313.jpg";
-import training3 from "../../public/images/services/Training_171.jpg";
-import training4 from "../../public/images/services/Training164.jpg";
-import networking1 from "../../public/images/homepage/networking1.jpg";
-import chilli3 from "../../public/images/services/chilli3.jpg";
+import training1 from "/public/images/services/Training_3309.jpg";
+import training2 from "/public/images/services/Training_3313.jpg";
+import training3 from "/public/images/services/Training_171.jpg";
+import training4 from "/public/images/services/Training164.jpg";
+import networking1 from "/public/images/homepage/networking1.jpg";
+import chilli3 from "/public/images/services/chilli3.jpg";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";

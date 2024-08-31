@@ -1,8 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import banana1 from "../../../../public/images/banana/Banana049.jpg";
-import { BsArrowRight } from "react-icons/bs";
 import ContactExpertsButton from "@/app/components/ContactExpertsButton";
 export default function Communication() {
   const FadeInLeftAnimation = {
