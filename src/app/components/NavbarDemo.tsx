@@ -62,25 +62,25 @@ function Navbar({ className }: { className?: string }) {
               title="Organic Wine"
               href="/Products/OrganicWine/BuyWine"
               src="https://images.unsplash.com/photo-1610371800811-a7d2a7b6b3e8?q=80&w=1963&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              description="Prepare for tech interviews like never before."
+              description="Organic wine with a rich taste"
             />
             <ProductItem
               title="Fresh Cherry Tomatoes"
               href="/Products/Tomatoes/BuyTomatoes"
               src="https://images.unsplash.com/photo-1589190051962-0b138f75d3c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              description="Production ready Tailwind css components for your next project"
+              description="Fresh cherry tomatoes from organic farms"
             />
             <ProductItem
               title="Herbal Gardening"
               href="/Products/HerbalGardening"
               src="https://images.unsplash.com/photo-1523301551780-cd17359a95d0?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              description="Never write from scratch again. Go from idea to blog in minutes."
+              description="Never start from scratch again. Follow our guide"
             />
             <ProductItem
               title="Local Eggs"
               href="/Products/Eggs"
               src="https://images.unsplash.com/photo-1586802990181-a5771596eaea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              description="Delicious organic eggs"
             />
           </div>
         </MenuItem>
