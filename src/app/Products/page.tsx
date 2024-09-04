@@ -36,7 +36,7 @@ export default async function Entrepreneurship() {
           <div
             className="card card-body bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
-     to-green-600 to-75%"
+     to-green-600 to-75% text-white"
           >
             <h1 className="text-5xl sm:text-6xl font-bold font-mono">
               NEED SOMETHING ELSE?

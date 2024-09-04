@@ -99,10 +99,10 @@ export default function Communication() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl sm:text-7xl font-mono">Communication</h1>
+          <h1 className="text-3xl sm:text-7xl font-mono text-white">Communication</h1>
         </div>
         <div className="divider lg:divider-horizontal divider-success h-10"></div>
-        <div className="sm:w-[48%] sm:text-xl">
+        <div className="sm:w-[48%] sm:text-xl text-white">
           <p>
             Effective communication in organic agriculture is essential for
             promoting sustainable practices, educating consumers, fostering
@@ -120,7 +120,7 @@ export default function Communication() {
         <h1 className="text-black text-4xl sm:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           IMPROVE YOUR COMMUNICATION
         </h1>
-        <div className="sm:flex sm:gap-10 p-8">
+        <div className="sm:flex sm:gap-10 p-8 text-white">
           {/* first card */}
           <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
@@ -192,7 +192,7 @@ export default function Communication() {
     via-lime-400 
      to-green-600 to-75%"
           >
-            <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em]">
+            <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em] text-white">
               EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
               YOUR BUSINESS
             </h1>

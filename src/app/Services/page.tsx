@@ -60,12 +60,12 @@ export default function Entrepreneurship() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl sm:text-7xl font-mono">
+          <h1 className="text-3xl sm:text-7xl font-mono text-white">
             Serving many industries, excelling in yours
           </h1>
         </div>
         <div className="divider lg:divider-horizontal divider-success h-10"></div>
-        <div className="sm:w-[48%] sm:text-xl">
+        <div className="sm:w-[48%] sm:text-xl text-white">
           <p>
             At <a className="text-green-700 font-bold">OMANET</a>, we are
             dedicated to providing you with the highest quality organic products
@@ -88,7 +88,7 @@ export default function Entrepreneurship() {
         <h1 className="text-black text-4xl sm:text-5xl font-semibold text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           EXPLORE THE SERVICES WE PROVIDE
         </h1>
-        <div className="sm:flex sm:gap-10 p-8">
+        <div className="sm:flex sm:gap-10 p-8 text-white">
           {/* first card */}
           <a
             className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 sm:w-[45em] sm:h-[25em] shadow-xl"
@@ -156,7 +156,7 @@ export default function Entrepreneurship() {
 
         {/* after first cards */}
 
-        <div className="sm:flex gap-10 p-8">
+        <div className="sm:flex gap-10 p-8 text-white">
           {/* first card */}
           <a
             className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 sm:w-[45em] sm:h-[25em] shadow-xl"
@@ -208,7 +208,7 @@ export default function Entrepreneurship() {
           <div
             className="card card-body bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
-     to-green-600 to-75%"
+     to-green-600 to-75% text-white"
           >
             <h1 className="text-4xl sm:text-6xl font-bold">NEED SOMETHING ELSE?</h1>
             <p className="sm:pt-16 sm:pr-20 text-xl font-extralight">

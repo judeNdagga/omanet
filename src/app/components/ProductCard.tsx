@@ -6,7 +6,7 @@ interface ProductCard2Props {
 }
 export default async function ProductCard2({product}: ProductCard2Props){
  return(
-    <Link className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 hover:text-green-400 transition duration-500 pt-2 shadow-xl"
+    <Link className="card card-body p-0 sm:w-[15em] sm:h-[25em] hover:scale-x-105 text-white hover:text-green-400 transition duration-500 pt-2 shadow-xl"
     href={"./Products/" + product.id}
     >           
       <Image

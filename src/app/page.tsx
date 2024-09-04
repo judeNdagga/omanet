@@ -249,7 +249,7 @@ export default function Home() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute sm:bottom-[10%] text-2xl sm:ml-10">
+            <h1 className="absolute sm:bottom-[10%] text-white text-2xl sm:ml-10">
               CONSULTANCY
             </h1>
           </a>
@@ -267,7 +267,7 @@ export default function Home() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute sm:bottom-[10%] text-2xl sm:ml-10">
+            <h1 className="absolute sm:bottom-[10%] text-white text-2xl sm:ml-10">
               TRAINING
             </h1>
           </a>
@@ -284,7 +284,7 @@ export default function Home() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute sm:bottom-[10%] text-2xl sm:ml-10">
+            <h1 className="absolute sm:bottom-[10%] text-white text-2xl sm:ml-10">
               COMMUNICATION
             </h1>
           </a>
@@ -301,7 +301,7 @@ export default function Home() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute sm:bottom-[10%] text-2xl sm:ml-10">
+            <h1 className="absolute sm:bottom-[10%] text-white text-2xl sm:ml-10">
               PRODUCT DEVELOPMENT
             </h1>
           </a>

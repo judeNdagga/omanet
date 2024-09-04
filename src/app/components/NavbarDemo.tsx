@@ -57,7 +57,7 @@ function Navbar({ className }: { className?: string }) {
         </MenuItem></a>
        <a href="/Products">
        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+          <div className="text-sm grid sm:grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Organic Wine"
               href="/Products/OrganicWine/BuyWine"

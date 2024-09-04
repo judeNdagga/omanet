@@ -39,13 +39,13 @@ export default async function ProductPage({
     via-lime-400 
      to-green-600 to-75%"
             >
-              <h2 className="card-title">
+              <h2 className="card-title text-white">
                 {product!.name}
                 <div className="sm:badge sm:bg-red-600 border-none text-red-800 sm:text-white text-xs sm:text-xs">
                   OUT OF STOCK
                 </div>
               </h2>
-              <p>{product!.description}</p>
+              <p className="text-white">{product!.description}</p>
             </div>
           </div>
 
@@ -63,7 +63,7 @@ export default async function ProductPage({
               />
               <OutOfStock />
             </div>
-            <div className="btn btn-sm hover:text-white">
+            <div className="btn btn-sm text-white hover:text-slate-800 bg-slate-800">
               <h1>Add to cart</h1>
               <FaCartPlus className="text-white" />
             </div>
@@ -76,7 +76,7 @@ export default async function ProductPage({
             </div>
 
             <div className="pt-10 sm:pt-20">
-              <div className="btn btn-wide text-white bg-slate-800">
+              <div className="btn btn-wide text-white hover:text-slate-800 bg-slate-800">
                 {" "}
                 CHECK OUT
               </div>
@@ -90,7 +90,7 @@ export default async function ProductPage({
           <div
             className="card card-body bg-gradient-to-r from-green-900 from-3%
     via-lime-400 
-     to-green-600 to-75%"
+     to-green-600 to-75% text-white"
           >
             <h1 className="text-5xl sm:text-6xl font-bold font-mono">
               NEED SOMETHING ELSE?

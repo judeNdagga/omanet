@@ -61,10 +61,10 @@ export default function Consultancy() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl sm:text-7xl font-mono">Consultancy</h1>
+          <h1 className="text-3xl sm:text-7xl font-mono text-white">Consultancy</h1>
         </div>
         <div className="divider lg:divider-horizontal divider-success h-10"></div>
-        <div className="sm:w-[48%] sm:text-xl">
+        <div className="sm:w-[48%] sm:text-xl text-white">
           <p>
             Consultancy in organic agriculture plays a crucial role in guiding
             farmers, agribusinesses, and organizations towards sustainable and
@@ -85,7 +85,7 @@ export default function Consultancy() {
         <h1 className="text-black text-4xl sm:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           DISCOVER HOW TO RUN AN AGRICULTURAL BUSINESS
         </h1>
-        <div className="sm:flex sm:gap-10 p-8">
+        <div className="sm:flex sm:gap-10 p-8 text-white">
           {/* first card */}
           <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
@@ -171,7 +171,7 @@ export default function Consultancy() {
     via-lime-400 
      to-green-600 to-75%"
           >
-            <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em]">
+            <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em] text-white">
               EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
               YOUR BUSINESS
             </h1>
