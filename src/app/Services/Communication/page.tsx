@@ -91,9 +91,9 @@ export default function Communication() {
     <div className="overflow-hidden">
       <div
         className="h-[35em] sm:h-[35em] sm:flex sm:pt-[11em] p-20  brightness-90
-        bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75%"
+   bg-gradient-to-r from-green-900 from-3%
+   via-green-400 
+             to-green-600 to-75%"
         // style={{
         //   backgroundImage: `url(https://images.unsplash.com/photo-1535090467336-9501f96eef89?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
         // }}
@@ -124,8 +124,8 @@ export default function Communication() {
           {/* first card */}
           <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% hover:-inset-y-2"
+            via-green-400 
+             to-green-600 to-75% hover:-inset-y-2"
             variants={FadeInUpwardsAnimation}
             initial="initial"
             whileInView="animate"
@@ -144,9 +144,8 @@ export default function Communication() {
           {/* second card */}
 
           <motion.div
-            className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
-            via-lime-400 
-             to-green-600 to-75% hover:-inset-y-2"
+            className="card card-body sm:w-[15em] sm:h-[25em] 
+            bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
             variants={FadeInUpwardsAnimationSlower}
             initial="initial"
             whileInView="animate"
@@ -167,7 +166,7 @@ export default function Communication() {
 
           <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
-            via-lime-400 
+            via-green-400 
              to-green-600 to-75% hover:-inset-y-2"
             variants={FadeInUpwardsAnimationEvenSlower}
             initial="initial"
@@ -189,8 +188,8 @@ export default function Communication() {
         <div className="p-20">
           <div
             className="card card-body bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75%"
+            via-green-400 
+             to-green-600 to-75%"
           >
             <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em] text-white">
               EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING

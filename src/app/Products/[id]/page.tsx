@@ -35,9 +35,7 @@ export default async function ProductPage({
               <img src={product!.imageUrl} alt="Shoes" />
             </figure>
             <div
-              className="rounded-md card-body bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75%"
+              className="rounded-md card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
             >
               <h2 className="card-title text-white">
                 {product!.name}
@@ -51,7 +49,7 @@ export default async function ProductPage({
 
           <div>
             <h1 className="text-black text-4xl sm:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] pt-6 sm:pt-0">
-              HIGH QUALITY EGGS
+              High Quality {product!.name}
             </h1>
 
             <div className="pt-3 sm:pt-10 pb-5 flex">
@@ -88,9 +86,7 @@ export default async function ProductPage({
 
         <div className="sm:p-20 p-10">
           <div
-            className="card card-body bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% text-white"
+            className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% text-white"
           >
             <h1 className="text-5xl sm:text-6xl font-bold font-mono">
               NEED SOMETHING ELSE?

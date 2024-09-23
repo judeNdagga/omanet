@@ -53,7 +53,7 @@ export default function Entrepreneurship() {
       <div
         className="h-[30em] sm:h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
+    via-green-400 
      to-green-600 to-75%"
         // style={{
         //   backgroundImage: `url(https://images.unsplash.com/photo-1535090467336-9501f96eef89?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
@@ -207,8 +207,8 @@ export default function Entrepreneurship() {
         <div className="sm:p-20 p-10">
           <div
             className="card card-body bg-gradient-to-r from-green-900 from-3%
-    via-lime-400 
-     to-green-600 to-75% text-white"
+            via-green-400 
+             to-green-600 to-75% text-white"
           >
             <h1 className="text-4xl sm:text-6xl font-bold">NEED SOMETHING ELSE?</h1>
             <p className="sm:pt-16 sm:pr-20 text-xl font-extralight">
