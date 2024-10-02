@@ -311,7 +311,7 @@ export default function Home() {
       </div>
       {/* 2nd level */}
       <div
-        className="h-[32em] sm:h-auto
+        className="h-auto
        bg-gradient-to-t from-green-300 from-3%
        via-green-300 
         to-white to-75%
@@ -427,7 +427,7 @@ export default function Home() {
       {/* 3rd level */}
 
       <div
-        className="h-[8em] sm:h-auto
+        className="h-auto
        bg-gradient-to-b from-green-300 from-3%
        via-green-300 
         to-white to-75%
@@ -435,9 +435,9 @@ export default function Home() {
       >
         {/* second testimonial */}
 
-        <div className="hidden sm:flex h-[40em] pt-10">
+        <div className="sm:flex h-auto sm:pt-10">
           <motion.div
-            className="w-[50%]"
+            className="sm:w-[50%]"
             variants={FadeInRightAnimation}
             initial="initial"
             whileInView="animate"
@@ -445,9 +445,9 @@ export default function Home() {
               once: true,
             }}
           >
-            <p className="text-black pl-16 pr-44 pt-20">
-              <h1 className="text-xl font-bold pb-10">OUR APPROACH</h1>
-              <h1 className="text-6xl pb-6">
+            <p className="text-black sm:pl-16 sm:pr-44 sm:pt-20">
+              <h1 className="text-xl font-bold sm:pb-10">OUR APPROACH</h1>
+              <h1 className="text-5xl sm:text-6xl pb-6">
                 EASY, <a className="text-green-600">ORGANIC</a> <br />
                 SEAMLESS
               </h1>
@@ -465,7 +465,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="w-[50%]"
+            className="sm:w-[50%]"
             variants={FadeInLeftAnimation}
             initial="initial"
             whileInView="animate"
@@ -476,7 +476,7 @@ export default function Home() {
             <Image
               src={training4}
               alt=""
-              className="w-full h-[85%] hover:scale-105 transition duration-500"
+              className="w-full h-[95%] hover:scale-105 transition duration-500"
             />
           </motion.div>
         </div>
