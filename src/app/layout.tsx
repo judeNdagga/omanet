@@ -21,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body className={inter.className}>
         <div className="flex"><NavbarDemo/><SignInNavbarAddition/></div>
         
@@ -28,6 +29,7 @@ export default function RootLayout({
         {children}
         <Footer/>
         </body>
+        
     </html>
   );
 }

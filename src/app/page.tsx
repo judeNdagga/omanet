@@ -207,7 +207,7 @@ export default function Home() {
         </div>
 
         {/* after first div */}
-        <div className="sm:pt-60 sm:pb-40 sm:flex sm:pl-20 sm:pr-20 sm:h-[35em]">
+        <div className="pt-10 sm:pt-60 sm:pb-40 sm:flex sm:pl-20 sm:pr-20 sm:h-[35em]">
           <motion.h1
             variants={FadeInUpwardsAnimation}
             initial="initial"
@@ -365,7 +365,7 @@ export default function Home() {
         </div>
 
         {/* after testimonial */}
-        <motion.div
+        {/* <motion.div
           className="bg-scroll bg-gradient-to-b from-green-300 from-3%
       via-green-300 to-white to-75% 
        sm:flex rounded-xl h-[32em] sm:h-auto"
@@ -378,10 +378,10 @@ export default function Home() {
           viewport={{
             once: true,
           }}
-        >
-          {/* <div className="bg-scroll rounded-xl" style={{ backgroundImage: `url(https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)` }}> */}
+        > */}
+          
           {/* inner card */}
-          <motion.div
+          {/* <motion.div
             className="hidden sm:block w-[50%]"
             variants={FadeInUpwardsAnimationEvenSlower}
             initial="initial"
@@ -413,21 +413,21 @@ export default function Home() {
               once: true,
             }}
           >
-            <h1 className="pt-12 sm:pt-32 text-3xl uppercase font-semibold text-white">
+            <h1 className="pt-5 sm:pt-32 text-3xl uppercase font-semibold text-white">
               Farmer Products
             </h1>
-            <p className="pt-8 sm:pt-8 pl-4 sm:pl-20 pr-4 sm:pr-20 pb-5 sm:pb-4 sm:text-md text-white">
+            <p className="pt-4 sm:pt-8 pl-4 sm:pl-20 pr-4 sm:pr-20 pb-5 sm:pb-4 sm:text-md text-white">
               {words}
             </p>
             <ContactButton />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* 3rd level */}
 
       <div
-        className="h-auto
+        className="h-[8em] sm:h-auto
        bg-gradient-to-b from-green-300 from-3%
        via-green-300 
         to-white to-75%

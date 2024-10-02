@@ -6,7 +6,7 @@ export default async function SignInNavbarAddition() {
   const session = await auth();
   const user = session?.user;
   return (
-    <div className="fixed z-10 sm:z-50 right-1 sm:right-[28%] mt-5 sm:mt-7 bg-transparent">
+    <div className="fixed z-50 sm:z-50 right-1 sm:right-[28%] mt-0 sm:mt-7 bg-transparent">
       {user ? <UserButton user={user} /> : <SignInButton />}
     </div>
   );
