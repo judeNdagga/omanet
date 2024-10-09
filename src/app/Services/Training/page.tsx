@@ -92,16 +92,16 @@ export default function Training() {
   return (
     <div className="overflow-hidden">
       <div
-        className="h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
+        className="h-auto sm:flex sm:pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
         // style={{
         //   backgroundImage: `url(https://images.unsplash.com/photo-1535090467336-9501f96eef89?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl sm:text-7xl font-mono text-white">Training</h1>
+          <h1 className="text-3xl md:text-5xl xl:text-7xl font-mono text-white">Training</h1>
         </div>
-        <div className="divider lg:divider-horizontal divider-success h-10"></div>
+        <div className="divider md:divider-horizontal divider-success h-10"></div>
         <div className="sm:w-[48%] sm:text-xl text-white">
           <p>
             Our commitment to your success doesn’t end with a single
@@ -109,7 +109,7 @@ export default function Training() {
             stay informed about the latest organic farming techniques and market
             trends. Whether you need periodic check-ins or continuous guidance,
             we’re here to ensure your farm thrives.
-            <p className="sm:pt-20">
+            <p className="md:pt-5 xl:pt-20">
               Training in organic agriculture is essential for fostering the
               knowledge, skills, and practices needed to cultivate sustainable,
               environmentally friendly, and health-conscious farming systems. As
@@ -122,13 +122,13 @@ export default function Training() {
 
       {/* 2nd level */}
       <div className="bg-white">
-        <h1 className="text-black text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
+        <h1 className="text-black text-4xl xl:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           UNDERTAKE CRUCIAL TRAINING FOR BETTER SUCCESS
         </h1>
-        <div className="sm:flex sm:gap-10 p-8 text-white">
+        <div className="sm:flex md:gap-3 xl:gap-10 p-8 text-white">
           {/* first card */}
           <motion.div
-            className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
+            className="card card-body sm:w-[15em] xl:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
             variants={FadeInUpwardsAnimation}
             initial="initial"
             whileInView="animate"
@@ -152,7 +152,7 @@ export default function Training() {
           {/* second card */}
 
           <motion.div
-            className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
+            className="card card-body sm:w-[15em] xl:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
             variants={FadeInUpwardsAnimationSlower}
             initial="initial"
             whileInView="animate"
@@ -175,7 +175,7 @@ export default function Training() {
           {/* third card */}
 
           <motion.div
-            className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
+            className="card card-body sm:w-[15em] xl:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
             variants={FadeInUpwardsAnimationEvenSlower}
             initial="initial"
             whileInView="animate"
@@ -202,7 +202,7 @@ export default function Training() {
           <div
             className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
           >
-            <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em] text-white">
+            <h1 className="text-4xl sm:text-6xl font-bold font-mono xl:mr-[4em] text-white">
               EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
               YOUR BUSINESS
             </h1>
@@ -223,7 +223,7 @@ export default function Training() {
               once: false,
             }}
           >
-            <p className="text-black pl-5 sm:pl-16 sm:pr-44 sm:pt-20">
+            <p className="text-black pl-5 xl:pl-16 xl:pr-44 sm:pt-20">
               <h1 className="text-xl font-bold pb-10">OUR APPROACH</h1>
               <h1 className="text-4xl sm:text-6xl pb-6">
                 EASY, <a className="text-green-600">ORGANIC</a> <br />

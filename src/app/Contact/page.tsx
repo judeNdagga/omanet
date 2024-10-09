@@ -37,7 +37,7 @@ export default function Contact() {
         via-green-300 
          to-white to-75%"
       >
-        <div className="sm:w-[70%] h-[28em] sm:ml-[15em] bg-green-300 text-center mt-20">
+        <div className=" xl:w-[70%] h-[28em] xl:ml-[15em] bg-green-300 text-center mt-20">
           <motion.h1
             className="text-center text-3xl sm:text-7xl font-bold text-black"
             variants={FadeInLeftAnimation}
@@ -61,7 +61,7 @@ export default function Contact() {
           >
             Send us an email or a text by clicking the links below and letting us know how we can help you. We will
             certainly receive your message. You can also call our offices on{" "}
-            <a className="font-bold text-green-600 underline">0772495627</a>.
+            <a className="font-bold text-green-600 underline">+256772495627</a>.
           </motion.p>
 
           <div className="text-center">

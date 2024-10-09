@@ -60,18 +60,18 @@ export default function Entrepreneurship() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl sm:text-7xl font-mono text-white">
+          <h1 className="text-3xl md:text-5xl xl:text-7xl font-mono text-white">
             Serving many industries, excelling in yours
           </h1>
         </div>
-        <div className="divider lg:divider-horizontal divider-success h-10"></div>
+        <div className="divider md:divider-horizontal divider-success h-10"></div>
         <div className="sm:w-[48%] sm:text-xl text-white">
           <p>
             At <a className="text-green-700 font-bold">OMANET</a>, we are
             dedicated to providing you with the highest quality organic products
             while promoting sustainable and environmentally friendly farming
             practices.
-            <p className="hidden sm:block sm:pt-20">
+            <p className="hidden sm:block md:pt-8 xl:pt-20">
               We are committed to soil and water conservation, promoting
               biodiversity, and supporting local food systems. Our practices are
               designed to preserve and enhance the environment, ensuring a
@@ -85,13 +85,13 @@ export default function Entrepreneurship() {
 
       {/* 2nd level */}
       <div className="bg-white">
-        <h1 className="text-black text-4xl sm:text-5xl font-semibold text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
+        <h1 className="text-black text-4xl xl:text-5xl font-semibold text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           EXPLORE THE SERVICES WE PROVIDE
         </h1>
         <div className="sm:flex sm:gap-10 p-8 text-white">
           {/* first card */}
           <a
-            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 sm:w-[45em] sm:h-[25em] shadow-xl"
+            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 xl:w-[45em] md:h-[20em] xl:h-[25em] shadow-xl"
             href="/Services/Consultancy"
           >
             <Image
@@ -101,10 +101,10 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute sm:bottom-[24%] text-3xl font-semibold sm:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
               CONSULTANCY
             </h1>
-            <p className="hidden sm:block absolute bottom-[3%] text-sm font-extralight p-4">
+            <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
               We are passionate about sharing our expertise in sustainable
               agriculture with fellow farmers and businesses.
             </p>
@@ -113,7 +113,7 @@ export default function Entrepreneurship() {
           {/* second card */}
 
           <a
-            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 sm:w-[45em] sm:h-[25em] shadow-xl"
+            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 xl:w-[45em] md:h-[20em] xl:h-[25em] shadow-xl"
             href="/Services/Training"
           >
             <Image
@@ -123,10 +123,10 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute sm:bottom-[24%] text-3xl font-semibold sm:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
               TRAINING
             </h1>
-            <p className="hidden sm:block absolute bottom-[3%] text-sm font-extralight p-4">
+            <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
               We provide ongoing support and training to help you stay informed
               about the latest organic farming techniques and market trends.
             </p>
@@ -134,7 +134,7 @@ export default function Entrepreneurship() {
           {/* third card */}
 
           <a
-            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 sm:w-[45em] sm:h-[25em] shadow-xl"
+            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 xl:w-[45em] md:h-[20em] xl:h-[25em] shadow-xl"
             href="/Services/Communication"
           >
             <Image
@@ -144,10 +144,10 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute sm:bottom-[24%] text-3xl font-semibold sm:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
               COMMUNICATION
             </h1>
-            <p className="hidden sm:block absolute bottom-[3%] text-sm font-extralight p-4">
+            <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
               We believe in the power of communication and environmental
               stewardship.
             </p>
@@ -159,7 +159,7 @@ export default function Entrepreneurship() {
         <div className="sm:flex gap-10 p-8 text-white">
           {/* first card */}
           <a
-            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 sm:w-[45em] sm:h-[25em] shadow-xl"
+            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 xl:w-[45em] md:h-[20em] xl:h-[25em] shadow-xl"
             href="/Services/ProductDevelopment"
           >
             <Image
@@ -169,10 +169,10 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute sm:bottom-[24%] text-3xl font-semibold sm:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
               PRODUCT DEVELOPMENT
             </h1>
-            <p className="hidden sm:block absolute bottom-[3%] text-sm font-extralight p-4">
+            <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
               Maximize your farm’s productivity and sustainability with our crop
               planning and rotation services.
             </p>
@@ -181,7 +181,7 @@ export default function Entrepreneurship() {
           {/* second card */}
 
           <a
-            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 sm:w-[45em] sm:h-[25em] shadow-xl"
+            className="card hover:text-green-300 transition duration-500 hover:scale-110 p-0 mt-4 sm:mt-0 xl:w-[45em] md:h-[20em] xl:h-[25em] shadow-xl"
             href="/Services/Entrepreneurship"
           >
             <Image
@@ -191,10 +191,10 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute sm:bottom-[24%] text-3xl font-semibold sm:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
               MARKETING AND ENTREPRENEURSHIP
             </h1>
-            <p className="hidden sm:block absolute bottom-[3%] text-sm font-extralight p-4">
+            <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
               Successfully bringing organic products to market requires
               strategic planning and effective distribution channels.
             </p>
@@ -222,11 +222,11 @@ export default function Entrepreneurship() {
 
         {/* after need something */}
 
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 h-[35em]">
-          <h1 className="text-black font-bold text-3xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
+        <div className="md:pt-20 xl:pt-40 sm:pb-40 sm:flex xl:pl-20 pr-20 h-[35em]">
+          <h1 className="text-black font-bold text-3xl md:text-5xl xl:text-6xl pl-4 sm:pl-10 sm:pr-1">
             CUSTOMER SATISFACTION KNOWS NO BORDERS
           </h1>
-          <div className="divider lg:divider-horizontal divider-success"></div>
+          <div className="divider md:divider-horizontal divider-success"></div>
           <h1 className="text-right text-xl sm:text-2xl font-light text-black ml-20 pr-10">
             Our customers come from different industries but share a unanimous
             appreciation of our work together, reflected in their progress

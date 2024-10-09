@@ -51,11 +51,11 @@ export default async function Entrepreneurship() {
 
         {/* after need something */}
 
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 sm:h-[35em]">
+        <div className="md:pt-20 xl:pt-40 md:pb-20 xl:pb-40 sm:flex xl:pl-20 pr-20 sm:h-[35em]">
           <h1 className="text-left text-black font-bold font-mono text-4xl sm:text-6xl pl-10 pr-1">
             CUSTOMER SATISFACTION KNOWS NO BORDERS
           </h1>
-          <div className="divider lg:divider-horizontal divider-success"></div>
+          <div className="divider md:divider-horizontal divider-success"></div>
           <h1 className="text-right text-xl sm:text-2xl font-light text-black ml-20 pr-10">
             Our customers come from different industries but share a unanimous
             appreciation of our work together, reflected in their progress

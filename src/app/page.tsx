@@ -129,7 +129,7 @@ export default function Home() {
       >
         <div className="sm:flex">
           <div className="text-center text-black sm:w-[50%]">
-            <p className="text-black sm:pl-16 sm:pr-44 sm:pt-20 pb-5">
+            <p className="text-black xl:pl-10 md:pr-4 xl:pr-44 xl:pt-20 pb-5">
               <motion.h1
                 className="text-xl font-bold pb-10"
                 variants={FadeInLeftAnimation}
@@ -142,7 +142,7 @@ export default function Home() {
                 WHY OMANET?
               </motion.h1>
               <motion.h1
-                className="text-3xl sm:text-6xl pb-6 sm:pl-40"
+                className="text-3xl md:text-4xl xl:text-6xl pb-6 xl:pl-40"
                 variants={FadeInLeftAnimationSlower}
                 initial="initial"
                 whileInView="animate"
@@ -207,7 +207,7 @@ export default function Home() {
         </div>
 
         {/* after first div */}
-        <div className="pt-10 sm:pt-60 sm:pb-40 sm:flex sm:pl-20 sm:pr-20 sm:h-[35em]">
+        <div className="pt-10 md:pt-40 xl:pt-60 sm:pb-40 sm:flex md:pl-5 xl:pl-20 sm:pr-20 h-auto">
           <motion.h1
             variants={FadeInUpwardsAnimation}
             initial="initial"
@@ -215,12 +215,12 @@ export default function Home() {
             viewport={{
               once: true,
             }}
-            className="text-black text-3xl sm:text-5xl pl-4 sm:pl-10 sm:pr-1"
+            className="text-black text-3xl md:text-4xl pl-4 sm:pl-10 sm:pr-1"
           >
             YOU’LL BE IN GREAT COMPANY, WE’RE{" "}
             <a className="text-green-600">TRUSTED BY HUNDREDS</a> OF FARMERS.
           </motion.h1>
-          <div className="divider lg:divider-horizontal divider-success"></div>
+          <div className="divider md:divider-horizontal divider-success"></div>
           <motion.h1
             variants={FadeInUpwardsAnimationSlower}
             initial="initial"
@@ -228,7 +228,7 @@ export default function Home() {
             viewport={{
               once: true,
             }}
-            className="text-right text-black text-lg sm:ml-20 sm:pr-10"
+            className="text-right text-black text-lg md:ml-10 xl:ml-20 md:pr-5 xl:pr-10"
           >
             Discover how we helped multiple farmers increase their productivity
             and efficiency for a better yield.
@@ -445,9 +445,9 @@ export default function Home() {
               once: true,
             }}
           >
-            <p className="text-black sm:pl-16 sm:pr-44 sm:pt-20">
-              <h1 className="text-xl font-bold sm:pb-10">OUR APPROACH</h1>
-              <h1 className="text-5xl sm:text-6xl pb-6">
+            <p className="text-black md:pl-6 xl:pl-16 md:pr-10 xl:pr-44 md:pt-10 xl:pt-20">
+              <h1 className="text-xl font-bold md:pb-3 xl:pb-10">OUR APPROACH</h1>
+              <h1 className="text-5xl md:text-4xl xl:text-6xl pb-6">
                 EASY, <a className="text-green-600">ORGANIC</a> <br />
                 SEAMLESS
               </h1>

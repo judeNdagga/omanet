@@ -90,7 +90,7 @@ export default function Communication() {
   return (
     <div className="overflow-hidden">
       <div
-        className="h-[35em] sm:h-[35em] sm:flex sm:pt-[11em] p-20  brightness-90
+        className="h-auto sm:flex sm:pt-[11em] p-20  brightness-90
    bg-gradient-to-r from-green-900 from-3%
    via-green-400 
              to-green-600 to-75%"
@@ -99,9 +99,9 @@ export default function Communication() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl sm:text-7xl font-mono text-white">Communication</h1>
+          <h1 className="text-3xl md:text-4xl xl:text-7xl font-mono text-white">Communication</h1>
         </div>
-        <div className="divider lg:divider-horizontal divider-success h-10"></div>
+        <div className="divider md:divider-horizontal divider-success h-10"></div>
         <div className="sm:w-[48%] sm:text-xl text-white">
           <p>
             Effective communication in organic agriculture is essential for
@@ -117,10 +117,10 @@ export default function Communication() {
 
       {/* 2nd level */}
       <div className="bg-white">
-        <h1 className="text-black text-4xl sm:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
+        <h1 className="text-black text-4xl xl:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
           IMPROVE YOUR COMMUNICATION
         </h1>
-        <div className="sm:flex sm:gap-10 p-8 text-white">
+        <div className="sm:flex md:gap-3 xl:gap-10 p-8 text-white">
           {/* first card */}
           <motion.div
             className="card card-body sm:w-[15em] sm:h-[25em] bg-gradient-to-r from-green-900 from-3%
@@ -191,7 +191,7 @@ export default function Communication() {
             via-green-400 
              to-green-600 to-75%"
           >
-            <h1 className="text-4xl sm:text-6xl font-bold font-mono mr-[4em] text-white">
+            <h1 className="text-4xl sm:text-6xl font-bold font-mono xl:mr-[4em] text-white">
               EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
               YOUR BUSINESS
             </h1>
@@ -212,9 +212,9 @@ export default function Communication() {
               once: false,
             }}
           >
-            <p className="text-black pl-5 sm:pl-16 sm:pr-44 sm:pt-20">
+            <p className="text-black pl-5 xl:pl-16 xl:pr-44 sm:pt-20">
               <h1 className="text-xl font-bold pb-10">OUR APPROACH</h1>
-              <h1 className="text-4xl sm:text-6xl pb-6">
+              <h1 className="text-4xl xl:text-6xl pb-6">
                 EASY, <a className="text-green-600">ORGANIC</a> <br />
                 SEAMLESS
               </h1>

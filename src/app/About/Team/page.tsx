@@ -93,7 +93,7 @@ export default function Team() {
   return (
     <div className="overflow-hidden">
       <div
-        className="h-auto sm:h-[80em]
+        className="h-auto
        bg-gradient-to-b from-green-300 from-3%
        via-green-300 
         to-white to-75%
@@ -102,9 +102,9 @@ export default function Team() {
       >
         <div className="sm:flex">
           <div className="text-center text-black sm:w-[50%]">
-            <p className="text-black sm:pl-16 sm:pr-44 sm:pt-20 pb-5">
+            <p className="text-black xl:pl-16 xl:pr-44 sm:pt-20 pb-5">
               <motion.h1
-                className="text-4xl sm:text-6xl pb-6 sm:pl-20 pt-10 sm:pt-0"
+                className="text-4xl xl:text-6xl pb-6 xl:pl-20 pt-10 sm:pt-0"
                 variants={FadeInLeftAnimationSlower}
                 initial="initial"
                 whileInView="animate"
@@ -133,9 +133,9 @@ export default function Team() {
           </div>
 
           {/* right side */}
-          <div className="sm:w-[50%] hidden sm:block ">
+          <div className="sm:w-[50%] hidden sm:block pt-6">
             <motion.div
-              className="relative sm:h-[32em] sm:w-[70%] bg-cover bg-center sm:right-[-30%] brightness-75"
+              className="relative md:h-[25em] xl:h-[32em] sm:w-[70%] bg-cover bg-center sm:right-[-30%] brightness-75"
               style={{
                 backgroundImage: `url('https://images.unsplash.com/photo-1664575197593-2e7085ef086b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
               }}
@@ -162,7 +162,7 @@ export default function Team() {
         </div>
 
         {/* after first div */}
-        <div className="pt-10 sm:pt-60 sm:pb-40 sm:pl-20 sm:pr-20 sm:h-[50em] flex">
+        <div className="pt-10 md:pt-32 xl:pt-60 xl:pb-40 xl:pl-20 xl:pr-20 h-auto flex">
         <motion.div
             className="sm:w-[50%]"
             variants={FadeInLeftAnimation}
@@ -187,7 +187,7 @@ export default function Team() {
             viewport={{
               once: true,
             }}
-            className="text-black text-2xl sm:text-5xl pl-4 sm:pl-10 sm:pr-1 sm:pt-20"
+            className="text-black text-2xl sm:text-5xl pl-4 xl:pl-10 xl:pr-1 sm:pt-20"
           >
             PROBLEM SOLVING AND{" "}
             <a className="text-green-600">KNOWLEDGE SHARING.</a>
@@ -196,10 +196,10 @@ export default function Team() {
         </div>
 
         {/* services level */}
-        <div className="h-auto sm:h-[40em] bg-gradient-to-t from-green-300 from-3%
+        <div className="h-auto bg-gradient-to-t from-green-300 from-3%
        via-green-300 
         to-white to-75%">
-        <div className="hidden sm:flex gap-10 p-10 pt-[10em]">
+        <div className="hidden sm:flex gap-4 xl:gap-10 p-10">
           {/* 1st card */}
           <a
             className="card sm:w-[25em] sm:h-[19em] shadow-xl hover:text-green-300 transition duration-500 hover:scale-110"
