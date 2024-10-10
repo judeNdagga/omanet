@@ -185,7 +185,7 @@ export default function Entrepreneurship() {
 
         {/* after 3 cards */}
 
-        <div className="p-20">
+        <div className="p-10 xl:p-20">
           <div
             className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
           >
