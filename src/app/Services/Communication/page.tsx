@@ -99,7 +99,9 @@ export default function Communication() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl md:text-4xl xl:text-7xl font-mono text-white">Communication</h1>
+          <h1 className="text-3xl md:text-4xl xl:text-7xl font-mono text-white pt-10 md:pt-0">
+            Communication
+          </h1>
         </div>
         <div className="divider md:divider-horizontal divider-success h-10"></div>
         <div className="sm:w-[48%] sm:text-xl text-white">
@@ -196,7 +198,7 @@ export default function Communication() {
               YOUR BUSINESS
             </h1>
 
-            <ContactExpertsButton/>
+            <ContactExpertsButton />
           </div>
         </div>
 

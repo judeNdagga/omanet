@@ -84,7 +84,7 @@ export default function Entrepreneurship() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl xl:text-7xl font-mono text-white">
+          <h1 className="text-3xl xl:text-7xl text-white  pt-10 md:pt-0">
             Entrepreneurship and Marketing
           </h1>
         </div>
@@ -186,15 +186,13 @@ export default function Entrepreneurship() {
         {/* after 3 cards */}
 
         <div className="p-10 xl:p-20">
-          <div
-            className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-          >
+          <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%">
             <h1 className="text-white text-4xl sm:text-6xl font-bold font-mono xl:mr-[4em]">
               EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
               YOUR BUSINESS
             </h1>
 
-           <ContactExpertsButton/>
+            <ContactExpertsButton />
           </div>
         </div>
 
@@ -256,8 +254,6 @@ export default function Entrepreneurship() {
             />
           </motion.div>
         </div>
-
-       
       </div>
     </div>
   );

@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import FloatingNav from "./components/ui/FloatingNav";
 import { NavbarDemo } from "./components/NavbarDemo";
 import Footer from "./components/Footer";
 import SignInNavbarAddition from "./components/SignInNavbarAddition";
 
-
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-Montserrat",
+});
 
 export const metadata: Metadata = {
   title: "OMANET UG",
@@ -21,15 +24,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
-      <body className={inter.className}>
-        <div className="flex"><NavbarDemo/><SignInNavbarAddition/></div>
-        
+      <body className={montserrat.variable}>
+        <div className="flex">
+          <NavbarDemo />
+          <SignInNavbarAddition />
+        </div>
+
         {/* <FloatingNav/> */}
         {children}
-        <Footer/>
-        </body>
-        
+        <Footer />
+      </body>
     </html>
   );
 }

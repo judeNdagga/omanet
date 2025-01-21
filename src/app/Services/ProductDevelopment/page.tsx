@@ -98,7 +98,7 @@ export default function ProductDevelopment() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl md:text-5xl xl:text-7xl font-mono text-white">
+          <h1 className="text-3xl md:text-5xl xl:text-7xl text-white  pt-10 md:pt-0">
             Product Development
           </h1>
         </div>
@@ -202,15 +202,13 @@ export default function ProductDevelopment() {
         {/* after 3 cards */}
 
         <div className="p-10 xl:p-20">
-          <div
-            className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-          >
+          <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%">
             <h1 className="text-4xl sm:text-6xl font-bold font-mono xl:mr-[4em] text-white">
               EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
               YOUR BUSINESS
             </h1>
 
-           <ContactExpertsButton/>
+            <ContactExpertsButton />
           </div>
         </div>
 
@@ -238,13 +236,14 @@ export default function ProductDevelopment() {
                 agribusinesses can increase their revenue streams and
                 profitability. This economic viability supports the growth of
                 the organic sector and encourages more farmers to adopt organic
-                practices. 
-                <br />Product development in organic agriculture is a
-                multifaceted process that combines innovation, sustainability,
-                and market insight. By transforming raw organic materials into
-                diverse, high-quality products, entrepreneurs not only meet
-                consumer demand but also contribute to a healthier planet and a
-                more resilient food system.
+                practices.
+                <br />
+                Product development in organic agriculture is a multifaceted
+                process that combines innovation, sustainability, and market
+                insight. By transforming raw organic materials into diverse,
+                high-quality products, entrepreneurs not only meet consumer
+                demand but also contribute to a healthier planet and a more
+                resilient food system.
               </p>
             </p>
           </motion.div>

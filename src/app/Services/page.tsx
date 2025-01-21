@@ -51,7 +51,7 @@ export default function Entrepreneurship() {
   return (
     <div className="overflow-hidden">
       <div
-        className="h-[30em] sm:h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
+        className="h-auto sm:h-[50em] sm:flex sm:pt-[11em] p-20  brightness-90
         bg-gradient-to-r from-green-900 from-3%
     via-green-400 
      to-green-600 to-75%"
@@ -60,8 +60,9 @@ export default function Entrepreneurship() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl md:text-5xl xl:text-7xl font-mono text-white">
-            Serving many industries, excelling in yours
+          <h1 className="text-3xl md:text-5xl xl:text-7xl text-white  pt-10 md:pt-0">
+            Serving many industries, excelling in{" "}
+            <a className="text-green-700 font-bold">yours</a>
           </h1>
         </div>
         <div className="divider md:divider-horizontal divider-success h-10"></div>
@@ -86,7 +87,8 @@ export default function Entrepreneurship() {
       {/* 2nd level */}
       <div className="bg-white">
         <h1 className="text-black text-4xl xl:text-5xl font-semibold text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
-          EXPLORE THE SERVICES WE PROVIDE
+          EXPLORE THE <a className="text-green-400 font-bold">SERVICES</a> WE
+          PROVIDE
         </h1>
         <div className="sm:flex sm:gap-10 p-8 text-white">
           {/* first card */}
@@ -101,7 +103,7 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-2xl font-semibold xl:ml-10">
               CONSULTANCY
             </h1>
             <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
@@ -123,7 +125,7 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-2xl font-semibold xl:ml-10">
               TRAINING
             </h1>
             <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
@@ -144,7 +146,7 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-2xl font-semibold xl:ml-10">
               COMMUNICATION
             </h1>
             <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
@@ -169,7 +171,7 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-2xl font-semibold xl:ml-10">
               PRODUCT DEVELOPMENT
             </h1>
             <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
@@ -191,7 +193,7 @@ export default function Entrepreneurship() {
               height={1080}
               alt="image"
             />
-            <h1 className="absolute xl:bottom-[24%] text-3xl md:text-2xl font-semibold xl:ml-10">
+            <h1 className="absolute xl:bottom-[24%] text-2xl font-semibold xl:ml-10">
               MARKETING AND ENTREPRENEURSHIP
             </h1>
             <p className="hidden xl:block absolute bottom-[3%] text-sm font-extralight p-4">
@@ -210,13 +212,16 @@ export default function Entrepreneurship() {
             via-green-400 
              to-green-600 to-75% text-white"
           >
-            <h1 className="text-4xl sm:text-6xl font-bold">NEED SOMETHING ELSE?</h1>
+            <h1 className="text-4xl sm:text-6xl font-bold">
+              NEED SOMETHING ELSE?
+            </h1>
             <p className="sm:pt-16 sm:pr-20 text-xl font-extralight">
-              Our commitment to your needs doesn’t end with a single
-              instance. We provide customized services and products to help you
-              along your organic journey. Give us a call if you need anything customized to your special needs. Easy for you, easy for us.
+              Our commitment to your needs doesn’t end with a single instance.
+              We provide customized services and products to help you along your
+              organic journey. Give us a call if you need anything customized to
+              your special needs. Easy for you, easy for us.
             </p>
-            <ContactExpertsButton/>
+            <ContactExpertsButton />
           </div>
         </div>
 
@@ -249,9 +254,7 @@ export default function Entrepreneurship() {
           </p>
         </div>
 
-        <div className="text-center h-[20em]">
-          
-        </div>
+        <div className="text-center h-[20em]"></div>
       </div>
     </div>
   );

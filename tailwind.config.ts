@@ -8,7 +8,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
@@ -22,8 +22,10 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      primary: "var(--font-Montserrat)",
+    },
     extend: {
-      
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -51,6 +53,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [(addVariablesForColors), require("daisyui")],
+  plugins: [addVariablesForColors, require("daisyui")],
 };
 export default config;

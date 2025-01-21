@@ -48,7 +48,7 @@ export default function Consultancy() {
       },
     },
   };
-  
+
   return (
     <div className="overflow-hidden">
       <div
@@ -59,7 +59,9 @@ export default function Consultancy() {
         // }}
       >
         <div className="sm:w-[48%]">
-          <h1 className="text-3xl md:text-5xl xl:text-7xl font-mono text-white">Consultancy</h1>
+          <h1 className="text-3xl md:text-5xl xl:text-7xl text-white  pt-10 md:pt-0">
+            Consultancy
+          </h1>
         </div>
         <div className="divider md:divider-horizontal divider-success h-10"></div>
         <div className="sm:w-[48%] sm:text-xl text-white">
@@ -158,15 +160,13 @@ export default function Consultancy() {
         {/* after 3 cards */}
 
         <div className="p-10 xl:p-20">
-          <div
-            className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-          >
+          <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%">
             <h1 className="text-4xl sm:text-6xl font-bold font-mono xl:mr-[4em] text-white">
               EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
               YOUR BUSINESS
             </h1>
 
-           <ContactExpertsButton/>
+            <ContactExpertsButton />
           </div>
         </div>
 
@@ -178,7 +178,7 @@ export default function Consultancy() {
           </h1>
           <div className="divider md:divider-horizontal divider-success"></div>
           <h1 className="text-right text-black text-lg ml-20 pr-10">
-          Our customers come from different industries but share a unanimous
+            Our customers come from different industries but share a unanimous
             appreciation of our work together, reflected in their progress.
           </h1>
         </div>
@@ -232,7 +232,9 @@ export default function Consultancy() {
               HOW THIS COMMUNITY USED OUR ADVICE
             </h1>
             <p className="text-black">
-              They were able to learn ways in which to increase their productivity as efficiently as possible while avoiding hindrances at the same time.
+              They were able to learn ways in which to increase their
+              productivity as efficiently as possible while avoiding hindrances
+              at the same time.
             </p>
           </div>
         </div>
