@@ -38,25 +38,22 @@ export default async function ProductPage({
     <div className="overflow-hidden">
       {/* 2nd level */}
       <div className="bg-white">
-        <div className="xl:flex gap-10 pl-10 sm:pl-16 pr-10 sm:pr-0 pt-20 sm:pt-40">
+        <div className="xl:flex gap-10 pl-10 sm:pl-16 pr-10 sm:pr-0 pt-28 sm:pt-40">
           <div className="card sm:w-[40em] sm:h-[30em] bg-base-100 shadow-xl">
             <figure>
               <img src={product!.imageUrl} alt="Shoes" />
             </figure>
             <div className="rounded-md card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%">
-              <h2 className="card-title text-white">
-                {product!.name}
-                
-              </h2>
-              <div className="sm:badge sm:bg-red-600 border-none text-red-800 sm:text-white text-xs sm:text-xs">
-                  OUT OF STOCK
-                </div>
+              <h2 className="card-title text-white">{product!.name}</h2>
+              <div className="sm:badge sm:bg-red-600 border-none text-red-800 sm:text-white text-xs sm:text-xs font-semibold">
+                OUT OF STOCK
+              </div>
               <p className="text-white">{product!.description}</p>
             </div>
           </div>
 
           <div>
-            <h1 className="text-black text-4xl xl:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] pt-6 sm:pt-0">
+            <h1 className="text-black text-4xl xl:text-5xl font-semibold text-center sm:pl-[5em] sm:pr-[5em] pt-6 sm:pt-0">
               High Quality {product!.name}
             </h1>
 
@@ -71,7 +68,6 @@ export default async function ProductPage({
             </div>
 
             {/* cart button */}
-            
 
             {/* <AddToCartButton
               productId={product!.id}
@@ -93,7 +89,7 @@ export default async function ProductPage({
       ))} */}
 
             <div className="pt-10 sm:pt-20">
-            {/* <p className="mb-3 font-bold text-black">
+              {/* <p className="mb-3 font-bold text-black">
             Total: {formatPrice(cart?.subtotal || 0)}
         </p> */}
               <div className="btn btn-wide text-white hover:text-gray-200 bg-slate-800 hover:bg-slate-800">
@@ -108,7 +104,7 @@ export default async function ProductPage({
 
         <div className="sm:p-20 p-10">
           <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% text-white">
-            <h1 className="text-5xl sm:text-6xl font-bold font-mono">
+            <h1 className="text-4xl sm:text-6xl font-bold font-mono">
               NEED SOMETHING ELSE?
             </h1>
             <p className="sm:pt-16 sm:pr-20 text-xl sm:text-2xl font-extralight">
@@ -123,8 +119,8 @@ export default async function ProductPage({
 
         {/* after need something */}
 
-        <div className="md:pt-20 xl:pt-40 md:pb-20 xl:pb-40 sm:flex xl:pl-20 pr-20 h-[35em]">
-          <h1 className="text-black font-bold font-mono text-5xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
+        <div className="md:pt-20 xl:pt-40 md:pb-20 xl:pb-40 sm:flex xl:pl-20 pr-20 h-auto">
+          <h1 className="text-black font-bold font-mono text-4xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
             CUSTOMER SATISFACTION KNOWS NO BORDERS
           </h1>
           <div className="divider md:divider-horizontal divider-success"></div>

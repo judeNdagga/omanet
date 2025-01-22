@@ -187,7 +187,7 @@ export default function Entrepreneurship() {
 
         <div className="p-10 xl:p-20">
           <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%">
-            <h1 className="text-white text-4xl sm:text-6xl font-bold font-mono xl:mr-[4em]">
+            <h1 className="text-white text-3xl sm:text-6xl font-bold font-mono xl:mr-[4em]">
               EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
               YOUR BUSINESS
             </h1>

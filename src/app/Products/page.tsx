@@ -15,10 +15,12 @@ export default async function Entrepreneurship() {
     <div className="overflow-hidden">
       {/* 2nd level */}
       <div className="bg-white">
-        <h1 className="text-black text-4xl
+        <h1
+          className="text-black text-4xl
          sm:text-5xl font-semibold font-mono
           text-center sm:pl-[5em] sm:pr-[5em]
-           sm:pt-40 pt-32">
+           sm:pt-40 pt-32"
+        >
           EXPLORE OUR PRODUCTS
         </h1>
         <div className="sm:flex gap-10 p-8">
@@ -33,10 +35,8 @@ export default async function Entrepreneurship() {
         {/* after second cards */}
 
         <div className="sm:p-20 p-10">
-          <div
-            className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% text-white"
-          >
-            <h1 className="text-5xl sm:text-6xl font-bold font-mono">
+          <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% text-white">
+            <h1 className="text-4xl sm:text-6xl font-bold">
               NEED SOMETHING ELSE?
             </h1>
             <p className="sm:pt-16 sm:pr-20 text-xl sm:text-2xl font-extralight">
@@ -51,7 +51,7 @@ export default async function Entrepreneurship() {
 
         {/* after need something */}
 
-        <div className="md:pt-20 xl:pt-40 md:pb-20 xl:pb-40 sm:flex xl:pl-20 pr-20 sm:h-[35em]">
+        <div className="md:pt-20 xl:pt-40 md:pb-20 xl:pb-40 sm:flex xl:pl-20 pr-20 h-auto">
           <h1 className="text-left text-black font-bold font-mono text-4xl sm:text-6xl pl-10 pr-1">
             CUSTOMER SATISFACTION KNOWS NO BORDERS
           </h1>
