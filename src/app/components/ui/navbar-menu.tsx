@@ -29,12 +29,12 @@ export const MenuItem = ({
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-white
-        bg-gradient-to-r from-green-800 to-green-300 border border-gray-400 
-         rounded-xl w-24 sm:w-28 text-sm 
+        bg-emerald-500 
+         rounded-md w-24 sm:w-28 text-sm 
          text-center uppercase  
          hover:opacity-[0.9] dark:text-white
-         hover:bg-white hover:text-slate-900
-          "
+         hover:bg-emerald-100 hover:text-slate-900 font-medium
+          transition duration-300"
       >
         {item}
       </motion.p>

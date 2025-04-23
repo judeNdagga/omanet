@@ -5,14 +5,14 @@ import Image from "next/image";
 
 import { formatPrice } from "@/app/lib/format";
 import { BsArrowRight } from "react-icons/bs";
-// import { incrementProductQuantity } from "./actions";
+import { incrementProductQuantity } from "./actions";
 import { FaCartPlus, FaCircleMinus, FaCirclePlus } from "react-icons/fa6";
 import prisma from "@/app/lib/prisma";
 import { cache } from "react";
 import { Metadata } from "next";
 import OutOfStock from "@/app/components/OutOfStock";
 import ContactExpertsButton from "@/app/components/ContactExpertsButton";
-// import AddToCartButton from "./AddToCartButton";
+import AddToCartButton from "./AddToCartButton";
 // import CartEntry from "@/app/components/CartEntry";
 
 interface ProductPageProps {
@@ -69,14 +69,14 @@ export default async function ProductPage({
 
             {/* cart button */}
 
-            {/* <AddToCartButton
+            <AddToCartButton
               productId={product!.id}
               incrementProductQuantity={incrementProductQuantity}
-            /> */}
-            <div className="btn btn-sm text-white hover:text-gray-200 bg-slate-800 hover:bg-slate-800">
+            />
+            {/* <div className="btn btn-sm text-white hover:text-gray-200 bg-slate-800 hover:bg-slate-800">
               <h1>Add to cart</h1>
               <FaCartPlus className="text-white" />
-            </div>
+            </div> */}
             <div className="pt-3 sm:pt-5 flex gap-10">
               <h1 className="text-black">Price :</h1>
               <h1 className="text-lime-500">
