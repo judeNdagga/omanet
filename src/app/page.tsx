@@ -6,483 +6,238 @@ import training4 from "/public/images/services/Training164.jpg";
 import networking1 from "/public/images/homepage/networking1.jpg";
 import chilli3 from "/public/images/services/chilli3.jpg";
 import Image from "next/image";
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import { CardBody, CardContainer, CardItem } from "./components/ui/3d-card";
-
-import { Button } from "./components/ui/moving-border";
-
-import eggs from "../../public/images/homepage/eggs.jpg";
+import React from "react";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import AltBackgroundSlider from "./components/AltBackgroundSlider";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import ContactButton from "./components/ContactButton";
+
+const fadeLeft = {
+  initial: { x: -30, opacity: 0 },
+  animate: { x: 0, opacity: 1, transition: { delay: 0.12, duration: 0.5, ease: "easeOut" } },
+};
+
+const fadeRight = {
+  initial: { x: 30, opacity: 0 },
+  animate: { x: 0, opacity: 1, transition: { delay: 0.12, duration: 0.5, ease: "easeOut" } },
+};
+const fadeUp = {
+  initial: { y: 24, opacity: 0 },
+  animate: { y: 0, opacity: 1, transition: { delay: 0.08, duration: 0.45, ease: "easeOut" } },
+};
+const fadeOnly = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.4, ease: "easeOut" } },
+};
+
+const services = [
+  { href: "/Services/Consultancy", image: training1, label: "CONSULTANCY" },
+  { href: "/Services/Training", image: training3, label: "TRAINING" },
+  { href: "/Services/Communication", image: training2, label: "COMMUNICATION" },
+  { href: "/Services/ProductDevelopment", image: chilli3, label: "PRODUCT DEVELOPMENT" },
+];
+
+const vp = { once: true, amount: 0.2 };
+
 export default function Home() {
-  const words = ` Organic farm products are grown with a deep respect for nature, free from synthetic chemicals, pesticides, and GMOs. They are nurtured in healthy, nutrient-rich soils,
-   which not only enhance their flavor but also retain more of the essential
-    vitamins and minerals we need. From fresh vegetables to pasture-raised meats,
-     organic farm products reflect sustainable practices that protect the environment,
-      support biodiversity, and promote animal welfare.`;
+  const shouldReduce = useReducedMotion();
 
-  useEffect(() => {
-    async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    };
-  }, []);
+  // Falls back to opacity-only when user prefers reduced motion
+  const anim = (variant: Variants) =>
+    shouldReduce
+      ? { variants: fadeOnly, initial: "initial", whileInView: "animate", viewport: vp }
+      : { variants: variant, initial: "initial", whileInView: "animate", viewport: vp };
 
-  const FadeInLeftAnimation = {
-    initial: {
-      x: -200,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.2,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInLeftAnimationSlower = {
-    initial: {
-      x: -200,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.4,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInRightAnimation = {
-    initial: {
-      x: 200,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.2,
-        type: "easeInOut",
-      },
-    },
-  };
-
-  const FadeInUpwardsAnimation = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.08,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInUpwardsAnimationSlower = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.18,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInUpwardsAnimationEvenSlower = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.38,
-        type: "easeInOut",
-      },
-    },
-  };
   return (
     <div className="overflow-hidden">
       <AltBackgroundSlider />
-      {/* 1st level */}
-      <div
-        className="h-auto sm:h-[100em]
-       bg-gradient-to-b from-green-300 from-3%
-       via-green-300 
-        to-white to-75%
-        group
-       p-10"
-      >
-        <div className="sm:flex">
-          <div className="text-center text-black sm:w-[50%]">
-            <p className="text-black xl:pl-10 md:pr-4 xl:pr-44 xl:pt-20 pb-5">
-              <motion.h1
-                className="text-xl font-bold pb-10"
-                variants={FadeInLeftAnimation}
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: false,
-                }}
-              >
-                WHY OMANET?
-              </motion.h1>
-              <motion.h1
-                className="text-3xl md:text-4xl xl:text-6xl pb-6 xl:pl-40"
-                variants={FadeInLeftAnimationSlower}
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: false,
-                }}
-              >
-                HEALTHY, <span className="text-green-600">ORGANIC,</span>
-                AUTHENTIC
-              </motion.h1>
-              <motion.p
-                variants={FadeInLeftAnimation}
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: false,
-                }}
-              >
-                Organic food is not just a trend; it’s a return to wholesome,
-                natural nutrition that benefits both our bodies and the planet.
-                Free from synthetic pesticides, GMOs, and harmful additives,
-                organic food is grown in harmony with nature, promoting soil
-                health, biodiversity, and sustainable farming practices. It
-                often contains higher levels of nutrients, tastes fresher, and
-                supports ethical farming methods that prioritize the welfare of
-                animals and the environment.
-                <br /> Choosing organic is an investment in your well-being and
-                a commitment to a healthier, more sustainable future for
-                everyone.
-              </motion.p>
+
+      {/* Why Omanet */}
+      <section className="bg-gradient-to-b from-green-200 from-3% via-green-100 to-white to-80% py-20 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-12 sm:gap-20 items-center">
+          {/* Left */}
+          <div className="sm:w-1/2">
+            <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-green-800 border border-green-700 rounded-full px-4 py-1.5 mb-6">
+              WHY OMANET?
+            </span>
+            <motion.h2
+              {...anim(fadeUp)}
+              className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight mb-6 text-gray-900"
+            >
+              HEALTHY,{" "}
+              <span className="text-green-600">ORGANIC,</span>{" "}
+              AUTHENTIC
+            </motion.h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+              Organic food is not just a trend — it's a return to wholesome,
+              natural nutrition that benefits both our bodies and the planet.
+              Free from synthetic pesticides, GMOs, and harmful additives,
+              organic food is grown in harmony with nature, promoting soil
+              health, biodiversity, and sustainable farming practices.
+            </p>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-8">
+              Choosing organic is an investment in your well-being and a
+              commitment to a healthier, more sustainable future for everyone.
             </p>
             <ContactButton />
           </div>
 
-          {/* right side */}
-          <div className="sm:w-[50%]">
-            <motion.div
-              className="hidden sm:block relative sm:h-[32em] sm:w-[70%] bg-cover bg-center sm:right-[-30%] brightness-75"
-              style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
-              }}
-              variants={FadeInRightAnimation}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-            >
-              <motion.img
-                src="https://images.unsplash.com/photo-1526346698789-22fd84314424?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Foreground Image"
-                className="sm:absolute sm:bottom-[-20%] sm:left-[-50%] m-4 w-[25em] sm:h-[20em] opacity-95"
-                // variants={FadeInUpwardsAnimationSlower}
-                // initial="initial"
-                // whileInView="animate"
-                // viewport={{
-                //   once: true,
-                // }}
+          {/* Right: stacked images */}
+          <motion.div
+            {...anim(fadeRight)}
+            className="hidden sm:block sm:w-1/2 relative"
+          >
+            <div className="relative h-[28em] w-full rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1635008388183-04ea0313c5d1?q=80&w=2070&auto=format&fit=crop"
+                alt="Organic farm field"
+                className="w-full h-full object-cover brightness-90"
+                loading="lazy"
               />
-            </motion.div>
-          </div>
+            </div>
+            <div className="absolute -bottom-6 -left-8 w-52 h-40 rounded-xl overflow-hidden border-[3px] border-white shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1526346698789-22fd84314424?q=80&w=2070&auto=format&fit=crop"
+                alt="Fresh vegetables"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </motion.div>
         </div>
 
-        {/* after first div */}
-        <div className="pt-10 md:pt-40 xl:pt-60 sm:pb-40 sm:flex md:pl-5 xl:pl-20 sm:pr-20 h-auto">
-          <motion.h1
-            variants={FadeInUpwardsAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            className="text-black text-3xl md:text-4xl pl-4 sm:pl-10 sm:pr-1"
-          >
-            YOU’LL BE IN GREAT COMPANY, WE’RE{" "}
-            <a className="text-green-600">TRUSTED BY HUNDREDS</a> OF FARMERS.
-          </motion.h1>
-          <div className="divider md:divider-horizontal divider-success"></div>
-          <motion.h1
-            variants={FadeInUpwardsAnimationSlower}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            className="text-right text-black text-lg md:ml-10 xl:ml-20 md:pr-5 xl:pr-10"
-          >
+        {/* Social proof bar */}
+        <motion.div
+          {...anim(fadeUp)}
+          className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center gap-6 sm:gap-10 mt-24 sm:mt-32 mb-12"
+        >
+          <h3 className="text-gray-900 text-2xl md:text-3xl font-semibold text-center sm:text-left flex-1 leading-snug">
+            YOU'LL BE IN GREAT COMPANY — WE'RE{" "}
+            <span className="text-green-600">TRUSTED BY HUNDREDS</span> OF
+            FARMERS.
+          </h3>
+          <div className="hidden sm:block w-px h-14 bg-green-400 shrink-0" />
+          <p className="text-gray-500 text-sm sm:text-base text-center sm:text-right flex-1 leading-relaxed">
             Discover how we helped multiple farmers increase their productivity
             and efficiency for a better yield.
-          </motion.h1>
+          </p>
+        </motion.div>
+
+        {/* Services grid */}
+        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5">
+          {services.map(({ href, image, label }) => (
+            <a
+              key={label}
+              href={href}
+              className="relative block h-[9em] sm:h-[19em] rounded-xl overflow-hidden shadow-lg group transform-gpu hover:scale-105 transition-transform duration-300"
+            >
+              <Image
+                src={image}
+                alt={label}
+                fill
+                sizes="(max-width: 640px) 50vw, 25vw"
+                className="object-cover brightness-75 group-hover:brightness-50 transition-[filter] duration-300"
+              />
+              <span className="absolute bottom-3 sm:bottom-5 left-3 sm:left-6 text-white text-xs sm:text-lg font-semibold tracking-wide group-hover:text-green-300 transition-colors duration-300">
+                {label}
+              </span>
+            </a>
+          ))}
         </div>
+      </section>
 
-        {/* services level */}
-        <div className="hidden sm:flex gap-10">
-          {/* 1st card */}
-          <a
-            className="card sm:w-[25em] sm:h-[19em] shadow-xl hover:text-green-300 transition duration-500 hover:scale-110"
-            href="/Services/Consultancy"
-          >
-            <Image
-              src={training1}
-              className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
-              width={1920}
-              height={1080}
-              alt="image"
-            />
-            <h1 className="absolute sm:bottom-[10%] text-white text-2xl sm:ml-10">
-              CONSULTANCY
-            </h1>
-          </a>
-
-          {/* second card */}
-
-          <a
-            className="card sm:w-[25em] sm:h-[19em] shadow-xl hover:text-green-300 transition duration-500 hover:scale-110"
-            href="/Services/Training"
-          >
-            <Image
-              src={training3}
-              className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
-              width={1920}
-              height={1080}
-              alt="image"
-            />
-            <h1 className="absolute sm:bottom-[10%] text-white text-2xl sm:ml-10">
-              TRAINING
-            </h1>
-          </a>
-          {/* third card */}
-
-          <a
-            className="card sm:w-[25em] sm:h-[19em] shadow-xl hover:text-green-300 transition duration-500 hover:scale-110"
-            href="/Services/Communication"
-          >
-            <Image
-              src={training2}
-              className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
-              width={1920}
-              height={1080}
-              alt="image"
-            />
-            <h1 className="absolute sm:bottom-[10%] text-white text-2xl sm:ml-10">
-              COMMUNICATION
-            </h1>
-          </a>
-
-          {/* fourth card */}
-          <a
-            className="card sm:w-[25em] sm:h-[19em] shadow-xl hover:text-green-300 transition duration-500 hover:scale-110"
-            href="/Services/ProductDevelopment"
-          >
-            <Image
-              src={chilli3}
-              className="w-full h-full brightness-75 hover:brightness-50 transition duration-500"
-              width={1920}
-              height={1080}
-              alt="image"
-            />
-            <h1 className="absolute sm:bottom-[10%] text-white text-2xl sm:ml-10">
-              PRODUCT DEVELOPMENT
-            </h1>
-          </a>
-        </div>
-
-        {/* after services level */}
-      </div>
-      {/* 2nd level */}
-      <div
-        className="h-auto
-       bg-gradient-to-t from-green-300 from-3%
-       via-green-300 
-        to-white to-75%
-       p-10"
-      >
-        {/* testimonial level */}
-        <div className="hidden sm:flex h-[40em]">
+      {/* Testimonial */}
+      <section className="bg-gradient-to-t from-green-200 from-3% via-green-100 to-white to-80% py-20 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 sm:gap-16 items-center">
           <motion.div
-            className="w-[50%]"
-            variants={FadeInLeftAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
+            {...anim(fadeLeft)}
+            className="w-full sm:w-1/2"
           >
-            <Image
-              src={networking1}
-              alt=""
-              className="w-full h-[85%] hover:scale-105 transition duration-500"
-            />
+            <div className="relative w-full h-60 sm:h-96 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src={networking1}
+                alt="OMANET networking event"
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover transform-gpu hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </motion.div>
+
           <motion.div
-            className="w-[50%]"
-            variants={FadeInRightAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
+            {...anim(fadeRight)}
+            className="w-full sm:w-1/2"
           >
-            <p className="text-black text-xl sm:text-2xl font-extralight pl-16">
-              <FaQuoteLeft /> To access product knowledge and serve our
-              customers more efficiently, we decided to build an intelligent
-              knowledge base.
-              <a className="font-bold text-green-400 italic">OMANET</a> selected
-              the right procedures and created a very simple and easy to follow
-              guide to success. Our technical expertise bolsters our advice and
-              guarantess a positive change. It is always a{" "}
-              <a className="underline text-green-400 font-bold italic">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              <FaQuoteLeft className="inline-block text-green-400 mr-2 mb-1" />
+              To access product knowledge and serve our customers more
+              efficiently, we decided to build an intelligent knowledge base.{" "}
+              <span className="font-bold text-green-600 italic">OMANET</span>{" "}
+              selected the right procedures and created a very simple and easy
+              to follow guide to success. Our technical expertise bolsters our
+              advice and guarantees a positive change. It is always a{" "}
+              <span className="underline text-green-600 font-semibold italic">
                 great pleasure to collaborate.
-              </a>
-              <FaQuoteRight />
+              </span>
+              <FaQuoteRight className="inline-block text-green-400 ml-2 mb-1" />
             </p>
-
-            <p className="sm:text-right text-center text-black pt-10 text-3xl">
-              - Jane Nalunga
-              <p className="text-2xl font-light text-green-600">Team Lead</p>
-            </p>
-          </motion.div>
-        </div>
-
-        {/* after testimonial */}
-        {/* <motion.div
-          className="bg-scroll bg-gradient-to-b from-green-300 from-3%
-      via-green-300 to-white to-75% 
-       sm:flex rounded-xl h-[32em] sm:h-auto"
-          style={{
-            backgroundImage: `url(https://images.unsplash.com/photo-1518843875459-f738682238a6?q=80&w=2042&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
-          }}
-          variants={FadeInUpwardsAnimation}
-          initial="initial"
-          whileInView="animate"
-          viewport={{
-            once: true,
-          }}
-        > */}
-          
-          {/* inner card */}
-          {/* <motion.div
-            className="hidden sm:block w-[50%]"
-            variants={FadeInUpwardsAnimationEvenSlower}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-          >
-            <CardContainer className="inter-var w-full">
-              <CardBody className="w-full">
-                <CardItem className="w-full pl-4 pt-4">
-                  <Image
-                    src={eggs}
-                    height="1000"
-                    width="1000"
-                    className=" h-[30em] w-[98%] object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt="thumbnail"
-                  />
-                </CardItem>
-              </CardBody>
-            </CardContainer>
-          </motion.div>
-          <motion.div
-            className="text-center text-black sm:w-[50%]"
-            variants={FadeInUpwardsAnimationSlower}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-          >
-            <h1 className="pt-5 sm:pt-32 text-3xl uppercase font-semibold text-white">
-              Farmer Products
-            </h1>
-            <p className="pt-4 sm:pt-8 pl-4 sm:pl-20 pr-4 sm:pr-20 pb-5 sm:pb-4 sm:text-md text-white">
-              {words}
-            </p>
-            <ContactButton />
-          </motion.div>
-        </motion.div> */}
-      </div>
-
-      {/* 3rd level */}
-
-      <div
-        className="h-auto
-       bg-gradient-to-b from-green-300 from-3%
-       via-green-300 
-        to-white to-75%
-       p-10"
-      >
-        {/* second testimonial */}
-
-        <div className="sm:flex h-auto sm:pt-10">
-          <motion.div
-            className="sm:w-[50%]"
-            variants={FadeInRightAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-          >
-            <p className="text-black md:pl-6 xl:pl-16 md:pr-10 xl:pr-44 md:pt-10 xl:pt-20">
-              <h1 className="text-xl font-bold md:pb-3 xl:pb-10">OUR APPROACH</h1>
-              <h1 className="text-5xl md:text-4xl xl:text-6xl pb-6">
-                EASY, <a className="text-green-600">ORGANIC</a> <br />
-                SEAMLESS
-              </h1>
-              <p>
-                At OMANET, we emphasize personal interactions and a bespoke
-                service from start to finish, valuing traditional engagement
-                methods over digital communication. As primarily an offline
-                business, we focus on face-to-face and telephone consultations
-                to provide tailored guidance based on your unique interests.
-                <br /> We invite to contact us for a meeting or telephone
-                conversation, allowing us to understand and craft your organic farming
-                plans to meet your specific expectations and preferences.
+            <div className="mt-8 border-t border-green-200 pt-6 text-right">
+              <p className="text-gray-900 text-xl font-semibold">
+                — Jane Nalunga
               </p>
+              <p className="text-base font-light text-green-600 mt-1">
+                Team Lead
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Approach */}
+      <section className="bg-gradient-to-b from-green-200 from-3% via-green-100 to-white to-80% py-20 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse sm:flex-row gap-10 sm:gap-16 items-center">
+          <motion.div
+            {...anim(fadeRight)}
+            className="w-full sm:w-1/2"
+          >
+            <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-green-800 border border-green-700 rounded-full px-4 py-1.5 mb-6">
+              OUR APPROACH
+            </span>
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight mb-6 text-gray-900">
+              EASY,{" "}
+              <span className="text-green-600">ORGANIC</span>{" "}
+              &amp; SEAMLESS
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+              At OMANET, we emphasize personal interactions and a bespoke
+              service from start to finish, valuing traditional engagement
+              methods over digital communication. As primarily an offline
+              business, we focus on face-to-face and telephone consultations to
+              provide tailored guidance based on your unique interests.
+            </p>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+              We invite you to contact us for a meeting or telephone
+              conversation, allowing us to understand and craft your organic
+              farming plans to meet your specific expectations and preferences.
             </p>
           </motion.div>
 
           <motion.div
-            className="sm:w-[50%]"
-            variants={FadeInLeftAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
+            {...anim(fadeLeft)}
+            className="w-full sm:w-1/2"
           >
-            <Image
-              src={training4}
-              alt=""
-              className="w-full h-[95%] hover:scale-105 transition duration-500"
-            />
+            <div className="relative w-full h-64 sm:h-[28em] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src={training4}
+                alt="OMANET training session"
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover transform-gpu hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </motion.div>
         </div>
-
-        {/* after second testimonial */}
-      </div>
+      </section>
     </div>
   );
 }

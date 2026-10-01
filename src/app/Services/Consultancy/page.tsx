@@ -1,244 +1,211 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import ruraltraining from "/public/images/homepage/ruraltraining.jpg";
 import chicken from "/public/images/homepage/chicken.jpg";
 import samavocado from "/public/images/homepage/samavocado.jpg";
 import ContactExpertsButton from "@/app/components/ContactExpertsButton";
+
+const heroContainer = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.14, delayChildren: 0.1 } },
+};
+const heroItem = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
+const heroItemReduced = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.4 } },
+};
+const cardContainer = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.12 } },
+};
+const cardItem = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
+const cardItemReduced = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.3 } },
+};
+
+const features = [
+  {
+    title: "Training & Education",
+    text: "Organising workshops, seminars, and field days on organic farming practices, sustainability, and market trends — showcasing best practices and innovative techniques in action.",
+  },
+  {
+    title: "Value-Added Product Development",
+    text: "Identifying opportunities for organic value-added products such as jams, sauces, and processed foods, with advice on processing techniques and packaging that maintains organic integrity.",
+  },
+  {
+    title: "Sustainable Farm Management",
+    text: "Advising on efficient use of water, energy, and resources alongside suitable organic fertilisers, pesticides, and seeds to meet certification standards and improve crop yields.",
+  },
+];
+
+const stories = [
+  {
+    image: chicken,
+    title: "How Peter Used Our Advice",
+    text: "Peter utilised our consultation to run his poultry farm more efficiently and identify probable hindrances to success before they arose.",
+  },
+  {
+    image: samavocado,
+    title: "How Sam Used Our Advice",
+    text: "Sam used our consultation to double the yield on his avocado farm and mitigate the problems he had faced in previous seasons.",
+  },
+  {
+    image: ruraltraining,
+    title: "How This Community Used Our Advice",
+    text: "The community learned ways to increase their productivity as efficiently as possible while avoiding common hindrances at the same time.",
+  },
+];
+
 export default function Consultancy() {
-  const FadeInUpwardsAnimation = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.08,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInUpwardsAnimationSlower = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.18,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInUpwardsAnimationEvenSlower = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.38,
-        type: "easeInOut",
-      },
-    },
-  };
+  const shouldReduce = useReducedMotion();
+  const heroIt = shouldReduce ? heroItemReduced : heroItem;
+  const cardIt = shouldReduce ? cardItemReduced : cardItem;
 
   return (
     <div className="overflow-hidden">
-      <div
-        className="h-auto sm:flex sm:pt-[11em] p-20  brightness-90
-        bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-        // style={{
-        //   backgroundImage: `url(https://images.unsplash.com/photo-1535090467336-9501f96eef89?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
-        // }}
-      >
-        <div className="sm:w-[48%]">
-          <h1 className="text-3xl md:text-5xl xl:text-7xl text-white  pt-10 md:pt-0">
-            Consultancy
-          </h1>
-        </div>
-        <div className="divider md:divider-horizontal divider-success h-10"></div>
-        <div className="sm:w-[48%] sm:text-xl text-white">
-          <p>
-            Consultancy in organic agriculture plays a crucial role in guiding
-            farmers, agribusinesses, and organizations towards sustainable and
-            profitable organic farming practices. Organic agricultural
-            consultants provide expert advice, support, and training to help
-            clients transition to organic farming, improve their operations, and
-            achieve certification.
-            <p className="md:pt-10 xl:pt-20">
-              Consultants help farmers build resilience against various risks,
-              including climate change, market fluctuations, and pest outbreaks
-            </p>
-          </p>
-        </div>
-      </div>
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-green-900 via-green-800 to-emerald-700 pt-36 pb-20 px-6 sm:px-12 md:px-16">
+        <motion.div
+          variants={heroContainer}
+          initial="hidden"
+          animate="show"
+          className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 sm:gap-20 items-start"
+        >
+          <div className="sm:w-1/2">
+            <motion.span
+              variants={heroIt}
+              className="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-emerald-300 border border-emerald-500/60 rounded-full px-4 py-1.5 mb-6"
+            >
+              Our Services
+            </motion.span>
+            <motion.h1
+              variants={heroIt}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08]"
+            >
+              Consultancy
+            </motion.h1>
+          </div>
+          <div className="sm:w-1/2 sm:pt-16">
+            <motion.p variants={heroIt} className="text-base sm:text-lg text-green-100 leading-relaxed mb-4">
+              Consultancy in organic agriculture guides farmers, agribusinesses,
+              and organisations towards sustainable and profitable organic
+              farming practices. Our consultants provide expert advice, support,
+              and training to help clients transition to organic farming, improve
+              operations, and achieve certification.
+            </motion.p>
+            <motion.p variants={heroIt} className="text-sm sm:text-base text-green-200/75 leading-relaxed">
+              We help farmers build resilience against climate change, market
+              fluctuations, and pest outbreaks — creating lasting foundations
+              for organic success.
+            </motion.p>
+          </div>
+        </motion.div>
+      </section>
 
-      {/* 2nd level */}
-      <div className="bg-white">
-        <h1 className="text-black text-4xl xl:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
-          DISCOVER HOW TO RUN AN AGRICULTURAL BUSINESS
-        </h1>
-        <div className="sm:flex md:gap-3 xl:gap-10 p-8 text-white">
-          {/* first card */}
+      {/* Feature cards */}
+      <section className="bg-white py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-green-800 border border-green-700 rounded-full px-4 py-1.5 mb-4">
+              What's Included
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              HOW TO RUN AN{" "}
+              <span className="text-green-600">AGRICULTURAL BUSINESS</span>
+            </h2>
+          </div>
           <motion.div
-            className="card card-body sm:w-[15em] xl:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-            variants={FadeInUpwardsAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
+            variants={cardContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
           >
-            <h1 className="text-2xl md:text-xl xl:text-2xl font-semibold pb-8 md:pb-3 xl:pb-8">
-              TRAINING AND EDUCATION
-            </h1>
-            <p>
-              Workshops and Seminars: Organizing workshops and seminars on
-              organic farming practices, sustainability, and market trends.
-              <br />
-              Field Days and Demonstrations: Hosting on-farm demonstrations and
-              field days to showcase best practices and innovative techniques.
-            </p>
-          </motion.div>
-
-          {/* second card */}
-
-          <motion.div
-            className="card card-body sm:w-[15em] xl:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-            variants={FadeInUpwardsAnimationSlower}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
-          >
-            <h1 className="text-2xl md:text-xl xl:text-2xl font-semibold pb-8 md:pb-3 xl:pb-8">
-              VALUE-ADDED PRODUCT DEVELOPMENT
-            </h1>
-            <p>
-              Product Innovation: Identifying opportunities for creating
-              value-added organic products such as jams, sauces, and processed
-              foods.
-              <br />
-              Processing and Packaging: Advising on processing techniques and
-              packaging solutions that maintain organic integrity and appeal to
-              consumers.
-            </p>
-          </motion.div>
-          {/* third card */}
-
-          <motion.div
-            className="card card-body sm:w-[15em] xl:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-            variants={FadeInUpwardsAnimationEvenSlower}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
-          >
-            <h1 className="text-2xl md:text-xl xl:text-2xl font-semibold pb-8 md:pb-3 xl:pb-8">
-              SUSTAINABLE FARM MANAGEMENT
-            </h1>
-            <p>
-              Resource Efficiency: Advising on efficient use of water, energy,
-              and other resources to reduce costs and environmental impact.
-              <br />
-              Organic Inputs: Recommending suitable organic fertilizers,
-              pesticides, and seeds to meet certification standards and improve
-              crop yields.
-            </p>
+            {features.map(({ title, text }) => (
+              <motion.div
+                key={title}
+                variants={cardIt}
+                className="bg-white rounded-xl p-6 shadow-sm border-l-4 border-emerald-500 ring-1 ring-gray-100"
+              >
+                <h3 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wide">
+                  {title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
+      </section>
 
-        {/* after 3 cards */}
-
-        <div className="p-10 xl:p-20">
-          <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%">
-            <h1 className="text-3xl sm:text-6xl font-bold font-mono xl:mr-[4em] text-white">
-              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
-              YOUR BUSINESS
-            </h1>
-
-            <ContactExpertsButton />
+      {/* CTA banner */}
+      <section className="py-12 px-6 sm:px-12 md:px-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl bg-gradient-to-br from-green-900 via-green-800 to-emerald-700 p-10 sm:p-14 flex flex-col sm:flex-row items-start sm:items-center gap-8">
+            <div className="flex-1">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                READY TO TRANSFORM YOUR FARMING OPERATION?
+              </h2>
+              <p className="text-green-100 text-base sm:text-lg leading-relaxed max-w-xl">
+                Our expert consultants are ready to help you build a sustainable,
+                profitable organic farming business tailored to your needs.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <ContactExpertsButton />
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* after card */}
-
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 sm:h-[35em]">
-          <h1 className="text-black font-bold font-mono text-3xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
-            HEAR IT FROM OUR CUSTOMERS
-          </h1>
-          <div className="divider md:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-black text-lg ml-20 pr-10">
-            Our customers come from different industries but share a unanimous
-            appreciation of our work together, reflected in their progress.
-          </h1>
-        </div>
-        <div className="sm:flex">
-          {/* 1st card */}
-          <div className="card card-body">
-            <Image
-              src={chicken}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="h-[20em] hover:scale-110 transition duration-700"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW PETER USED OUR ADVICE
-            </h1>
-            <p className="text-black">
-              Peter utilised our consultation to enable him run his poultry farm
-              more effieciently as well as look out for probable hindrances to
-              success.
+      {/* Customer stories */}
+      <section className="bg-white py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-green-800 border border-green-700 rounded-full px-4 py-1.5 mb-4">
+              Success Stories
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              HEAR IT FROM{" "}
+              <span className="text-green-600">OUR CUSTOMERS</span>
+            </h2>
+            <p className="text-gray-500 mt-3 text-sm sm:text-base max-w-xl mx-auto">
+              How our consultancy has transformed farming operations across Uganda.
             </p>
           </div>
-          {/* 2nd card */}
-
-          <div className="card card-body">
-            <Image
-              src={samavocado}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="h-[20em] hover:scale-110 transition duration-700"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW SAM USED OUR ADVICE
-            </h1>
-            <p className="text-black">
-              Sam used our consultation to double the yield on his avocado farm
-              and mitigate the problems he had faced before.
-            </p>
-          </div>
-          {/* 3rd card */}
-          <div className="card card-body">
-            <Image
-              src={ruraltraining}
-              width={1920}
-              height={1080}
-              alt="bg pic"
-              className="h-[20em] hover:scale-110 transition duration-700"
-            ></Image>
-            <h1 className="text-black hover:text-green-500 font-semibold text-2xl font-mono">
-              HOW THIS COMMUNITY USED OUR ADVICE
-            </h1>
-            <p className="text-black">
-              They were able to learn ways in which to increase their
-              productivity as efficiently as possible while avoiding hindrances
-              at the same time.
-            </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {stories.map(({ image, title, text }) => (
+              <div
+                key={title}
+                className="group rounded-xl overflow-hidden shadow-md bg-white ring-1 ring-gray-100"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={image}
+                    fill
+                    alt={title}
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                    className="object-cover transform-gpu group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-gray-900 font-bold text-sm uppercase tracking-wide mb-2 group-hover:text-green-600 transition-colors duration-300">
+                    {title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

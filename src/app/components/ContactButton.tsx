@@ -1,13 +1,10 @@
-export default function ContactButton(){
-    return(
-        <div>
-             <a 
-             className="btn px-4 py-2 hover:scale-125 transition duration-500 backdrop-blur-sm border-none bg-emerald-500 hover:bg-emerald-500 text-white mx-auto text-center rounded-full relative mt-4"
-             href="/Contact"
-             >
-          <span>Contact Us →</span>
-          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-        </a>
-        </div>
-    )
+export default function ContactButton() {
+  return (
+    <a
+      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm tracking-wide shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 mt-4"
+      href="/Contact"
+    >
+      Contact Us <span>→</span>
+    </a>
+  );
 }

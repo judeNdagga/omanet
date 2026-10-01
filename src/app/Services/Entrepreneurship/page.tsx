@@ -1,260 +1,195 @@
 "use client";
-import ContactExpertsButton from "@/app/components/ContactExpertsButton";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
+import ContactExpertsButton from "@/app/components/ContactExpertsButton";
+
+const heroContainer = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.14, delayChildren: 0.1 } },
+};
+const heroItem = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
+const heroItemReduced = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.4 } },
+};
+const cardContainer = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.12 } },
+};
+const cardItem = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
+const cardItemReduced = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.3 } },
+};
+
+const features = [
+  {
+    title: "Sustainable & Organic Farming",
+    text: "Prioritising sustainability through crop rotation, composting, natural pest control, and biodiversity enhancement — improving soil health and reducing environmental impact while yielding high-quality, organic-certified produce.",
+  },
+  {
+    title: "Leveraging Technology & Innovation",
+    text: "Utilising precision farming tools — drones for crop monitoring, automated irrigation, and soil sensors — to enhance productivity. Exploring vertical farming, aquaponics, and biopesticides to increase yields and maintain organic integrity.",
+  },
+  {
+    title: "Building Strong Brands",
+    text: "Building transparent brands that emphasise commitment to organic practices and sustainability. Using social media, e-commerce platforms, and direct-to-consumer channels to connect with health-conscious consumers and build loyal customer bases.",
+  },
+];
 
 export default function Entrepreneurship() {
-  const FadeInUpwardsAnimation = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.08,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInUpwardsAnimationSlower = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.18,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInUpwardsAnimationEvenSlower = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.38,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInLeftAnimation = {
-    initial: {
-      x: -200,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.2,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInRightAnimation = {
-    initial: {
-      x: 200,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.2,
-        type: "easeInOut",
-      },
-    },
-  };
+  const shouldReduce = useReducedMotion();
+  const heroIt = shouldReduce ? heroItemReduced : heroItem;
+  const cardIt = shouldReduce ? cardItemReduced : cardItem;
+
   return (
     <div className="overflow-hidden">
-      <div
-        className="h-auto sm:flex sm:pt-[11em] p-20  brightness-90
-        bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-        // style={{
-        //   backgroundImage: `url(https://images.unsplash.com/photo-1535090467336-9501f96eef89?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
-        // }}
-      >
-        <div className="sm:w-[48%]">
-          <h1 className="text-3xl xl:text-7xl text-white  pt-10 md:pt-0">
-            Entrepreneurship and Marketing
-          </h1>
-        </div>
-        <div className="divider md:divider-horizontal divider-success h-10"></div>
-        <div className="sm:w-[48%] sm:text-xl text-white">
-          <p>
-            Entrepreneurship in agriculture isn't just about sowing seeds; it's
-            about cultivating innovation, harvesting opportunity, and reaping
-            sustainable growth. Embrace the land, nurture creativity, and watch
-            your dreams grow into fields of abundance.
-            <p className="md:pt-5 xl:pt-20">
-              As the global population continues to grow and the demand for food
-              increases, agricultural entrepreneurs are at the forefront of
-              developing solutions that ensure food security, promote
-              sustainability, and drive economic growth.
-            </p>
-          </p>
-        </div>
-      </div>
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-green-900 via-green-800 to-emerald-700 pt-36 pb-20 px-6 sm:px-12 md:px-16">
+        <motion.div
+          variants={heroContainer}
+          initial="hidden"
+          animate="show"
+          className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 sm:gap-20 items-start"
+        >
+          <div className="sm:w-1/2">
+            <motion.span
+              variants={heroIt}
+              className="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-emerald-300 border border-emerald-500/60 rounded-full px-4 py-1.5 mb-6"
+            >
+              Our Services
+            </motion.span>
+            <motion.h1
+              variants={heroIt}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08]"
+            >
+              Entrepreneurship &amp; Marketing
+            </motion.h1>
+          </div>
+          <div className="sm:w-1/2 sm:pt-16">
+            <motion.p variants={heroIt} className="text-base sm:text-lg text-green-100 leading-relaxed mb-4">
+              Entrepreneurship in agriculture isn't just about sowing seeds —
+              it's about cultivating innovation, harvesting opportunity, and
+              reaping sustainable growth. Embrace the land, nurture creativity,
+              and watch your vision grow into fields of abundance.
+            </motion.p>
+            <motion.p variants={heroIt} className="text-sm sm:text-base text-green-200/75 leading-relaxed">
+              As global demand for food rises, agricultural entrepreneurs are
+              at the forefront of developing solutions that ensure food
+              security, promote sustainability, and drive economic growth.
+            </motion.p>
+          </div>
+        </motion.div>
+      </section>
 
-      {/* 2nd level */}
-      <div className="bg-white">
-        <h1 className="text-black md:text-4xl xl:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
-          DISCOVER HOW TO RUN AN ORGANIC AGRICULTURAL BUSINESS
-        </h1>
-        <div className="sm:flex md:gap-3 xl:gap-10 p-8 text-white">
-          {/* first card */}
+      {/* Feature cards */}
+      <section className="bg-white py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-green-800 border border-green-700 rounded-full px-4 py-1.5 mb-4">
+              Key Pillars
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              RUN AN ORGANIC{" "}
+              <span className="text-green-600">AGRICULTURAL BUSINESS</span>
+            </h2>
+          </div>
           <motion.div
-            className="card card-body sm:w-[15em] sm:h-auto bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-            variants={FadeInUpwardsAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
+            variants={cardContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
           >
-            <h1 className="text-2xl font-bold pb-8">
-              SUSTAINABLE AND ORGANIC FARMING
-            </h1>
-            <p>
-              Organic agricultural entrepreneurs prioritize sustainability in
-              every aspect of their operations. They adopt eco-friendly
-              practices such as crop rotation, composting, natural pest control,
-              and biodiversity enhancement. These methods not only improve soil
-              health and reduce environmental impact but also yield
-              high-quality, nutritious produce that meets organic certification
-              standards.
-            </p>
-          </motion.div>
-
-          {/* second card */}
-
-          <motion.div
-            className="card card-body sm:w-[15em] sm:h-auto bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-            variants={FadeInUpwardsAnimationSlower}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
-          >
-            <h1 className="text-2xl font-bold pb-8">
-              LEVERAGING TECHNOLOGY AND INNOVATION
-            </h1>
-            <p>
-              Technology plays a vital role in optimizing organic farming
-              operations. Entrepreneurs utilize precision farming tools, such as
-              drones for crop monitoring, automated irrigation systems, and soil
-              sensors, to enhance productivity and efficiency. Innovations like
-              vertical farming, aquaponics, and biopesticides are also being
-              explored to increase yields and maintain organic integrity.
-            </p>
-          </motion.div>
-          {/* third card */}
-
-          <motion.div
-            className="card card-body sm:w-[15em] sm:h-auto bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-            variants={FadeInUpwardsAnimationEvenSlower}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
-          >
-            <h1 className="text-2xl font-bold pb-8">
-              BUILDING STRONG BRANDS AND MARKET PRESENCE
-            </h1>
-            <p>
-              Effective branding and marketing are crucial for success in
-              organic agriculture. Entrepreneurs focus on building strong,
-              transparent brands that emphasize their commitment to organic
-              practices and sustainability. Utilizing social media, e-commerce
-              platforms, and direct-to-consumer sales channels, they connect
-              with health-conscious consumers and build loyal customer bases.
-            </p>
+            {features.map(({ title, text }) => (
+              <motion.div
+                key={title}
+                variants={cardIt}
+                className="bg-white rounded-xl p-6 shadow-sm border-l-4 border-emerald-500 ring-1 ring-gray-100"
+              >
+                <h3 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wide">
+                  {title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
+      </section>
 
-        {/* after 3 cards */}
-
-        <div className="p-10 xl:p-20">
-          <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%">
-            <h1 className="text-white text-3xl sm:text-6xl font-bold font-mono xl:mr-[4em]">
-              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
-              YOUR BUSINESS
-            </h1>
-
-            <ContactExpertsButton />
+      {/* CTA banner */}
+      <section className="py-12 px-6 sm:px-12 md:px-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl bg-gradient-to-br from-green-900 via-green-800 to-emerald-700 p-10 sm:p-14 flex flex-col sm:flex-row items-start sm:items-center gap-8">
+            <div className="flex-1">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                READY TO GROW YOUR AGRICULTURAL BUSINESS?
+              </h2>
+              <p className="text-green-100 text-base sm:text-lg leading-relaxed max-w-xl">
+                Our entrepreneurship and marketing experts will help you build
+                a strong brand, access new markets, and scale your organic
+                farming operation.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <ContactExpertsButton />
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* after card */}
-
-        <div className="sm:pt-40 sm:pb-40 sm:flex sm:pl-20 pr-20 sm:h-[35em]">
-          <h1 className="text-black font-bold font-mono text-3xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
-            HEAR IT FROM OUR CUSTOMERS
-          </h1>
-          <div className="divider md:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-black text-md ml-20 pr-10">
-            Discover how we helped industry leaders build their data-driven
-            future. Get a deeper understanding of our AI & Data solutions and
-            the impact they have on businesses like yours.
-          </h1>
-        </div>
-        <div className="sm:flex sm:h-[40em] pt-10">
+      {/* Our Approach */}
+      <section className="bg-white py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse sm:flex-row gap-10 sm:gap-16 items-center">
           <motion.div
-            className="sm:w-[50%]"
-            variants={FadeInRightAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full sm:w-1/2"
           >
-            <p className="text-black pl-5 xl:pl-16 xl:pr-44 xl:pt-20">
-              <h1 className="text-xl font-bold pb-10">OUR APPROACH</h1>
-              <h1 className="text-4xl sm:text-6xl pb-6">
-                EASY, <a className="text-green-600">ORGANIC</a> <br />
-                SEAMLESS
-              </h1>
-              <p>
-                Entrepreneurship in organic agriculture represents a dynamic and
-                innovative approach to farming that combines sustainable
-                practices with business acumen. As consumer demand for organic
-                products continues to rise, opportunities abound for
-                entrepreneurs to create profitable and environmentally
-                responsible agricultural enterprises.
-              </p>
+            <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-green-800 border border-green-700 rounded-full px-4 py-1.5 mb-6">
+              Our Approach
+            </span>
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight mb-6 text-gray-900">
+              EASY,{" "}
+              <span className="text-green-600">ORGANIC</span>{" "}
+              &amp; SEAMLESS
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+              Entrepreneurship in organic agriculture combines sustainable
+              farming with business acumen. As consumer demand for organic
+              products continues to rise, opportunities abound for
+              entrepreneurs to create profitable and environmentally
+              responsible agricultural enterprises — and OMANET is here to
+              guide every step of that journey.
             </p>
           </motion.div>
-
           <motion.div
-            className="sm:w-[50%]"
-            variants={FadeInLeftAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full sm:w-1/2"
           >
-            <Image
-              src="https://images.unsplash.com/photo-1609780447631-05b93e5a88ea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-              width={1080}
-              height={720}
-              className="p-5 sm:p-0 sm:pr-5 sm:w-full h-[85%] hover:scale-105 transition duration-500"
-            />
+            <div className="relative w-full h-64 sm:h-[28em] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="https://images.unsplash.com/photo-1609780447631-05b93e5a88ea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Agricultural entrepreneurship"
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover transform-gpu hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </motion.div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

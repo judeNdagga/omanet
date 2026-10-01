@@ -27,39 +27,29 @@ export const MenuItem = ({
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
-        transition={{ duration: 0.3 }}
-        className="cursor-pointer text-white
-        bg-emerald-500 
-         rounded-md w-24 sm:w-28 text-sm 
-         text-center uppercase  
-         hover:opacity-[0.9] dark:text-white
-         hover:bg-emerald-100 hover:text-slate-900 font-medium
-          transition duration-300"
+        transition={{ duration: 0.2 }}
+        className="cursor-pointer text-xs sm:text-sm font-semibold uppercase tracking-wide
+          text-white
+          px-3 py-1.5 rounded-lg
+          hover:bg-emerald-600
+          transition duration-200 text-center select-none"
       >
         {item}
       </motion.p>
       {active !== null && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.85, y: 10 }}
+          initial={{ opacity: 0, scale: 0.92, y: 8 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
         >
           {active === item && (
-            <div className="hidden md:block absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2">
+            <div className="hidden sm:block absolute top-[calc(100%_+_0.75rem)] left-1/2 -translate-x-1/2">
               <motion.div
                 transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
-                className="bg-gradient-to-r
-                 from-green-900 to-green-300
-                 dark:bg-black backdrop-blur-sm
-                  rounded-2xl overflow-hidden 
-                  border border-gray-400
-                   dark:border-white/[0.2] shadow-xl"
+                layoutId="active"
+                className="bg-emerald-500 rounded-2xl overflow-hidden border border-emerald-400 shadow-2xl"
               >
-                <motion.div
-                  layout // layout ensures smooth animation
-                  className="w-max h-full p-4"
-                >
+                <motion.div layout className="w-max h-full p-5">
                   {children}
                 </motion.div>
               </motion.div>
@@ -80,12 +70,13 @@ export const Menu = ({
 }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative grid grid-cols-2 gap-6 px-2 py-1
-       rounded-full boder
-       border-transparent dark:bg-black dark:border-white/[0.2]
-        border-gray-400 border-2 shadow-input justify-center
-         sm:space-x-4 sm:px-8 sm:py-6 sm:flex sm:gap-0"
+      onMouseLeave={() => setActive(null)}
+      className="relative w-full grid grid-cols-2 gap-2 px-3 py-2
+        rounded-2xl sm:rounded-full
+        bg-emerald-500
+        border border-emerald-400
+        shadow-lg
+        sm:flex sm:items-center sm:justify-around sm:gap-0 sm:px-8 sm:py-3"
     >
       {children}
     </nav>
@@ -104,27 +95,19 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <Link href={href} className="flex space-x-2">
+    <Link href={href} className="flex space-x-3 group">
       <Image
         src={src}
-        width={140}
+        width={120}
         height={70}
         alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
+        className="flex-shrink-0 rounded-lg shadow-md object-cover group-hover:scale-105 transition duration-300"
       />
       <div>
-        <h4
-          className="text-xl font-bold mb-1
-         text-white hover:text-black uppercase font-mono
-          dark:text-white"
-        >
+        <h4 className="text-sm font-bold mb-1 text-white group-hover:text-emerald-100 uppercase tracking-wide transition duration-200">
           {title}
         </h4>
-        <p
-          className="text-gray-300 text-xs
-         max-w-[10rem] dark:text-neutral-300
-         hover:text-black"
-        >
+        <p className="text-white/75 text-xs max-w-[10rem] leading-relaxed">
           {description}
         </p>
       </div>
@@ -136,7 +119,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-gray-200 dark:text-neutral-200 hover:text-black "
+      className="text-white/90 hover:text-white font-medium transition duration-200"
     >
       {children}
     </Link>
