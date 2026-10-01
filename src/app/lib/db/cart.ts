@@ -99,7 +99,7 @@ export async function mergeAnonymousCartIntoUserCart(userId: string) {
   if (!localCart) return;
 
   const userCart = await prisma.cart.findFirst({
-    where: { userId },
+    where: { id: userId },
     include: { items: true },
   });
 
@@ -126,7 +126,7 @@ export async function mergeAnonymousCartIntoUserCart(userId: string) {
     } else {
       await tx.cart.create({
         data: {
-          userId,
+          id: userId,
           items: {
             createMany: {
               data: localCart.items.map((item) => ({

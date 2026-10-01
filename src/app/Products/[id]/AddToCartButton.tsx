@@ -14,9 +14,10 @@ export default function AddToCartButton({
   const [isPending, startTransition] = useTransition();
   const [success, setSuccess] = useState(false);
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-3">
       <button
-        className="btn btn-sm text-white hover:text-gray-200 bg-slate-800 hover:bg-slate-800"
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm tracking-wide shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
+        disabled={isPending}
         onClick={() => {
           setSuccess(false);
           startTransition(async () => {
@@ -25,10 +26,10 @@ export default function AddToCartButton({
           });
         }}
       >
-        Add to cart
+        {isPending ? "Adding…" : "Add to Cart"}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 space-x-4"
+          className="h-4 w-4"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -41,9 +42,8 @@ export default function AddToCartButton({
           />
         </svg>
       </button>
-      {isPending && <span className="loading loading-spinner loading-md" />}
-      {isPending && success && (
-        <span className="text-success">Added to Cart</span>
+      {!isPending && success && (
+        <span className="text-emerald-600 text-sm font-medium">Added to cart ✓</span>
       )}
     </div>
   );

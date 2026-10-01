@@ -1,15 +1,10 @@
 import { auth, signIn } from "../lib/auth";
-import Link from "next/link";
 import UserButton from "./UserButton";
 
 export default async function SignInNavbarAddition() {
   const session = await auth();
   const user = session?.user;
-  return (
-    <div className="fixed z-50 sm:z-50 right-1 md:right-[10%] lg:right-[16%] xl:right-[28%] mt-0 sm:mt-7 bg-transparent">
-      {user ? <UserButton user={user} /> : <SignInButton />}
-    </div>
-  );
+  return user ? <UserButton user={user} /> : <SignInButton />;
 }
 
 function SignInButton() {
@@ -22,13 +17,9 @@ function SignInButton() {
     >
       <button
         type="submit"
-        className="mt-12 sm:mt-2 btn rounded-full text-white 
-       bg-gradient-to-r
-        from-green-800 to-green-300
-         border-none hover:scale-150 transition
-          duration-500"
+        className="inline-flex items-center px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm tracking-wide border border-emerald-400 transition-colors duration-300 whitespace-nowrap"
       >
-        SIGN IN
+        Sign In
       </button>
     </form>
   );

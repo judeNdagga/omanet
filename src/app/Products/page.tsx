@@ -1,81 +1,120 @@
-import Image from "next/image";
 import prisma from "@/app/lib/prisma";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import { ProductCard } from "../components/ui/hero-parallax";
 import ProductCard2 from "../components/ProductCard";
 import ContactExpertsButton from "../components/ContactExpertsButton";
+
 export const metadata = {
   title: "Products - OMANET",
 };
-export default async function Entrepreneurship() {
+
+export default async function Products() {
   const products = await prisma.product.findMany({
     orderBy: { id: "desc" },
   });
+
   return (
     <div className="overflow-hidden">
-      {/* 2nd level */}
-      <div className="bg-white">
-        <h1
-          className="text-black text-4xl
-         sm:text-5xl font-semibold font-mono
-          text-center sm:pl-[5em] sm:pr-[5em]
-           sm:pt-40 pt-32"
-        >
-          EXPLORE OUR PRODUCTS
-        </h1>
-        <div className="sm:flex gap-10 p-8">
-          {/* first card */}
-
-          {/* product card trial */}
-          {products.map((product) => (
-            <ProductCard2 product={product} key={product.id} />
-          ))}
-        </div>
-
-        {/* after second cards */}
-
-        <div className="sm:p-20 p-10">
-          <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% text-white">
-            <h1 className="text-4xl sm:text-6xl font-bold">
-              NEED SOMETHING ELSE?
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-green-900 via-green-800 to-emerald-700 pt-36 pb-20 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 sm:gap-20 items-start">
+          <div className="sm:w-1/2">
+            <span className="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-emerald-300 border border-emerald-500/60 rounded-full px-4 py-1.5 mb-6">
+              Our Products
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08]">
+              Explore Our Products
             </h1>
-            <p className="sm:pt-16 sm:pr-20 text-xl sm:text-2xl font-extralight">
-              Don't see what you want? No worries. We can provide custom
-              products tailored to what you require. We also offer our expert
-              guidance to any related situation, regardless of the field. You
-              need only connect with our experts.
-            </p>
-            <ContactExpertsButton />
           </div>
-        </div>
-
-        {/* after need something */}
-
-        <div className="md:pt-20 xl:pt-40 md:pb-20 xl:pb-40 sm:flex xl:pl-20 pr-20 h-auto">
-          <h1 className="text-left text-black font-bold font-mono text-4xl sm:text-6xl pl-10 pr-1">
-            CUSTOMER SATISFACTION KNOWS NO BORDERS
-          </h1>
-          <div className="divider md:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-xl sm:text-2xl font-light text-black ml-20 pr-10">
-            Our customers come from different industries but share a unanimous
-            appreciation of our work together, reflected in their progress
-          </h1>
-        </div>
-        <div className="sm:pr-40 sm:pl-40 p-6">
-          <div className="card card-body shadow-xl">
-            <p className="text-black text-3xl sm:text-4xl font-extralight">
-              " Our customers' needs are our primary concern. Everything else is
-              secondary. It is always a great pleasure to collaborate."
+          <div className="sm:w-1/2 sm:pt-16">
+            <p className="text-base sm:text-lg text-green-100 leading-relaxed mb-4">
+              Discover our range of certified organic products, grown and
+              processed to the highest standards of quality and sustainability.
+            </p>
+            <p className="text-sm sm:text-base text-green-200/75 leading-relaxed">
+              Every product reflects our commitment to supporting Ugandan
+              farmers and delivering health-conscious choices to consumers
+              and businesses alike.
             </p>
           </div>
-          <p className="text-right text-black pt-10 text-3xl">
-            - Jane Nalunga
-            <p className="text-2xl font-light text-green-600">Team Lead</p>
-          </p>
         </div>
+      </section>
 
-        <div className="text-center h-[20em]"></div>
-      </div>
+      {/* Product grid */}
+      <section className="bg-white py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          {products.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {products.map((product) => (
+                <ProductCard2 product={product} key={product.id} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-20">
+              <p className="text-gray-400 text-lg">No products listed yet.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* CTA banner */}
+      <section className="py-12 px-6 sm:px-12 md:px-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl bg-gradient-to-br from-green-900 via-green-800 to-emerald-700 p-10 sm:p-14 flex flex-col sm:flex-row items-start sm:items-center gap-8">
+            <div className="flex-1">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                NEED SOMETHING ELSE?
+              </h2>
+              <p className="text-green-100 text-base sm:text-lg leading-relaxed max-w-xl">
+                Don't see what you want? We can provide custom products
+                tailored to your exact requirements, and our experts are
+                always on hand to advise on related situations regardless
+                of the field.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <ContactExpertsButton />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social proof */}
+      <section className="bg-white py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 sm:gap-16 items-center">
+          <div className="sm:w-1/2">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+              CUSTOMER SATISFACTION{" "}
+              <span className="text-green-600">KNOWS NO BORDERS</span>
+            </h2>
+          </div>
+          <div className="sm:w-1/2">
+            <p className="text-base sm:text-lg text-gray-500 leading-relaxed">
+              Our customers come from different industries but share a
+              unanimous appreciation of our work together, reflected in
+              their continued progress and growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="bg-green-50 py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-2xl bg-white border border-green-100 shadow-sm p-8 sm:p-12">
+            <p className="text-gray-700 text-2xl sm:text-3xl font-light leading-relaxed mb-8">
+              &ldquo;Our customers' needs are our primary concern. Everything
+              else is secondary. It is always a great pleasure to
+              collaborate.&rdquo;
+            </p>
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-[2px] bg-green-500" />
+              <div>
+                <p className="font-bold text-gray-900">Jane Nalunga</p>
+                <p className="text-sm text-green-600">Team Lead</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

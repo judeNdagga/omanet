@@ -1,19 +1,10 @@
-"use server";
 import PriceTag from "@/app/components/PriceTag";
 import Image from "next/image";
-// import { getCart } from "@/app/lib/db/cart";
-
-import { formatPrice } from "@/app/lib/format";
-import { BsArrowRight } from "react-icons/bs";
 import { incrementProductQuantity } from "./actions";
-import { FaCartPlus, FaCircleMinus, FaCirclePlus } from "react-icons/fa6";
 import prisma from "@/app/lib/prisma";
 import { cache } from "react";
-import { Metadata } from "next";
-import OutOfStock from "@/app/components/OutOfStock";
 import ContactExpertsButton from "@/app/components/ContactExpertsButton";
 import AddToCartButton from "./AddToCartButton";
-// import CartEntry from "@/app/components/CartEntry";
 
 interface ProductPageProps {
   params: {
@@ -23,127 +14,135 @@ interface ProductPageProps {
 
 const getProduct = cache(async (id: string) => {
   const product = await prisma.product.findUnique({ where: { id } });
-
   return product;
 });
+
+export async function generateMetadata({ params: { id } }: ProductPageProps) {
+  const product = await getProduct(id);
+  return {
+    title: product ? `${product.name} - OMANET` : "Product - OMANET",
+  };
+}
 
 export default async function ProductPage({
   params: { id },
 }: ProductPageProps) {
   const product = await getProduct(id);
 
-  // const cart = await getCart();
-
   return (
-    <div className="overflow-hidden">
-      {/* 2nd level */}
-      <div className="bg-white">
-        <div className="xl:flex gap-10 pl-10 sm:pl-16 pr-10 sm:pr-0 pt-28 sm:pt-40">
-          <div className="card sm:w-[40em] sm:h-[30em] bg-base-100 shadow-xl">
-            <figure>
-              <img src={product!.imageUrl} alt="Shoes" />
-            </figure>
-            <div className="rounded-md card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%">
-              <h2 className="card-title text-white">{product!.name}</h2>
-              <div className="sm:badge sm:bg-red-600 border-none text-red-800 sm:text-white text-xs sm:text-xs font-semibold">
-                OUT OF STOCK
-              </div>
-              <p className="text-white">{product!.description}</p>
-            </div>
-          </div>
-
-          <div>
-            <h1 className="text-black text-4xl xl:text-5xl font-semibold text-center sm:pl-[5em] sm:pr-[5em] pt-6 sm:pt-0">
-              High Quality {product!.name}
-            </h1>
-
-            <div className="pt-3 sm:pt-10 pb-5 flex items-center">
-              <h1 className="text-black pt-2">Quantity :</h1>
-              <FaCircleMinus className="text-green-600 btn btn-circle scale-50 mt-0" />
-              <input
-                type="text"
-                className="input input-bordered max-w-20 h-8 bg-white text-black border-slate-500 border-2"
+    <div className="overflow-hidden bg-white">
+      {/* Product detail */}
+      <section className="pt-36 pb-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+          {/* Image */}
+          <div className="w-full lg:w-1/2">
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gray-100">
+              <Image
+                src={product!.imageUrl}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                alt={product!.name}
+                className="object-cover"
+                priority
               />
-              <OutOfStock />
             </div>
+          </div>
 
-            {/* cart button */}
+          {/* Details */}
+          <div className="w-full lg:w-1/2 lg:pt-4">
+            <span className="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-green-800 border border-green-700 rounded-full px-4 py-1.5 mb-4">
+              Organic Product
+            </span>
+            <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight mb-4">
+              {product!.name}
+            </h1>
 
-            <AddToCartButton
-              productId={product!.id}
-              incrementProductQuantity={incrementProductQuantity}
-            />
-            {/* <div className="btn btn-sm text-white hover:text-gray-200 bg-slate-800 hover:bg-slate-800">
-              <h1>Add to cart</h1>
-              <FaCartPlus className="text-white" />
-            </div> */}
-            <div className="pt-3 sm:pt-5 flex gap-10">
-              <h1 className="text-black">Price :</h1>
-              <h1 className="text-lime-500">
-                {" "}
+            <p className="text-gray-600 text-base leading-relaxed mb-6">
+              {product!.description}
+            </p>
+
+            <div className="border-t border-gray-100 pt-6 mb-6">
+              <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">Price</p>
+              <div className="text-2xl font-bold text-gray-900">
                 <PriceTag price={product!.price} className="" />
-              </h1>
+              </div>
             </div>
-            {/* {cart?.items.map(cartItem =>(
-        <CartEntry cartItem={cartItem} key={cartItem.id} setProductQuantity={incrementProductQuantity} />
-      ))} */}
 
-            <div className="pt-10 sm:pt-20">
-              {/* <p className="mb-3 font-bold text-black">
-            Total: {formatPrice(cart?.subtotal || 0)}
-        </p> */}
-              <div className="btn btn-wide text-white hover:text-gray-200 bg-slate-800 hover:bg-slate-800">
-                {" "}
-                CHECK OUT
+            <div className="flex flex-col sm:flex-row gap-3">
+              <AddToCartButton
+                productId={product!.id}
+                incrementProductQuantity={incrementProductQuantity}
+              />
+              <a
+                href="/Contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-gray-900 text-gray-900 font-semibold text-sm tracking-wide hover:bg-gray-900 hover:text-white transition-colors duration-300"
+              >
+                Check Out
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA banner */}
+      <section className="py-12 px-6 sm:px-12 md:px-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl bg-gradient-to-br from-green-900 via-green-800 to-emerald-700 p-10 sm:p-14 flex flex-col sm:flex-row items-start sm:items-center gap-8">
+            <div className="flex-1">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                NEED SOMETHING ELSE?
+              </h2>
+              <p className="text-green-100 text-base sm:text-lg leading-relaxed max-w-xl">
+                Don't see what you want? We can provide custom products
+                tailored to your exact requirements, and our experts are
+                always on hand to advise on any related situation.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <ContactExpertsButton />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social proof */}
+      <section className="bg-white py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 sm:gap-16 items-center">
+          <div className="sm:w-1/2">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+              CUSTOMER SATISFACTION{" "}
+              <span className="text-green-600">KNOWS NO BORDERS</span>
+            </h2>
+          </div>
+          <div className="sm:w-1/2">
+            <p className="text-base sm:text-lg text-gray-500 leading-relaxed">
+              Our customers come from different industries but share a
+              unanimous appreciation of our work together, reflected in
+              their continued progress and growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="bg-green-50 py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-2xl bg-white border border-green-100 shadow-sm p-8 sm:p-12">
+            <p className="text-gray-700 text-2xl sm:text-3xl font-light leading-relaxed mb-8">
+              &ldquo;Our customers' needs are our primary concern. Everything
+              else is secondary. It is always a great pleasure to
+              collaborate.&rdquo;
+            </p>
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-[2px] bg-green-500" />
+              <div>
+                <p className="font-bold text-gray-900">Jane Nalunga</p>
+                <p className="text-sm text-green-600">Team Lead</p>
               </div>
             </div>
           </div>
         </div>
-
-        {/* after second cards */}
-
-        <div className="sm:p-20 p-10">
-          <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% text-white">
-            <h1 className="text-4xl sm:text-6xl font-bold font-mono">
-              NEED SOMETHING ELSE?
-            </h1>
-            <p className="sm:pt-16 sm:pr-20 text-xl sm:text-2xl font-extralight">
-              Don't see what you want? No worries. We can provide custom
-              products tailored to what you require. We also offer our expert
-              guidance to any related situation, regardless of the field. You
-              need only connect with our experts.
-            </p>
-            <ContactExpertsButton />
-          </div>
-        </div>
-
-        {/* after need something */}
-
-        <div className="md:pt-20 xl:pt-40 md:pb-20 xl:pb-40 sm:flex xl:pl-20 pr-20 h-auto">
-          <h1 className="text-black font-bold font-mono text-4xl sm:text-6xl pl-4 sm:pl-10 sm:pr-1">
-            CUSTOMER SATISFACTION KNOWS NO BORDERS
-          </h1>
-          <div className="divider md:divider-horizontal divider-success"></div>
-          <h1 className="text-right text-2xl font-light text-black ml-20 pr-10">
-            Our customers come from different industries but share a unanimous
-            appreciation of our work together, reflected in their progress
-          </h1>
-        </div>
-        <div className="sm:pr-40 sm:pl-40">
-          <div className="card card-body shadow-xl">
-            <p className="text-black text-3xl sm:text-4xl font-extralight">
-              " Our customers' needs are our primary concern. Everything else is
-              secondary. It is always a great pleasure to collaborate."
-            </p>
-          </div>
-          <p className="sm:text-right text-center text-black pt-10 text-3xl">
-            - Jane Nalunga
-            <p className="text-2xl font-light text-green-600">Team Lead</p>
-          </p>
-        </div>
-
-        <div className="text-center h-[20em]"></div>
-      </div>
+      </section>
     </div>
   );
 }

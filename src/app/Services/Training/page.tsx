@@ -1,262 +1,194 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import training3 from "../../../../public/images/services/Training_171.jpg";
-import { BsArrowRight } from "react-icons/bs";
 import ContactExpertsButton from "@/app/components/ContactExpertsButton";
+
+const heroContainer = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.14, delayChildren: 0.1 } },
+};
+const heroItem = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
+const heroItemReduced = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.4 } },
+};
+const cardContainer = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.12 } },
+};
+const cardItem = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
+const cardItemReduced = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.3 } },
+};
+
+const features = [
+  {
+    title: "Workshops & Seminars",
+    text: "Sessions led by experienced organic farmers, agronomists, and industry experts covering advanced topics such as organic market trends, innovative farming technologies, and sustainable business strategies.",
+  },
+  {
+    title: "Networking & Community Building",
+    text: "Connecting participants with fellow trainees, mentors, and industry professionals — fostering a supportive community committed to organic farming where knowledge, resources, and opportunities are freely shared.",
+  },
+  {
+    title: "Field Visits & Demonstrations",
+    text: "Hands-on visits to successful organic farms offering firsthand experience of how organic principles are applied in real operations, showcasing innovative techniques and best practices in action.",
+  },
+];
+
 export default function Training() {
-  const FadeInLeftAnimation = {
-    initial: {
-      x: -200,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.2,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInLeftAnimationSlower = {
-    initial: {
-      x: -200,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.4,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInRightAnimation = {
-    initial: {
-      x: 200,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.2,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInUpwardsAnimation = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.08,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInUpwardsAnimationSlower = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.18,
-        type: "easeInOut",
-      },
-    },
-  };
-  const FadeInUpwardsAnimationEvenSlower = {
-    initial: {
-      y: 200,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.38,
-        type: "easeInOut",
-      },
-    },
-  };
+  const shouldReduce = useReducedMotion();
+  const heroIt = shouldReduce ? heroItemReduced : heroItem;
+  const cardIt = shouldReduce ? cardItemReduced : cardItem;
+
   return (
     <div className="overflow-hidden">
-      <div
-        className="h-auto sm:flex sm:pt-[11em] p-20  brightness-90
-        bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%"
-        // style={{
-        //   backgroundImage: `url(https://images.unsplash.com/photo-1535090467336-9501f96eef89?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
-        // }}
-      >
-        <div className="sm:w-[48%]">
-          <h1 className="text-3xl md:text-5xl xl:text-7xl text-white  pt-10 md:pt-0">
-            Training
-          </h1>
-        </div>
-        <div className="divider md:divider-horizontal divider-success h-10"></div>
-        <div className="sm:w-[48%] sm:text-xl text-white">
-          <p>
-            Our commitment to your success doesn’t end with a single
-            consultation. We provide ongoing support and training to help you
-            stay informed about the latest organic farming techniques and market
-            trends. Whether you need periodic check-ins or continuous guidance,
-            we’re here to ensure your farm thrives.
-            <p className="md:pt-5 xl:pt-20">
-              Training in organic agriculture is essential for fostering the
-              knowledge, skills, and practices needed to cultivate sustainable,
-              environmentally friendly, and health-conscious farming systems. As
-              the demand for organic products continues to rise, comprehensive
-              training programs are crucial in equipping farmers.
-            </p>
-          </p>
-        </div>
-      </div>
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-green-900 via-green-800 to-emerald-700 pt-36 pb-20 px-6 sm:px-12 md:px-16">
+        <motion.div
+          variants={heroContainer}
+          initial="hidden"
+          animate="show"
+          className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 sm:gap-20 items-start"
+        >
+          <div className="sm:w-1/2">
+            <motion.span
+              variants={heroIt}
+              className="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-emerald-300 border border-emerald-500/60 rounded-full px-4 py-1.5 mb-6"
+            >
+              Our Services
+            </motion.span>
+            <motion.h1
+              variants={heroIt}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08]"
+            >
+              Training &amp; Extension
+            </motion.h1>
+          </div>
+          <div className="sm:w-1/2 sm:pt-16">
+            <motion.p variants={heroIt} className="text-base sm:text-lg text-green-100 leading-relaxed mb-4">
+              Our commitment to your success doesn't end with a single
+              consultation. We provide ongoing support and training to help
+              you stay informed about the latest organic farming techniques
+              and market trends — ensuring your farm continues to thrive.
+            </motion.p>
+            <motion.p variants={heroIt} className="text-sm sm:text-base text-green-200/75 leading-relaxed">
+              As the demand for organic products continues to rise,
+              comprehensive training programmes are crucial in equipping
+              farmers with the knowledge and skills needed to succeed.
+            </motion.p>
+          </div>
+        </motion.div>
+      </section>
 
-      {/* 2nd level */}
-      <div className="bg-white">
-        <h1 className="text-black text-4xl xl:text-5xl font-semibold font-mono text-center sm:pl-[5em] sm:pr-[5em] sm:pt-10">
-          UNDERTAKE CRUCIAL TRAINING FOR BETTER SUCCESS
-        </h1>
-        <div className="sm:flex md:gap-3 xl:gap-10 p-8 text-white">
-          {/* first card */}
+      {/* Feature cards */}
+      <section className="bg-white py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-green-800 border border-green-700 rounded-full px-4 py-1.5 mb-4">
+              Training Areas
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              UNDERTAKE TRAINING FOR{" "}
+              <span className="text-green-600">BETTER SUCCESS</span>
+            </h2>
+          </div>
           <motion.div
-            className="card card-body sm:w-[15em] xl:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
-            variants={FadeInUpwardsAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
+            variants={cardContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
           >
-            <h1 className="text-2xl font-semibold pb-8">
-              WORKSHOPS AND SEMINARS
-            </h1>
-            <p>
-              Workshops and seminars led by experienced organic farmers,
-              agronomists, and industry experts provide valuable insights and
-              up-to-date information on organic farming practices. These
-              sessions often cover advanced topics, such as organic market
-              trends, innovative farming technologies, and sustainable business
-              strategies.
-            </p>
-          </motion.div>
-
-          {/* second card */}
-
-          <motion.div
-            className="card card-body sm:w-[15em] xl:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
-            variants={FadeInUpwardsAnimationSlower}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
-          >
-            <h1 className="text-2xl font-semibold pb-8">
-              NETWORKING AND COMMUNITY BUILDING
-            </h1>
-            <p>
-              Training programs often provide opportunities for networking and
-              community building. Participants can connect with fellow trainees,
-              mentors, and industry professionals, fostering a supportive
-              community of like-minded individuals committed to organic farming.
-              This network can be invaluable for sharing knowledge, resources,
-              and opportunities.
-            </p>
-          </motion.div>
-          {/* third card */}
-
-          <motion.div
-            className="card card-body sm:w-[15em] xl:h-[25em] bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75% hover:-inset-y-2"
-            variants={FadeInUpwardsAnimationEvenSlower}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
-          >
-            <h1 className="text-2xl font-semibold pb-8">
-              FIELD VISITS AND DEMONSTRATIONS
-            </h1>
-            <p>
-              Field visits to successful organic farms and demonstration sites
-              offer trainees a firsthand look at how organic principles are
-              applied in diverse farming operations. These visits provide
-              practical examples and inspiration, showcasing innovative
-              techniques and best practices in action.
-            </p>
+            {features.map(({ title, text }) => (
+              <motion.div
+                key={title}
+                variants={cardIt}
+                className="bg-white rounded-xl p-6 shadow-sm border-l-4 border-emerald-500 ring-1 ring-gray-100"
+              >
+                <h3 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wide">
+                  {title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
+      </section>
 
-        {/* after 3 cards */}
-
-        <div className="p-10 xl:p-20">
-          <div className="card card-body bg-gradient-to-r from-green-900 from-3% via-green-400 to-green-600 to-75%">
-            <h1 className="text-3xl sm:text-6xl font-bold font-mono xl:mr-[4em] text-white">
-              EXPLORE FLEXIBLE HIGH-PERFORMANCE SOLUTIONS TAILORED TO GROWING
-              YOUR BUSINESS
-            </h1>
-
-            <ContactExpertsButton />
+      {/* CTA banner */}
+      <section className="py-12 px-6 sm:px-12 md:px-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl bg-gradient-to-br from-green-900 via-green-800 to-emerald-700 p-10 sm:p-14 flex flex-col sm:flex-row items-start sm:items-center gap-8">
+            <div className="flex-1">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                START YOUR LEARNING JOURNEY TODAY
+              </h2>
+              <p className="text-green-100 text-base sm:text-lg leading-relaxed max-w-xl">
+                Whether you need periodic training check-ins or continuous
+                guidance, our experts are here to help your farm thrive.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <ContactExpertsButton />
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* after card */}
-
-        <div className="sm:flex sm:h-[40em] pt-10">
+      {/* Our Approach */}
+      <section className="bg-white py-16 px-6 sm:px-12 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse sm:flex-row gap-10 sm:gap-16 items-center">
           <motion.div
-            className="sm:w-[50%]"
-            variants={FadeInRightAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full sm:w-1/2"
           >
-            <p className="text-black pl-5 xl:pl-16 xl:pr-44 sm:pt-20">
-              <h1 className="text-xl font-bold pb-10">OUR APPROACH</h1>
-              <h1 className="text-4xl sm:text-6xl pb-6">
-                EASY, <a className="text-green-600">ORGANIC</a> <br />
-                SEAMLESS
-              </h1>
-              <p>
-                Practical, hands-on training is a cornerstone of effective
-                organic agriculture education. Participants engage in on-farm
-                experiences where they can apply theoretical knowledge to
-                real-world scenarios. This includes activities like soil
-                testing, planting, weeding, composting, and harvesting, as well
-                as managing livestock and implementing pest control measures.
-              </p>
+            <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-green-800 border border-green-700 rounded-full px-4 py-1.5 mb-6">
+              Our Approach
+            </span>
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight mb-6 text-gray-900">
+              EASY,{" "}
+              <span className="text-green-600">ORGANIC</span>{" "}
+              &amp; SEAMLESS
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+              Practical, hands-on training is a cornerstone of effective
+              organic agriculture education. Participants engage in on-farm
+              experiences applying theoretical knowledge to real-world
+              scenarios — soil testing, planting, composting, harvesting,
+              and managing livestock and pest control measures.
             </p>
           </motion.div>
-
           <motion.div
-            className="sm:w-[50%]"
-            variants={FadeInLeftAnimation}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: false,
-            }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full sm:w-1/2"
           >
-            <Image
-              src={training3}
-              alt=""
-              className="p-5 sm:p-0 sm:pr-5 sm:w-full h-[85%] hover:scale-105 transition duration-500"
-            />
+            <div className="relative w-full h-64 sm:h-[28em] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src={training3}
+                alt="OMANET training session"
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover transform-gpu hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </motion.div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

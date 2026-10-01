@@ -25,10 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.variable}>
-        <div className="flex">
-          <NavbarDemo />
+        <NavbarDemo>
           <SignInNavbarAddition />
-        </div>
+        </NavbarDemo>
 
         {/* <FloatingNav/> */}
         {children}
@@ -37,3 +36,4 @@ export default function RootLayout({
     </html>
   );
 }
+
